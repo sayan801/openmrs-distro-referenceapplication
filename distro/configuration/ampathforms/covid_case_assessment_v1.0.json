@@ -1958,7 +1958,7 @@
             "type": "obs",
             "questionOptions": {
               "rendering": "toggle",
-              "concept": "2dbf01ab-77f6-4b35-aa2c-46dfc14b0af0",
+              "concept": "9674e958-7269-11ee-b962-0242ac120002",
               "toggleOptions": {
                 "labelTrue": "Yes",
                 "labelFalse": "No"
@@ -1967,35 +1967,6 @@
                 {
                   "type": "OCT",
                   "value": "LabOrdered"
-                }
-              ],
-              "answers": [
-                {
-                  "concept": "cf82933b-3f3f-45e7-a5ab-5d31aaee3da3",
-                  "label": "Yes",
-                  "conceptMappings": [
-                    {
-                      "type": "CIEL",
-                      "value": "1065"
-                    },
-                    {
-                      "type": "AMPATH",
-                      "value": "1065"
-                    },
-                    {
-                      "type": "PIH",
-                      "value": "1065"
-                    },
-                    {
-                      "type": "SNOMED CT",
-                      "value": "CT: 373066001"
-                    }
-                  ]
-                },
-                {
-                  "concept": "488b58ff-64f5-4f8a-8979-fa79940b1594",
-                  "label": "No",
-                  "conceptMappings": []
                 }
               ]
             },
