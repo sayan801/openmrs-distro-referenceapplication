@@ -175,12 +175,18 @@
       <version>${queue.version}</version>
       <scope>provided</scope>
     </dependency>
-    <!--<dependency>
+    <dependency>
       <groupId>org.bahmni.module</groupId>
       <artifactId>appointments-omod</artifactId>
       <version>${appointments.version}</version>
       <scope>provided</scope>
-    </dependency>-->
+    </dependency>
+    <dependency>
+      <groupId>org.bahmni.module</groupId>
+      <artifactId>teleconsultation-omod</artifactId>
+      <version>${teleconsultation.version}</version>
+      <scope>provided</scope>
+    </dependency>
     <dependency>
       <groupId>org.openmrs.module</groupId>
       <artifactId>cohort-omod</artifactId>
@@ -217,12 +223,18 @@
       <version>${serialization-xstream.version}</version>
       <scope>provided</scope>
     </dependency>
-    <!--<dependency>
+    <dependency>
       <groupId>org.openmrs.module</groupId>
       <artifactId>patientflags-omod</artifactId>
       <version>${patientflags.version}</version>
       <scope>provided</scope>
-    </dependency>-->
+    </dependency>
+    <dependency>
+      <groupId>org.openmrs.module</groupId>
+      <artifactId>o3forms-omod</artifactId>
+      <version>${o3forms.version}</version>
+      <scope>provided</scope>
+    </dependency>
 
      <!-- Versions required for OHRI -->
      <dependency>
@@ -275,13 +287,6 @@
       <version>${casereport.version}</version> 
       <scope>provided</scope>
     </dependency> -->
-
-    <dependency>
-      <groupId>org.openmrs.module</groupId>
-      <artifactId>o3forms-omod</artifactId>
-      <version>${o3forms.version}</version>
-      <scope>provided</scope>
-    </dependency>
 
   </dependencies>
 
