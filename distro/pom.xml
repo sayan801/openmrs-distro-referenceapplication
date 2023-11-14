@@ -41,10 +41,10 @@
     <!--  OpenMRS Vanilla Clean installation  -->
     <!-- <referencedemodata.version>2.1.0-SNAPSHOT</referencedemodata.version> -->
 
-    <queue.version>1.0.0-alpha</queue.version>
+    <queue.version>1.0.0-alpha.2</queue.version>
     <!--<appointments.version>2.0.0-SNAPSHOT</appointments.version>
     <teleconsultation.version>2.0.0-SNAPSHOT</teleconsultation.version>-->
-    <cohort.version>3.6.0-SNAPSHOT</cohort.version>
+    <cohort.version>3.4.0</cohort.version>
     <reporting.version>1.25.0</reporting.version>
     <reportingrest.version>1.14.0</reportingrest.version>
 
