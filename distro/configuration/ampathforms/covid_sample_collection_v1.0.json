@@ -430,6 +430,60 @@
                   "validators": []
                 }
               ]
+            },
+            {
+              "label": "Status",
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "fixed-value",
+                "concept": "6681366c-2174-489a-b951-13a1404935bf",
+                "conceptMappings": [
+                  {
+                    "type": "OCT",
+                    "value": "LabOrderStatus"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "162866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Pending status",
+                    "conceptMappings": [
+                      {
+                        "type": "CIEL",
+                        "value": "162866"
+                      },
+                      {
+                        "type": "SNOMED-CT",
+                        "value": "307824009"
+                      },
+                      {
+                        "type": "CIEL",
+                        "value": "162866"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "id": "labOrderStatus",
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "false",
+                  "unspecified": "false",
+                  "hide": {
+                    "hideWhenExpression": "false"
+                  }
+                },
+                {
+                  "intent": "COVID_SAMPLE_COLLECTION_EMBED",
+                  "required": "false",
+                  "unspecified": "false",
+                  "hide": {
+                    "hideWhenExpression": "false"
+                  },
+                  "value": "165170AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                }
+              ]
             }
           ]
         }
