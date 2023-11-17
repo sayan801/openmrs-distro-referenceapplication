@@ -41,19 +41,87 @@
     },
     {
       "label": "Lab Order",
-      "sections": [],
-      "isSubform": "true",
-      "subform": {
-        "name": "COVID Lab Order Form",
-        "package": "covid",
-        "behaviours": [
-          {
-            "intent": "*",
-            "subform_intent": "COVID_LAB_ORDER_EMBED",
-            "readonly": "true"
-          }
-        ]
-      }
+      "sections": [
+        {
+          "label": "Lab Order Details",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Order date",
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "162078AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "weeksList": ""
+              },
+              "id": "testOrderDate",
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "false",
+                  "unspecified": "true",
+                  "readonly": "true",
+                  "hide": {
+                    "hideWhenExpression": "false"
+                  },
+                  "validators": []
+                },
+                {
+                  "intent": "COVID_LAB_ORDER_EMBED",
+                  "required": "false",
+                  "hide": {
+                    "hideWhenExpression": "true"
+                  },
+                  "validators": []
+                }
+              ]
+            },
+            {
+              "label": "Test requested",
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "069f6dfe-88c1-4a45-a894-0d99549c8718",
+                "answers": [
+                  {
+                    "concept": "165840AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Diagnostic PCR Test",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "165852AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Rapid Antigen Test",
+                    "conceptMappings": []
+                  }
+                ]
+              },
+              "id": "testRequested",
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "false",
+                  "unspecified": "true",
+                  "readonly": "true",
+                  "hide": {
+                    "hideWhenExpression": "false"
+                  },
+                  "validators": []
+                },
+                {
+                  "intent": "COVID_LAB_ORDER_EMBED",
+                  "required": "false",
+                  "unspecified": "true",
+                  "readonly": "true",
+                  "hide": {
+                    "hideWhenExpression": "true"
+                  },
+                  "validators": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "label": "Lab Sample Collection",
