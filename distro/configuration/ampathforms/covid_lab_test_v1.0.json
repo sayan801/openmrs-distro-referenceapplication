@@ -67,8 +67,9 @@
                   "validators": []
                 },
                 {
-                  "intent": "COVID_LAB_ORDER_EMBED",
+                  "intent": "COVID_LAB_TEST_EMBED",
                   "required": "false",
+                  "readonly": "true",
                   "hide": {
                     "hideWhenExpression": "true"
                   },
@@ -108,7 +109,7 @@
                   "validators": []
                 },
                 {
-                  "intent": "COVID_LAB_ORDER_EMBED",
+                  "intent": "COVID_LAB_TEST_EMBED",
                   "required": "false",
                   "unspecified": "true",
                   "readonly": "true",
@@ -176,6 +177,10 @@
     {
       "intent": "*",
       "display": "COVID Lab Test"
+    },
+    {
+      "intent": "COVID_LAB_TEST_EMBED",
+      "display": "COVID Lab Test Embed"
     }
   ],
   "processor": "EncounterFormProcessor",
