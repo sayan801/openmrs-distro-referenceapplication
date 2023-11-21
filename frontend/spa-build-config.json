@@ -6,6 +6,7 @@
     "@ohri/openmrs-esm-ohri-form-render-app": "next",
     "@ohri/openmrs-esm-ohri-hiv-app": "next",
     "@ohri/openmrs-esm-ohri-pmtct": "next",
+    "@ohri/openmrs-esm-ohri-tb-app": "next",
     "@openmrs/esm-appointments-app": "next",
     "@openmrs/esm-dispensing-app": "next",
     "@openmrs/esm-form-builder-app": "next",
