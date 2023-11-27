@@ -1,0 +1,136 @@
+{
+  "name": "TB Contact Listing",
+  "description": "TB Contact Listing Form",
+  "version": "1",
+  "published": true,
+  "retired": false,
+  "pages": [
+    {
+      "label": "TB Contacts",
+      "sections": [
+        {
+          "label": "Details of TB contacts",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Contact Listing",
+              "type": "obsGroup",
+              "questionOptions": {
+                "rendering": "repeating",
+                "concept": "164351AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [],
+                "conceptMappings": [
+                  {
+                    "type": "SNOMED CT",
+                    "value": "CT: 160476009"
+                  },
+                  {
+                    "type": "CIEL",
+                    "value": "164351"
+                  }
+                ]
+              },
+              "required": "false",
+              "id": "164351",
+              "validators": [],
+              "questions": [
+                {
+                  "label": "Date Listed",
+                  "id": "160753",
+                  "questionOptions": {
+                    "rendering": "date",
+                    "concept": "160753AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  "type": "obs"
+                },
+                {
+                  "label": "Name of contact person",
+                  "id": "__uMGvH6MLn",
+                  "questionOptions": {
+                    "rendering": "text",
+                    "concept": "163258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  "type": "obs"
+                },
+                {
+                  "label": "Contact phone number",
+                  "id": "__MDxMoCxGI",
+                  "questionOptions": {
+                    "rendering": "text",
+                    "concept": "159635AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  "type": "obs"
+                },
+                {
+                  "label": "Address (text)",
+                  "id": "__u1HxuDKno",
+                  "questionOptions": {
+                    "rendering": "text",
+                    "concept": "162725AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  "type": "obs"
+                },
+                {
+                  "label": "Relationship to TB contact",
+                  "id": "tbRelationship",
+                  "questionOptions": {
+                    "rendering": "select",
+                    "concept": "160239AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "answers": [
+                      {
+                        "concept": "1560AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Family member"
+                      },
+                      {
+                        "concept": "160237AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Classmate"
+                      },
+                    {
+                        "concept": "160238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Co-worker"
+                      },
+                      {
+                        "concept": "5618AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Friend"
+                      },
+                      {
+                        "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Other"
+                      }
+                    ]
+                  },
+                  "type": "obs"
+                },
+                {
+                  "label": "Contacts invited",
+                  "id": "164072",
+                  "questionOptions": {
+                    "rendering": "select",
+                    "concept": "164072AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "answers": [
+                      {
+                        "concept": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Yes"
+                      },
+                      {
+                        "concept": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "No"
+                      },
+                      {
+                        "concept": "1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Unknown"
+                      }
+                    ]
+                  },
+                  "type": "obs"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "uuid": "",
+  "encounterType": ""
+}

@@ -1,0 +1,907 @@
+{
+  "name": "TB Case Enrollment Form",
+  "published": true,
+  "retired": false,
+  "pages": [
+    {
+      "label": "TB Enrollment",
+      "sections": [
+        {
+          "label": "TB Program",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "TB Program to enrol",
+              "type": "obs",
+              "required": false,
+              "id": "tbProgramType",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "163775AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [],
+                "answers": [
+                  {
+                    "concept": "160541AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Drug-susceptible (DS) TB Program"
+                  },
+                  {
+                    "concept": "160052AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Drug Resistant (DR) TB program"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "Date enrolled in tuberculosis (TB) care",
+              "type": "obs",
+              "required": true,
+              "id": "tbRegDate",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "161552AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "161552"
+                  },
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "SNOMED CT",
+                    "value": "413946009"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            },
+            {
+              "label": "Date of TB Diagnosis",
+              "type": "obs",
+              "required": false,
+              "id": "date-diagnosed-with-dr-tb",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "159948AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [],
+                "answers": []
+              },
+              "validators": []
+            },
+            {
+              "label": "DS TB Treatment Number",
+              "type": "obs",
+              "required": false,
+              "id": "dsServiceID",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "161654AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "161654"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            },
+            {
+              "label": "DR TB Treatment ID",
+              "type": "obs",
+              "required": false,
+              "id": "drServiceID",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "164415AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "164415"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            },
+            {
+              "label": "TB Case ID.",
+              "type": "obs",
+              "required": false,
+              "id": "caseID",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "162576AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "162576"
+                  },
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "SNOMED CT",
+                    "value": "422549004"
+                  }
+                ],
+                "answers": []
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Case Summary",
+      "sections": [
+        {
+          "label": "History of previous TB treatment",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Patient Type",
+              "type": "obs",
+              "required": true,
+              "id": "patient-type",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "159990AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "org.openmrs.module.mdrtb",
+                    "value": "CATEGORY 4 TUBERCULOSIS CLASSIFICATION ACCORDING TO RESULT OF PREVIOUS TREATMENT"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "159990"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "159977AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Newly diagnosed TB without prior treatment"
+                  },
+                  {
+                    "concept": "160033AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Relapse"
+                  },
+                  {
+                    "concept": "164097AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Treatment after loss to follow up"
+                  },
+                  {
+                    "concept": "160032AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Treatment after Failure category I"
+                  },
+                  {
+                    "concept": "160030AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Treatment after Failure category II "
+                  },
+                  {
+                    "concept": "1693AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Transferred In"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other previously treated"
+                  }
+                ]
+              },
+              "validators": []
+            }
+          ]
+        },
+        {
+          "label": "Disease Classification",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Site of tuberculosis",
+              "type": "obs",
+              "required": false,
+              "id": "diseaseClassification",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "160040AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [],
+                "answers": [
+                  {
+                    "concept": "42AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Pulmonary tuberculosis"
+                  },
+                  {
+                    "concept": "5042AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Extra Pulmonary TB"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "Bacteriological status",
+              "type": "obs",
+              "required": false,
+              "id": "bacteriologicalStatus,",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "164399AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [],
+                "answers": [
+                  {
+                    "concept": "164397AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Bacteriologically confirmed"
+                  },
+                  {
+                    "concept": "164398AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Clinically diagnosised"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "Indicate Site of Extra-Pulmonary TB",
+              "type": "obs",
+              "required": false,
+              "id": "indication-site",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "161011AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [],
+                "answers": []
+              },
+              "validators": []
+            }
+          ]
+        },
+        {
+          "label": "Resistance Pattern",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "TB drug resistance pattern",
+              "type": "obs",
+              "required": false,
+              "id": "resistancePattern",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "164368AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "SNOMED CT",
+                    "value": "423709000"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "164368"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "None"
+                  },
+                  {
+                    "concept": "164366AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Rifampicin resistant mycobacterium tuberculosis"
+                  },
+                  {
+                    "concept": "164367AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Poly-resistance mycobacterium tuberculosis"
+                  },
+                  {
+                    "concept": "159345AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Multi-drug resistant tuberculosis infection"
+                  },
+                  {
+                    "concept": "159346AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Extremely drug-resistant tuberculosis infection"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "label": "HIV Testing",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "HIV Status",
+              "type": "obs",
+              "required": false,
+              "id": "everTestedForHIV",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "159576AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "PIH",
+                    "value": "3753"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "3BT",
+                    "value": "10042719"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "SNOMED CT",
+                    "value": "278977008"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "ICPC2",
+                    "value": "B90"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "703AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Positive"
+                  },
+                  {
+                    "concept": "664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Negative"
+                  },
+                  {
+                    "concept": "1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Unknown"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Date HIV test done",
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "164400AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "weeksList": ""
+              },
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "true",
+                  "unspecified": "true",
+                  "hide": {},
+                  "validators": [
+                    {
+                      "type": "date",
+                      "allowFutureDates": "false"
+                    },
+                    {
+                      "type": "js_expression",
+                      "failsWhenExpression": "isDateBefore(myValue, '1980-01-01') || myValue >= today()"
+                    }
+                  ]
+                }
+              ],
+              "id": "dateTestPerformed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Regimen",
+      "sections": [
+        {
+          "label": "Drug-susceptible Regimen",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Drug-susceptible regimen",
+              "type": "obs",
+              "required": false,
+              "id": "dsRegimen",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "16fd7307-0b26-4c8b-afa3-8362baff4042",
+                "conceptMappings": [],
+                "answers": [
+                  {
+                    "concept": "b539f758-b24b-417f-9400-4edeca0f6e06",
+                    "label": "2RHZ/4RH"
+                  },
+                  {
+                    "concept": "d250bcae-5889-4bb4-9903-e47f8594f746",
+                    "label": "2RHZE/4H"
+                  },
+                  {
+                    "concept": "eb1f1131-d0e2-414a-94a5-d5c7ad126c9f",
+                    "label": "2RHZE/4RH"
+                  },
+                  {
+                    "concept": "73cd1cda-e82a-43d8-938c-fbaf97b7642b",
+                    "label": "2RHZE/6EH"
+                  },
+                  {
+                    "concept": "7f47837f-1ea5-4a99-b4dd-5ca268d24ba8",
+                    "label": "2RHZE/10RH"
+                  },
+                  {
+                    "concept": "c25e5586-4660-4020-83cd-ee7f7f7fec20",
+                    "label": "2SRHZE/RHZE/5RHE"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "Date DS TB Treatment Started",
+              "type": "obs",
+              "required": false,
+              "id": "dsRxDate",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "1113AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "SNOMED CT",
+                    "value": "413946009"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "SNOMED MVP",
+                    "value": "11131000105005"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "AMPATH",
+                    "value": "1113"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "PIH",
+                    "value": "1113"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "1113"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            }
+          ]
+        },
+        {
+          "label": "Drug Resistant Regimen",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "MDR tuberculosis treatment type",
+              "type": "obs",
+              "required": false,
+              "id": "drRegimenType",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "160051AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "160051"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "org.openmrs.module.mdrtb",
+                    "value": "CURRENT MULTI-DRUG RESISTANT TUBERCULOSIS TREATMENT TYPE"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "160049AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "standard treatment"
+                  },
+                  {
+                    "concept": "160050AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Individualized treatment"
+                  },
+                  {
+                    "concept": "160048AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "empiric treatment"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "MDR regimen",
+              "type": "obs",
+              "required": false,
+              "id": "drRegimen",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "159909AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "AMPATH",
+                    "value": "2161"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "159909"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "128ea82a-1301-4ec0-b9de-9f98c55c6bb5",
+                    "label": "6 (H)REZ/Lfx"
+                  },
+                  {
+                    "concept": "82bd6821-1897-491b-9597-e7ba9d33e208",
+                    "label": "6 Bdq/Cfz/Lfx/Cs/Lzd 12 Cfz/Lfx/Cs"
+                  },
+                  {
+                    "concept": "c70c1789-bbf4-4a0f-8727-0bc3e310c19a",
+                    "label": "6 Bdq/DIm/Lzd/Cfz/Cs/ 14 DIm/Cfz/Cs"
+                  },
+                  {
+                    "concept": "271209f1-068a-449e-acc0-3c18c5bfcf75",
+                    "label": "6 Bdq/Dlm/Lzd/Cfz/Cs 14 Dlm/Cfz/Cs/Z"
+                  },
+                  {
+                    "concept": "4b630a0c-7bce-44d9-8af1-dab602edc6dc",
+                    "label": "6 Bdq/Dlm/Lzd/Cfz/Cs/Z 14 Dlm/Cfz/Cs/Z"
+                  },
+                  {
+                    "concept": "60052d37-3e61-460b-b887-d672093b0bb1",
+                    "label": "6 Dlm/Lzd/Lfx/Cfz/Cs 12 Lfx/Cfz/Cs"
+                  },
+                  {
+                    "concept": "4c852067-84c0-4dd9-8eaa-77d3f40f2c20",
+                    "label": "6 Lzd/Mfx/Cfz/Cs 12 Mfx/Cfz/Cs"
+                  },
+                  {
+                    "concept": "ad311897-b20e-4009-ac9a-e5a322498bee",
+                    "label": "6 Mfx/Cfz/Cs/Lzd 12 Mfx/Cfz/Cs"
+                  },
+                  {
+                    "concept": "839a3a51-07c3-4316-8efc-429b6471d314",
+                    "label": "9 (H)REZ/Lfx"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "MDR regimen - Free text",
+              "type": "obs",
+              "required": false,
+              "id": "drRegimen",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "160136AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "160136"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            },
+            {
+              "label": "MDR Treatment Start Date",
+              "type": "obs",
+              "required": false,
+              "id": "mdrRxDate",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "164416AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "164416"
+                  },
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "SNOMED CT",
+                    "value": "413946009"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Treatment Supporter",
+      "sections": [
+        {
+          "label": "Treatment Supporter Details",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Treatment supporter’s name",
+              "type": "obs",
+              "required": false,
+              "id": "nameTreatmentSupporter",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "160638AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "160638"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            },
+            {
+              "label": "Treatment supporter’s address",
+              "type": "obs",
+              "required": false,
+              "id": "rxSupporterAddress",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "160641AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": []
+              },
+              "validators": []
+            },
+            {
+              "label": "Relationship to patient",
+              "type": "obs",
+              "required": false,
+              "id": "relationshipToPatient",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "160640AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "160640"
+                  },
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "SNOMED CT",
+                    "value": "444018008"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "5617AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Partner or spouse"
+                  },
+                  {
+                    "concept": "1527AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Parent"
+                  },
+                  {
+                    "concept": "160639AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Guardian"
+                  },
+                  {
+                    "concept": "972AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Sibling"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "Treatment supporter’s cell phone no.",
+              "type": "obs",
+              "required": false,
+              "id": "rxPhoneNo",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "160642AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "SNOMED CT",
+                    "value": "184103008"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Treatment Outcome",
+      "sections": [
+        {
+          "label": "Tuberculosis Treatment Outcome",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "TB Treatment Outcome",
+              "type": "obs",
+              "required": false,
+              "id": "tbRxOutcome",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "159786AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "159786"
+                  },
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "AMPATH",
+                    "value": "6206"
+                  },
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "SNOMED CT",
+                    "value": "385676005"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "SNOMED MVP",
+                    "value": "1597861000105004"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "1663AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Completed treatment for disease"
+                  },
+                  {
+                    "concept": "159791AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Cure, outcome"
+                  },
+                  {
+                    "concept": "159874AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Tuberculosis treatment failure"
+                  },
+                  {
+                    "concept": "164424AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Patient moved to multi drug resistant tuberculosis (MDR-TB) register"
+                  },
+                  {
+                    "concept": "5240AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Lost to followup"
+                  },
+                  {
+                    "concept": "160034AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Died"
+                  },
+                  {
+                    "concept": "160737AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Not assessed"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "TB treatment end date",
+              "type": "obs",
+              "required": false,
+              "id": "tbRxEndDate",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "159431AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "PIH",
+                    "value": "2597"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "159431"
+                  },
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "SNOMED CT",
+                    "value": "413947000"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            },
+            {
+              "label": "Death Date",
+              "type": "obs",
+              "required": false,
+              "id": "deathDate",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "1543AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "AMPATH",
+                    "value": "1570"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "1543"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "PIH",
+                    "value": "1815"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "SNOMED CT",
+                    "value": "399753006"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            },
+            {
+              "label": "Outcome date, tuberculosis treatment",
+              "type": "obs",
+              "required": true,
+              "id": "outcomeTBRx",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "159787AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "159787"
+                  },
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "AMPATH",
+                    "value": "6207"
+                  },
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "SNOMED CT",
+                    "value": "439771001"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "processor": "EncounterFormProcessor",
+  "encounterType": "TB Program Enrolment",
+  "referencedForms": [],
+  "uuid": "9a199b59-b185-485b-b9b3-a9754e65ae57",
+  "description": "This form enrols a client to the respective TB Program",
+  "version": "1.0"
+}

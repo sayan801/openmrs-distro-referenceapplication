@@ -1,0 +1,303 @@
+{
+  "name": "TB Patient Tracing Form",
+  "version": "1.0",
+  "published": false,
+  "retired": false,
+  "pages": [
+    {
+      "label": "Introduction",
+      "sections": [
+        {
+          "label": "",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "markdown",
+              "questionOptions": {
+                "rendering": "markdown"
+              },
+              "id": "fooMarkdown",
+              "value": [
+                "**Use this form to:** Trace a patient who has missed an appointment or drug pick up "
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Patient Tracing",
+      "sections": [
+        {
+          "label": "Patient Tracing Details",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Contact date",
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "160753AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "type": "CIEL",
+                    "value": "160753"
+                  },
+                  {
+                    "type": "CIEL",
+                    "value": "160753"
+                  },
+                  {
+                    "type": "SNOMED-CT",
+                    "value": "439771001"
+                  },
+                  {
+                    "type": "SNOMED-CT",
+                    "value": "439771001"
+                  }
+                ]
+              },
+              "id": "contactDate",
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "true",
+                  "unspecified": "true",
+                  "hide": {
+                    "hideWhenExpression": "false"
+                  },
+                  "validators": [
+                    {
+                      "type": "date",
+                      "allowFutureDates": "false"
+                    },
+                    {
+                      "type": "js_expression",
+                      "failsWhenExpression": "isDateBefore(myValue, '1980-01-01') || myValue >= today()"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "label": "Contact Method",
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "166456AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "166457AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Physical contact/client tracing",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "166458AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Telephone contact/client tracing",
+                    "conceptMappings": []
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other non-coded",
+                    "conceptMappings": [
+                      {
+                        "type": "PIH-Malawi",
+                        "value": "6408"
+                      },
+                      {
+                        "type": "org.openmrs.module.mdrtb",
+                        "value": "OTHER"
+                      },
+                      {
+                        "type": "PIH",
+                        "value": "5622"
+                      },
+                      {
+                        "type": "org.openmrs.module.mdrtb",
+                        "value": "OTHER"
+                      },
+                      {
+                        "type": "PIH-Malawi",
+                        "value": "6408"
+                      },
+                      {
+                        "type": "SNOMED-MVP",
+                        "value": "56221000105001"
+                      },
+                      {
+                        "type": "AMPATH",
+                        "value": "5622"
+                      },
+                      {
+                        "type": "PIH",
+                        "value": "5622"
+                      },
+                      {
+                        "type": "SNOMED-MVP",
+                        "value": "56221000105001"
+                      },
+                      {
+                        "type": "CIEL",
+                        "value": "5622"
+                      },
+                      {
+                        "type": "AMPATH",
+                        "value": "5622"
+                      },
+                      {
+                        "type": "SNOMED-CT",
+                        "value": "74964007"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "id": "contactMethod",
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "true",
+                  "unspecified": "true",
+                  "hide": {
+                    "hideWhenExpression": "false"
+                  },
+                  "validators": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Tracing Outcome",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Reason for missing a appointment",
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "162169AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": []
+              },
+              "id": "patientContacted",
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "true",
+                  "unspecified": "true",
+                  "hide": {
+                    "hideWhenExpression": "false"
+                  },
+                  "validators": []
+                }
+              ]
+            },
+            {
+              "label": "Expected Return Date",
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "5096AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "weeksList": "",
+                "conceptMappings": [
+                  {
+                    "type": "AMPATH",
+                    "value": "5096"
+                  },
+                  {
+                    "type": "AMPATH",
+                    "value": "5096"
+                  },
+                  {
+                    "type": "PIH-Malawi",
+                    "value": "5096"
+                  },
+                  {
+                    "type": "SNOMED-MVP",
+                    "value": "50961000105000"
+                  },
+                  {
+                    "type": "CIEL",
+                    "value": "5096"
+                  },
+                  {
+                    "type": "org.openmrs.module.mdrtb",
+                    "value": "RETURN VISIT DATE"
+                  },
+                  {
+                    "type": "SNOMED-MVP",
+                    "value": "50961000105000"
+                  },
+                  {
+                    "type": "PIH-Malawi",
+                    "value": "5096"
+                  },
+                  {
+                    "type": "org.openmrs.module.mdrtb",
+                    "value": "RETURN VISIT DATE"
+                  },
+                  {
+                    "type": "SNOMED-CT",
+                    "value": "406543005"
+                  }
+                ]
+              },
+              "id": "expectedReturnDate",
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "true",
+                  "unspecified": "true",
+                  "hide": {
+                    "hideWhenExpression": "!includes('patientContacted','1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+                  },
+                  "validators": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Notes",
+      "sections": [
+        {
+          "label": "Contact tracking notes",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Notes",
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "165095AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rows": "",
+                "conceptMappings": [
+                  {
+                    "type": "CIEL",
+                    "value": "165095"
+                  }
+                ]
+              },
+              "id": "contactTracingNotes"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "availableIntents": [
+    {
+      "intent": "*",
+      "display": "TB Patient Tracing Form"
+    }
+  ],
+  "processor": "EncounterFormProcessor",
+  "uuid": "41f4d6fa-1f29-41b1-9dfd-d9267755d621",
+  "referencedForms": [],
+  "encounterType": "98c938e9-fb3e-4982-ae22-0305cbd12f8c",
+  "encounter": "TB Patient Tracing",
+  "allowUnspecifiedAll": true,
+  "description": "Used to trace a TB patient who has missed an appointment"
+}
