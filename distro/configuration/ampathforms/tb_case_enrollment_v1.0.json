@@ -583,7 +583,7 @@
               "label": "MDR regimen - Free text",
               "type": "obs",
               "required": false,
-              "id": "drRegimen",
+              "id": "drRegimenTxt",
               "questionOptions": {
                 "rendering": "text",
                 "concept": "160136AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
