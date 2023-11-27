@@ -45,7 +45,7 @@
                 },
                 {
                   "label": "Name of contact person",
-                  "id": "__uMGvH6MLn",
+                  "id": "nameofContactPerson",
                   "questionOptions": {
                     "rendering": "text",
                     "concept": "163258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
@@ -54,7 +54,7 @@
                 },
                 {
                   "label": "Contact phone number",
-                  "id": "__MDxMoCxGI",
+                  "id": "contactPhoneNumber",
                   "questionOptions": {
                     "rendering": "text",
                     "concept": "159635AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
@@ -63,7 +63,7 @@
                 },
                 {
                   "label": "Address (text)",
-                  "id": "__u1HxuDKno",
+                  "id": "contactAddress",
                   "questionOptions": {
                     "rendering": "text",
                     "concept": "162725AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
@@ -103,7 +103,7 @@
                 },
                 {
                   "label": "Contacts invited",
-                  "id": "164072",
+                  "id": "contactsInvited",
                   "questionOptions": {
                     "rendering": "select",
                     "concept": "164072AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -131,6 +131,16 @@
       ]
     }
   ],
+  "availableIntents": [
+    {
+      "intent": "*",
+      "display": "TB Contact Listing Form"
+    }
+  ],
+  "processor": "EncounterFormProcessor",
   "uuid": "",
-  "encounterType": ""
+  "referencedForms": [],
+  "encounterType": "70d2b2f6-860b-438c-994b-c28e863dca34",
+  "encounter": "TB Contact Listing",
+  "allowUnspecifiedAll": true
 }

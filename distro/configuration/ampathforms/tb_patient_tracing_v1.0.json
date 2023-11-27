@@ -249,7 +249,7 @@
                   "required": "true",
                   "unspecified": "true",
                   "hide": {
-                    "hideWhenExpression": "!includes('patientContacted','1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+                    "hideWhenExpression": "false"
                   },
                   "validators": []
                 }
