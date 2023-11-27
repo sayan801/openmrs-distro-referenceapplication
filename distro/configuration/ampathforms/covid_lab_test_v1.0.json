@@ -65,15 +65,6 @@
                     "hideWhenExpression": "false"
                   },
                   "validators": []
-                },
-                {
-                  "intent": "COVID_LAB_TEST_EMBED",
-                  "required": "false",
-                  "readonly": "true",
-                  "hide": {
-                    "hideWhenExpression": "true"
-                  },
-                  "validators": []
                 }
               ]
             },
@@ -105,16 +96,6 @@
                   "readonly": "true",
                   "hide": {
                     "hideWhenExpression": "false"
-                  },
-                  "validators": []
-                },
-                {
-                  "intent": "COVID_LAB_TEST_EMBED",
-                  "required": "false",
-                  "unspecified": "true",
-                  "readonly": "true",
-                  "hide": {
-                    "hideWhenExpression": "true"
                   },
                   "validators": []
                 }
@@ -155,32 +136,12 @@
           }
         ]
       }
-    },
-    {
-      "label": "Lab Result",
-      "sections": [],
-      "isSubform": "true",
-      "subform": {
-        "name": "COVID Lab Result Form",
-        "package": "covid",
-        "behaviours": [
-          {
-            "intent": "*",
-            "subform_intent": "COVID_LAB_RESULT_EMBED",
-            "readonly": "true"
-          }
-        ]
-      }
     }
   ],
   "availableIntents": [
     {
       "intent": "*",
       "display": "COVID Lab Test"
-    },
-    {
-      "intent": "COVID_LAB_TEST_EMBED",
-      "display": "COVID Lab Test Embed"
     }
   ],
   "processor": "EncounterFormProcessor",
