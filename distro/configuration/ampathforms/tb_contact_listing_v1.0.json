@@ -35,6 +35,15 @@
               "validators": [],
               "questions": [
                 {
+                  "label": "TB Case ID",
+                  "id": "CaseID",
+                  "questionOptions": {
+                    "rendering": "text",
+                    "concept": "162576AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  "type": "obs"
+                },
+                {
                   "label": "Date Listed",
                   "id": "160753",
                   "questionOptions": {
