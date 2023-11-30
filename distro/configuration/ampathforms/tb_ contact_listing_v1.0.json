@@ -6,6 +6,50 @@
   "retired": false,
   "pages": [
     {
+      "label": "Date of Listing",
+      "sections": [
+        {
+          "label": "Encounter Details",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Date Contacts Listed",
+              "type": "encounterDatetime",
+              "questionOptions": {
+                "rendering": "date",
+                "weeksList": ""
+              },
+              "id": "tbListingDate"
+            },
+            {
+              "label": "TB Case ID",
+              "type": "obs",
+              "required": true,
+              "id": "CaseID",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "162576AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "162576"
+                  },
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "SNOMED CT",
+                    "value": "422549004"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            }
+          ]
+        }
+      ]
+    },
+    {
       "label": "TB Contacts",
       "sections": [
         {
@@ -34,24 +78,6 @@
               "id": "164351",
               "validators": [],
               "questions": [
-                {
-                  "label": "TB Case ID",
-                  "id": "caseID",
-                  "questionOptions": {
-                    "rendering": "text",
-                    "concept": "162576AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                  },
-                  "type": "obs"
-                },
-                {
-                  "label": "Date Listed",
-                  "id": "160753",
-                  "questionOptions": {
-                    "rendering": "date",
-                    "concept": "160753AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                  },
-                  "type": "obs"
-                },
                 {
                   "label": "Name of contact person",
                   "id": "__uMGvH6MLn",
