@@ -898,8 +898,15 @@
       ]
     }
   ],
+  "availableIntents": [
+    {
+      "intent": "*",
+      "display": "TB Case Enrollment Form"
+    }
+  ],
   "processor": "EncounterFormProcessor",
-  "encounterType": "TB Program Enrolment",
+  "encounterType": "9a199b59-b185-485b-b9b3-a9754e65ae57",
+  "encounter": "TB Program Enrolment",
   "referencedForms": [],
   "uuid": "9ad909d2-64a9-437d-9a40-301d50cae1f6",
   "description": "This form enrols a client to the respective TB Program",
