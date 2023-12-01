@@ -14,9 +14,10 @@
           "questions": [
             {
               "label": "Date Contacts Listed",
-              "type": "encounterDatetime",
+              "type": "obs",
               "questionOptions": {
                 "rendering": "date",
+                "concept": "160753AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 "weeksList": ""
               },
               "id": "tbListingDate"
@@ -178,6 +179,4 @@
   "encounterType": "70d2b2f6-860b-438c-994b-c28e863dca34",
   "encounter": "TB Contact Listing",
   "allowUnspecifiedAll": true
-  "uuid": "5f1a4b41-eb36-4a7a-aead-e0d9e6fb76f8",
-  "encounterType": "70d2b2f6-860b-438c-994b-c28e863dca34"
 }
