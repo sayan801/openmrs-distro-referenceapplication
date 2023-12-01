@@ -1,0 +1,1392 @@
+{
+  "encounterType": "91654d2c-d266-4661-9110-a239cf82d5b8",
+  "name": "TB Follow-up Form",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "uuid": "79b05c37-0def-4482-a345-c63b99fbd565",
+  "version": "1.0",
+  "pages": [
+    {
+      "label": "Visit Details",
+      "sections": [
+        {
+          "label": "Visit Details",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Visit Date",
+              "type": "obs",
+              "required": true,
+              "id": "visitDate",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "ceaca505-6dff-4940-8a43-8c060a0924d7",
+                "conceptMappings": [],
+                "answers": []
+              },
+              "validators": []
+            },
+            {
+              "label": "Case ID",
+              "type": "obs",
+              "required": true,
+              "id": "caseID",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "161654AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [],
+                "answers": []
+              },
+              "validators": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "TB Treatment",
+      "sections": [
+        {
+          "label": "TB therapy plan",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Treatment Plan",
+              "type": "obs",
+              "required": true,
+              "id": "tbRxPlan",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "1268AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "PIH",
+                    "value": "1268"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "1268"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "AMPATH",
+                    "value": "1268"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "None"
+                  },
+                  {
+                    "concept": "1256AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Start drugs"
+                  },
+                  {
+                    "concept": "1257AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Continue regimen"
+                  },
+                  {
+                    "concept": "1260AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Stop all"
+                  },
+                  {
+                    "concept": "1259AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Change regimen"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "Month of Treatment",
+              "type": "obs",
+              "required": true,
+              "id": "monthOfRx",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "1418AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [],
+                "answers": []
+              },
+              "validators": []
+            },
+            {
+              "label": "Date started on DS Regimen",
+              "type": "obs",
+              "required": false,
+              "id": "rxStartDate",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "1113AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "SNOMED CT",
+                    "value": "413946009"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "SNOMED MVP",
+                    "value": "11131000105005"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "AMPATH",
+                    "value": "1113"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "PIH",
+                    "value": "1113"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "1113"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            },
+            {
+              "label": "MDR tuberculosis treatment start date",
+              "type": "obs",
+              "required": false,
+              "id": "tbRxMdrStart",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "164416AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "164416"
+                  },
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "SNOMED CT",
+                    "value": "413946009"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            },
+            {
+              "label": "Date completed/Stopped Treatment",
+              "type": "obs",
+              "required": false,
+              "id": "tbRxStop",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "159431AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "PIH",
+                    "value": "2597"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "159431"
+                  },
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "SNOMED CT",
+                    "value": "413947000"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            },
+            {
+              "label": "Reason TB Treatment Stopped",
+              "type": "obs",
+              "required": false,
+              "id": "rxStopped",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "1269AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "org.openmrs.module.mdrtb",
+                    "value": "REASON TUBERCULOSIS TREATMENT CHANGED OR STOPPED"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "AMPATH",
+                    "value": "1269"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "1269"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "PIH",
+                    "value": "1269"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "AMPATH",
+                    "value": "1927"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "1258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Change formulation"
+                  },
+                  {
+                    "concept": "1267AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Completed"
+                  },
+                  {
+                    "concept": "159794AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "continuation phase, tuberculosis treatment"
+                  },
+                  {
+                    "concept": "159AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Deceased"
+                  },
+                  {
+                    "concept": "141747AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Drug-Drug Interaction (Properly Prescribed and Administered)"
+                  },
+                  {
+                    "concept": "1754AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Medications unavailable"
+                  },
+                  {
+                    "concept": "843AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Regimen failure"
+                  },
+                  {
+                    "concept": "159956AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "resistant to anti-tuberculosis drugs"
+                  },
+                  {
+                    "concept": "102AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Toxicity, drug"
+                  },
+                  {
+                    "concept": "160041AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Treatment extended"
+                  },
+                  {
+                    "concept": "983AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Weight change"
+                  },
+                  {
+                    "concept": "1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Unknown"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
+              },
+              "validators": []
+            }
+          ]
+        },
+        {
+          "label": "Treatment Phase",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "tuberculosis treatment phase",
+              "type": "obs",
+              "required": false,
+              "id": "rxPhase",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "159792AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [
+                  {
+                    "concept": "159795AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Initial phase, tuberculosis treatment"
+                  },
+                  {
+                    "concept": "159794AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Continuation phase, tuberculosis treatment"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "Intensive phase regimen start date",
+              "type": "obs",
+              "required": false,
+              "id": "rxIntensiveStart",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "164403AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "164403"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            },
+            {
+              "label": "Continuation phase regimen start date",
+              "type": "obs",
+              "required": false,
+              "id": "rxContinuationDate",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "164404AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "164404"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            }
+          ]
+        },
+        {
+          "label": "Directly Observed Therapy (DOT)",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Drug administration observation",
+              "type": "obs",
+              "required": false,
+              "id": "tbRxDot",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "164373AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "164373"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "SNOMED CT",
+                    "value": "414051007"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "164370AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Drug intake observed"
+                  },
+                  {
+                    "concept": "164371AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Not observed"
+                  },
+                  {
+                    "concept": "164372AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Did not take medication"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "DOT done by",
+              "type": "obs",
+              "required": false,
+              "id": "dotBy",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "238eb8e6-da41-46dd-83bf-0edad6df2489",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "5487"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "5619AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Health care provider"
+                  },
+                  {
+                    "concept": "1560AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Family member"
+                  },
+                  {
+                    "concept": "1555AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Community health care worker"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
+              },
+              "validators": []
+            }
+          ]
+        },
+        {
+          "label": "TB Adverse Drug Effect",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "type": "obsGroup",
+              "label": "ADRs",
+              "id": "adrGroup",
+              "questionOptions": {
+                "concept": "160647AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "repeating"
+              },
+              "questions": [
+                {
+                  "label": "Suspected Drug",
+                  "type": "obs",
+                  "required": false,
+                  "id": "adrDrug",
+                  "questionOptions": {
+                    "rendering": "select",
+                    "concept": "160643AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "conceptMappings": [],
+                    "answers": [
+                      {
+                        "concept": "71060AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Amikacin"
+                      },
+                      {
+                        "concept": "dc7912c7-30ab-102d-86b0-7a5022ba4115",
+                        "label": "Amoxicillin and Clavulanic Acid"
+                      },
+                      {
+                        "concept": "163143AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Bedaquiline"
+                      },
+                      {
+                        "concept": "72794AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Capreomycin (C)"
+                      },
+                      {
+                        "concept": "73449AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Ciprofloxacin (CF)"
+                      },
+                      {
+                        "concept": "73581AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Clofazimine (CFZ)"
+                      },
+                      {
+                        "concept": "74123AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Cycloserine (Cs)"
+                      },
+                      {
+                        "concept": "1f9143a5-94eb-4398-a3fa-740e6f00dd7b",
+                        "label": "Delamanid (Dlm)"
+                      },
+                      {
+                        "concept": "75976AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Ethionamide (ET)"
+                      },
+                      {
+                        "concept": "76835AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Gatifloxacin (GF)"
+                      },
+                      {
+                        "concept": "78280AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Isoniazid (H)"
+                      },
+                      {
+                        "concept": "78385AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Kanamycin (K)"
+                      },
+                      {
+                        "concept": "78788AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Levofloxacin (Lfx)"
+                      },
+                      {
+                        "concept": "6a616982-faa1-4f60-9675-7f507baafd3e",
+                        "label": "Linezolid (Lzd)"
+                      },
+                      {
+                        "concept": "80133AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Moxifloxacin (Mfx)"
+                      },
+                      {
+                        "concept": "81022AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Ofloxacin (OF)"
+                      },
+                      {
+                        "concept": "81457AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "P-Aminosalicylic Acid (PAA)"
+                      },
+                      {
+                        "concept": "82772AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Prothionamide (PR)"
+                      },
+                      {
+                        "concept": "82900AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Pyrazinamide (Z)"
+                      },
+                      {
+                        "concept": "82912AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Pyridoxine (B6)"
+                      },
+                      {
+                        "concept": "83352AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Rifabutin (RB)"
+                      },
+                      {
+                        "concept": "83352AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Rifabutin"
+                      },
+                      {
+                        "concept": "dc87f047-30ab-102d-86b0-7a5022ba4115",
+                        "label": "Rifampicin (R)"
+                      },
+                      {
+                        "concept": "84360AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Streptomycin (S)"
+                      },
+                      {
+                        "concept": "84360AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Streptomycin (S)"
+                      },
+                      {
+                        "concept": "84836AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Terizidone (T)"
+                      },
+                      {
+                        "concept": "160019AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Thioacetazone (TA)"
+                      },
+                      {
+                        "concept": "160020AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Viomycin (V)"
+                      },
+                      {
+                        "concept": "1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Unknown"
+                      }
+                    ]
+                  },
+                  "validators": []
+                },
+                {
+                  "label": "ADR",
+                  "type": "obs",
+                  "required": false,
+                  "id": "adr",
+                  "questionOptions": {
+                    "rendering": "select",
+                    "concept": "160646AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "conceptMappings": [],
+                    "answers": [
+                      {
+                        "concept": "142412AAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Diarrhea"
+                      },
+                      {
+                        "concept": "137162AAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Flu-Like Syndrome"
+                      },
+                      {
+                        "concept": "159098AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Hepatotoxicity"
+                      },
+                      {
+                        "concept": "138111AAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Hyperuricemia"
+                      },
+                      {
+                        "concept": "5978AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Nausea"
+                      },
+                      {
+                        "concept": "133073AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Nephrotoxicity"
+                      },
+                      {
+                        "concept": "114736AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Optic Neuritis"
+                      },
+                      {
+                        "concept": "131103AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Ototoxicity"
+                      },
+                      {
+                        "concept": "118983AAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Peripheral neuropathy"
+                      },
+                      {
+                        "concept": "167271AAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Psychiatric symptoms"
+                      },
+                      {
+                        "concept": "128384AAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "QT Interval Prolongation"
+                      },
+                      {
+                        "concept": "512AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Rash"
+                      },
+                      {
+                        "concept": "113180AAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Tendon Rupture"
+                      },
+                      {
+                        "concept": "123074AAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Visual Disturbances"
+                      },
+                      {
+                        "concept": "122983AAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Vomiting"
+                      },
+                      {
+                        "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Other"
+                      }
+                    ]
+                  },
+                  "validators": []
+                },
+                {
+                  "label": "Reaction (to an allergen)(text)",
+                  "type": "obs",
+                  "required": false,
+                  "id": "adrTxt",
+                  "questionOptions": {
+                    "rendering": "text",
+                    "concept": "160644AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                  },
+                  "validators": []
+                },
+                {
+                  "label": "Grade of adverse reaction",
+                  "id": "adrGrade",
+                  "questionOptions": {
+                    "rendering": "select",
+                    "concept": "160759AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "answers": [
+                      {
+                        "concept": "160754AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Adverse reaction grade 1"
+                      },
+                      {
+                        "concept": "160755AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Adverse reaction grade 2"
+                      },
+                      {
+                        "concept": "160756AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Adverse reaction grade 3"
+                      },
+                      {
+                        "concept": "160757AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Adverse reaction grade 4"
+                      }
+                    ]
+                  },
+                  "type": "obs"
+                }
+              ],
+              "validators": []
+            },
+            {
+              "label": "Action Taken",
+              "type": "obs",
+              "required": false,
+              "id": "adrAction",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "164378AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "164378"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            }
+          ]
+        },
+        {
+          "label": "Adherence",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "TB Drug Adherence",
+              "type": "obs",
+              "required": false,
+              "id": "tbRxAdherence",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "164075AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "164075"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "PIH",
+                    "value": "2307"
+                  },
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "SNOMED CT",
+                    "value": "405077003"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "159405AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Good"
+                  },
+                  {
+                    "concept": "159406AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Fair"
+                  },
+                  {
+                    "concept": "159407AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Poor"
+                  },
+                  {
+                    "concept": "1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Unknown"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "Reason for poor adherence",
+              "type": "obs",
+              "required": false,
+              "id": "tbRxPoorAdherence",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "160582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "SNOMED CT",
+                    "value": "397695000"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "PIH",
+                    "value": "3140"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "160582"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "121725AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Alcohol abuse"
+                  },
+                  {
+                    "concept": "819AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Cannot afford treatment"
+                  },
+                  {
+                    "concept": "160589AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Concerned about privacy/stigma"
+                  },
+                  {
+                    "concept": "119537AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Depression"
+                  },
+                  {
+                    "concept": "160586AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Felt better and stopped taking medication"
+                  },
+                  {
+                    "concept": "160585AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Felt too ill to take medication"
+                  },
+                  {
+                    "concept": "160587AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Forgot to take medication"
+                  },
+                  {
+                    "concept": "160584AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Lost or ran out of medication"
+                  },
+                  {
+                    "concept": "1754AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Medications unavailable"
+                  },
+                  {
+                    "concept": "160588AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Pill burden"
+                  },
+                  {
+                    "concept": "160583AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Shares medications with others"
+                  },
+                  {
+                    "concept": "102AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Toxicity, drug"
+                  },
+                  {
+                    "concept": "820AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Transport problems"
+                  },
+                  {
+                    "concept": "1778AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Treatment or procedure not carried out due to fear of side effects"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
+              },
+              "validators": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "TB Monitoring",
+      "sections": [
+        {
+          "label": "Molecular/Microbiological Tests ordered",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Investigations to order ",
+              "type": "obs",
+              "required": false,
+              "id": "tbInvestigations",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "165254AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "165254"
+                  },
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "SNOMED CT",
+                    "value": "416342005"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "159961AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Smear microscopy"
+                  },
+                  {
+                    "concept": "164945AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "GeneXpert MTB/Rif"
+                  },
+                  {
+                    "concept": "167459AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Rapid urine LAM"
+                  },
+                  {
+                    "concept": "159391AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Tuberculosis drug sensitivity testing"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "Sputum for acid fast bacilli",
+              "type": "obs",
+              "required": false,
+              "id": "sputumAafb",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "159865AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "SNOMED MVP",
+                    "value": "1598651000105001"
+                  },
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "SNOMED CT",
+                    "value": "391483001"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "159865"
+                  },
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "AMPATH",
+                    "value": "2309"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "159866AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "sputum for acid fast bacilli, zero month"
+                  },
+                  {
+                    "concept": "159867AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "sputum for acid fast bacilli, two months"
+                  },
+                  {
+                    "concept": "159868AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Sputum for acid fast bacilli, three months"
+                  },
+                  {
+                    "concept": "159869AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "sputum for acid fast bacilli, five months"
+                  },
+                  {
+                    "concept": "159870AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "sputum for acid fast bacilli, eight months"
+                  }
+                ]
+              },
+              "validators": []
+            }
+          ]
+        },
+        {
+          "label": "Radiology",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Chest X-ray",
+              "type": "obs",
+              "required": false,
+              "id": "car",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "12AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "SNOMED CT",
+                    "value": "399208008"
+                  },
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "AMPATH",
+                    "value": "2395"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "12"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "AMPATH",
+                    "value": "5229"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "IMO ProcedureIT",
+                    "value": "708400"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "PIH",
+                    "value": "3386"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "AMPATH",
+                    "value": "375"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "AMPATH",
+                    "value": "645"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "AMPATH",
+                    "value": "12"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "1115AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Normal"
+                  },
+                  {
+                    "concept": "6052AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Cavitary lesion"
+                  },
+                  {
+                    "concept": "6050AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Diffuse non-miliary changes"
+                  },
+                  {
+                    "concept": "5158AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Evidence of cardiac enlargement"
+                  },
+                  {
+                    "concept": "6049AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Infiltrate"
+                  },
+                  {
+                    "concept": "1137AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Miliary changes"
+                  },
+                  {
+                    "concept": "114108AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Pleural effusion"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
+              },
+              "validators": []
+            }
+          ]
+        },
+        {
+          "label": "Nutritional Support",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Nutritional support",
+              "type": "obs",
+              "required": false,
+              "id": "nutritionalSupport",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "5484AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "5484"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "PIH",
+                    "value": "1400"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "AMPATH",
+                    "value": "5484"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "SNOMED CT",
+                    "value": "278906000"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "None"
+                  },
+                  {
+                    "concept": "161648AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Food support"
+                  },
+                  {
+                    "concept": "161649AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Micronutrient support"
+                  },
+                  {
+                    "concept": "1380AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Nutrition counseling"
+                  },
+                  {
+                    "concept": "161650AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Therapeutic feeding"
+                  },
+                  {
+                    "concept": "82912AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Pyridoxine (B6)"
+                  },
+                  {
+                    "concept": "86339AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Vitamin A"
+                  }
+                ]
+              },
+              "validators": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Referrals",
+      "sections": [
+        {
+          "label": "Referrals ordered",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Referrals ordered",
+              "type": "obs",
+              "required": false,
+              "id": "referralsOrdered",
+              "questionOptions": {
+                "rendering": "multiCheckbox",
+                "concept": "1272AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "SNOMED CT",
+                    "value": "439980006"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "1272"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "AMPATH",
+                    "value": "1932"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "AMPATH",
+                    "value": "1272"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "None"
+                  },
+                  {
+                    "concept": "5488AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Adherence counseling"
+                  },
+                  {
+                    "concept": "1288AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Alcohol counseling"
+                  },
+                  {
+                    "concept": "5576AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "ARV for mother"
+                  },
+                  {
+                    "concept": "1374AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Dental care referral"
+                  },
+                  {
+                    "concept": "1459AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Diagnostic testing and counseling for HIV"
+                  },
+                  {
+                    "concept": "1167AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Disclosure counseling"
+                  },
+                  {
+                    "concept": "5483AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Family planning services"
+                  },
+                  {
+                    "concept": "1275AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Health center hospital"
+                  },
+                  {
+                    "concept": "1588AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Health clinic/post"
+                  },
+                  {
+                    "concept": "1589AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Hospital"
+                  },
+                  {
+                    "concept": "5485AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Inpatient care or hospitalization"
+                  },
+                  {
+                    "concept": "159937AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Maternal and child health program"
+                  },
+                  {
+                    "concept": "5489AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Mental health services"
+                  },
+                  {
+                    "concept": "5484AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Nutritional support"
+                  },
+                  {
+                    "concept": "160456AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Obstetrics and gynecology department"
+                  },
+                  {
+                    "concept": "1373AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Ophthalmology referral"
+                  },
+                  {
+                    "concept": "1372AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Postnatal care referral"
+                  },
+                  {
+                    "concept": "1371AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Prenatal care referral"
+                  },
+                  {
+                    "concept": "160479AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Private health care clinic/facility"
+                  },
+                  {
+                    "concept": "161359AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Private home-based care"
+                  },
+                  {
+                    "concept": "5490AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Psychosocial counseling"
+                  },
+                  {
+                    "concept": "1610AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Referral for antiretroviral therapy"
+                  },
+                  {
+                    "concept": "1609AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Referral for imaging study"
+                  },
+                  {
+                    "concept": "1611AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Referral for opportunistic infection treatment"
+                  },
+                  {
+                    "concept": "1636AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Referral for pregnancy termination"
+                  },
+                  {
+                    "concept": "160546AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Sexually transmitted infection program/clinic"
+                  },
+                  {
+                    "concept": "5486AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Social support services"
+                  },
+                  {
+                    "concept": "164164AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Surgical Outpatient Department"
+                  },
+                  {
+                    "concept": "1455AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Tobacco use counseling"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other"
+                  }
+                ]
+              },
+              "validators": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Appointments",
+      "sections": [
+        {
+          "label": "Next Appointment",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Next Appointment Date",
+              "type": "obs",
+              "required": false,
+              "id": "dateAppointment",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "5096AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "AMPATH",
+                    "value": "5096"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "SNOMED MVP",
+                    "value": "50961000105000"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "org.openmrs.module.mdrtb",
+                    "value": "RETURN VISIT DATE"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "5096"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "PIH Malawi",
+                    "value": "5096"
+                  },
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "SNOMED CT",
+                    "value": "406543005"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            },
+            {
+              "label": "Remarks",
+              "type": "obs",
+              "required": false,
+              "id": "remarks",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "165095AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "165095"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
