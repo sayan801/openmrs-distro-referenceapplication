@@ -1157,7 +1157,7 @@
               "required": false,
               "id": "referralsOrdered",
               "questionOptions": {
-                "rendering": "multiCheckbox",
+                "rendering": "checkbox",
                 "concept": "1272AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 "conceptMappings": [
                   {
