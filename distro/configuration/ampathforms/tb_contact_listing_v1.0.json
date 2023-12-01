@@ -14,9 +14,10 @@
           "questions": [
             {
               "label": "Date Contacts Listed",
-              "type": "encounterDatetime",
+              "type": "obs",
               "questionOptions": {
                 "rendering": "date",
+                "concept": "160753AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 "weeksList": ""
               },
               "id": "tbListingDate"
