@@ -1,10 +1,55 @@
 {
   "name": "TB Contact Listing",
   "description": "TB Contact Listing Form",
-  "version": "1",
+  "version": "1.0",
   "published": true,
   "retired": false,
   "pages": [
+    {
+      "label": "Date of Listing",
+      "sections": [
+        {
+          "label": "Encounter Details",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Date Contacts Listed",
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "160753AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "weeksList": ""
+              },
+              "id": "tbListingDate"
+            },
+            {
+              "label": "TB Case ID",
+              "type": "obs",
+              "required": true,
+              "id": "CaseID",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "162576AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "162576"
+                  },
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "SNOMED CT",
+                    "value": "422549004"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            }
+          ]
+        }
+      ]
+    },
     {
       "label": "TB Contacts",
       "sections": [
@@ -35,17 +80,8 @@
               "validators": [],
               "questions": [
                 {
-                  "label": "Date Listed",
-                  "id": "160753",
-                  "questionOptions": {
-                    "rendering": "date",
-                    "concept": "160753AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                  },
-                  "type": "obs"
-                },
-                {
                   "label": "Name of contact person",
-                  "id": "__uMGvH6MLn",
+                  "id": "nameofContactPerson",
                   "questionOptions": {
                     "rendering": "text",
                     "concept": "163258AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
@@ -54,7 +90,7 @@
                 },
                 {
                   "label": "Contact phone number",
-                  "id": "__MDxMoCxGI",
+                  "id": "contactPhoneNumber",
                   "questionOptions": {
                     "rendering": "text",
                     "concept": "159635AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
@@ -63,7 +99,7 @@
                 },
                 {
                   "label": "Address (text)",
-                  "id": "__u1HxuDKno",
+                  "id": "contactAddress",
                   "questionOptions": {
                     "rendering": "text",
                     "concept": "162725AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
@@ -85,7 +121,7 @@
                         "concept": "160237AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                         "label": "Classmate"
                       },
-                    {
+                      {
                         "concept": "160238AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                         "label": "Co-worker"
                       },
@@ -103,7 +139,7 @@
                 },
                 {
                   "label": "Contacts invited",
-                  "id": "164072",
+                  "id": "contactsInvited",
                   "questionOptions": {
                     "rendering": "select",
                     "concept": "164072AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -131,6 +167,16 @@
       ]
     }
   ],
-  "uuid": "",
-  "encounterType": ""
+  "availableIntents": [
+    {
+      "intent": "*",
+      "display": "TB Contact Listing Form"
+    }
+  ],
+  "processor": "EncounterFormProcessor",
+  "uuid": "5f1a4b41-eb36-4a7a-aead-e0d9e6fb76f8",
+  "referencedForms": [],
+  "encounterType": "70d2b2f6-860b-438c-994b-c28e863dca34",
+  "encounter": "TB Contact Listing",
+  "allowUnspecifiedAll": true
 }

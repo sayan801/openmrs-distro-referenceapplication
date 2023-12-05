@@ -153,17 +153,7 @@
                 ]
               },
               "id": "contactMethod",
-              "behaviours": [
-                {
-                  "intent": "*",
-                  "required": "true",
-                  "unspecified": "true",
-                  "hide": {
-                    "hideWhenExpression": "false"
-                  },
-                  "validators": []
-                }
-              ]
+              "behaviours": []
             }
           ]
         },
@@ -249,7 +239,7 @@
                   "required": "true",
                   "unspecified": "true",
                   "hide": {
-                    "hideWhenExpression": "!includes('patientContacted','1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')"
+                    "hideWhenExpression": "false"
                   },
                   "validators": []
                 }
