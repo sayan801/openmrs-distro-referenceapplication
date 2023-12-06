@@ -53,3 +53,6 @@ b553904d-23c0-5394-b115-bc132505c053,,HL7-ActSubstanceAdminSubstitutionCode,HL7-
 df272316-641f-5690-99fa-937df27a81f5,,HL7-DiagnosticReportStatus,HL7-DiagnosticReportStatus,,
 4d85531c-f351-5f85-aae2-2856e5f51e11,,CCAM,CCAM,,
 f6417e5c-4e0c-5b54-96f9-65ba241f0949,,OS4H.MASTER,Imported from https://api.openconceptlab.org/orgs/OHRITechGroup/sources/TB_SC/mappings/1/,,
+c3822f22-943e-11ee-b9d1-0242ac120002,,NigeriaMRS,Nigeria Medical Record System,,
+c38232ba-943e-11ee-b9d1-0242ac120002,,UgandaEMR,UgandaEMR,,
+c3823440-943e-11ee-b9d1-0242ac120002,,OHRITB,TB Functional Package,,
