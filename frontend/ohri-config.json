@@ -57,6 +57,9 @@
   "@openmrs/esm-login-app": {
     "logo": {
       "src": "ohri_logo_light.svg"
+    },
+    "links": {
+      "loginSuccess": "${openmrsSpaBase}/dashboard/home"
     }
   },
   "@ohri/openmrs-esm-ohri-pmtct": {
