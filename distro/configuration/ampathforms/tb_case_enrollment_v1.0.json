@@ -13,7 +13,6 @@
             {
               "label": "TB Program to enrol",
               "type": "obs",
-              "required": false,
               "id": "tbProgramType",
               "questionOptions": {
                 "rendering": "radio",
@@ -30,12 +29,19 @@
                   }
                 ]
               },
-              "validators": []
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "false",
+                  "unspecified": "false",
+                  "hide": {},
+                  "validators": []
+                }
+              ]
             },
             {
               "label": "Date enrolled in tuberculosis (TB) care",
               "type": "obs",
-              "required": true,
               "id": "tbRegDate",
               "questionOptions": {
                 "rendering": "date",
@@ -54,12 +60,24 @@
                 ],
                 "answers": []
               },
-              "validators": []
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "true",
+                  "unspecified": "false",
+                  "hide": {},
+                  "validators": [
+                    {
+                      "type": "date",
+                      "allowFutureDates": "false"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "label": "Date of TB Diagnosis",
               "type": "obs",
-              "required": false,
               "id": "date-diagnosed-with-dr-tb",
               "questionOptions": {
                 "rendering": "date",
@@ -67,12 +85,29 @@
                 "conceptMappings": [],
                 "answers": []
               },
-              "validators": []
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "true",
+                  "unspecified": "false",
+                  "hide": {},
+                  "validators": [
+                    {
+                      "type": "date",
+                      "allowFutureDates": "false"
+                    },
+                    {
+                      "type": "js_expression",
+                      "failsWhenExpression": "myValue > useFieldValue('tbRegDate')",
+                      "message": "Diagnosis is after enrolment"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "label": "DS TB Treatment Number",
               "type": "obs",
-              "required": false,
               "id": "dsServiceID",
               "questionOptions": {
                 "rendering": "number",
@@ -86,12 +121,21 @@
                 ],
                 "answers": []
               },
-              "validators": []
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "false",
+                  "unspecified": "false",
+                  "hide": {
+                    "hideWhenExpression": "isEmpty(tbProgramType) || tbProgramType !== '160541AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  "validators": []
+                }
+              ]
             },
             {
               "label": "DR TB Treatment ID",
               "type": "obs",
-              "required": false,
               "id": "drServiceID",
               "questionOptions": {
                 "rendering": "text",
@@ -105,12 +149,21 @@
                 ],
                 "answers": []
               },
-              "validators": []
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "false",
+                  "unspecified": "false",
+                  "hide": {
+                    "hideWhenExpression": "isEmpty(tbProgramType) || tbProgramType !== '160052AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  "validators": []
+                }
+              ]
             },
             {
               "label": "TB Case ID.",
               "type": "obs",
-              "required": false,
               "id": "caseID",
               "questionOptions": {
                 "rendering": "text",
@@ -128,7 +181,16 @@
                   }
                 ],
                 "answers": []
-              }
+              },
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "true",
+                  "unspecified": "false",
+                  "hide": {},
+                  "validators": []
+                }
+              ]
             }
           ]
         }
@@ -144,7 +206,6 @@
             {
               "label": "Patient Type",
               "type": "obs",
-              "required": true,
               "id": "patient-type",
               "questionOptions": {
                 "rendering": "radio",
@@ -192,7 +253,15 @@
                   }
                 ]
               },
-              "validators": []
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "true",
+                  "unspecified": "false",
+                  "hide": {},
+                  "validators": []
+                }
+              ]
             }
           ]
         },
@@ -203,7 +272,6 @@
             {
               "label": "Site of tuberculosis",
               "type": "obs",
-              "required": false,
               "id": "diseaseClassification",
               "questionOptions": {
                 "rendering": "radio",
@@ -220,7 +288,15 @@
                   }
                 ]
               },
-              "validators": []
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "true",
+                  "unspecified": "false",
+                  "hide": {},
+                  "validators": []
+                }
+              ]
             },
             {
               "label": "Bacteriological status",
@@ -242,7 +318,16 @@
                   }
                 ]
               },
-              "validators": []
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "false",
+                  "unspecified": "false",
+                  "hide": {
+                    "hideWhenExpression": "diseaseClassification !== '42AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  }
+                }
+              ]
             },
             {
               "label": "Indicate Site of Extra-Pulmonary TB",
@@ -255,7 +340,16 @@
                 "conceptMappings": [],
                 "answers": []
               },
-              "validators": []
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "false",
+                  "unspecified": "false",
+                  "hide": {
+                    "hideWhenExpression": "diseaseClassification !== '5042AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  }
+                }
+              ]
             }
           ]
         },
@@ -266,7 +360,6 @@
             {
               "label": "TB drug resistance pattern",
               "type": "obs",
-              "required": false,
               "id": "resistancePattern",
               "questionOptions": {
                 "rendering": "radio",
@@ -305,7 +398,16 @@
                     "label": "Extremely drug-resistant tuberculosis infection"
                   }
                 ]
-              }
+              },
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "false",
+                  "unspecified": "false",
+                  "hide": {},
+                  "validators": []
+                }
+              ]
             }
           ]
         },
@@ -316,7 +418,6 @@
             {
               "label": "HIV Status",
               "type": "obs",
-              "required": false,
               "id": "everTestedForHIV",
               "questionOptions": {
                 "rendering": "radio",
@@ -357,7 +458,16 @@
                     "label": "Unknown"
                   }
                 ]
-              }
+              },
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "false",
+                  "unspecified": "false",
+                  "hide": {},
+                  "validators": []
+                }
+              ]
             },
             {
               "label": "Date HIV test done",
@@ -370,9 +480,10 @@
               "behaviours": [
                 {
                   "intent": "*",
-                  "required": "true",
-                  "unspecified": "true",
-                  "hide": {},
+                  "unspecified": "false",
+                  "required": "false",
+                  "hide": {                    
+                    "hideWhenExpression": "isEmpty(everTestedForHIV) || everTestedForHIV === '1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"},
                   "validators": [
                     {
                       "type": "date",
@@ -380,7 +491,8 @@
                     },
                     {
                       "type": "js_expression",
-                      "failsWhenExpression": "isDateBefore(myValue, '1980-01-01') || myValue >= today()"
+                      "failsWhenExpression": "isDateBefore(myValue, '1980-01-01') || myValue >= today()",
+                      "message": "Out of range date"
                     }
                   ]
                 }
@@ -401,7 +513,6 @@
             {
               "label": "Drug-susceptible regimen",
               "type": "obs",
-              "required": false,
               "id": "dsRegimen",
               "questionOptions": {
                 "rendering": "select",
@@ -434,12 +545,21 @@
                   }
                 ]
               },
-              "validators": []
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "false",
+                  "unspecified": "false",
+                  "hide": {
+                    "hideWhenExpression": "isEmpty(tbProgramType) || tbProgramType !== '160541AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  "validators": []
+                }
+              ]
             },
             {
               "label": "Date DS TB Treatment Started",
               "type": "obs",
-              "required": false,
               "id": "dsRxDate",
               "questionOptions": {
                 "rendering": "date",
@@ -473,7 +593,27 @@
                 ],
                 "answers": []
               },
-              "validators": []
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "true",
+                  "unspecified": "false",
+                  "hide": {
+                    "hideWhenExpression": "isEmpty(tbProgramType) || tbProgramType !== '160541AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  "validators": [
+                    {
+                      "type": "date",
+                      "allowFutureDates": "false"
+                    },
+                    {
+                      "type": "js_expression",
+                      "failsWhenExpression": "myValue < useFieldValue('tbRegDate')",
+                      "message": "Treatment before enrolment"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -484,7 +624,6 @@
             {
               "label": "MDR tuberculosis treatment type",
               "type": "obs",
-              "required": false,
               "id": "drRegimenType",
               "questionOptions": {
                 "rendering": "select",
@@ -516,12 +655,20 @@
                   }
                 ]
               },
-              "validators": []
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "false",
+                  "unspecified": "false",
+                  "hide": {
+                    "hideWhenExpression": "isEmpty(tbProgramType) || tbProgramType !== '160052AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  }
+                }
+              ]
             },
             {
               "label": "MDR regimen",
               "type": "obs",
-              "required": false,
               "id": "drRegimen",
               "questionOptions": {
                 "rendering": "select",
@@ -577,12 +724,20 @@
                   }
                 ]
               },
-              "validators": []
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "false",
+                  "unspecified": "false",
+                  "hide": {
+                    "hideWhenExpression": "isEmpty(tbProgramType) || tbProgramType !== '160052AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  }
+                }
+              ]
             },
             {
               "label": "MDR regimen - Free text",
               "type": "obs",
-              "required": false,
               "id": "MdrRegimen",
               "questionOptions": {
                 "rendering": "textarea",
@@ -596,12 +751,20 @@
                 ],
                 "answers": []
               },
-              "validators": []
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "false",
+                  "unspecified": "false",
+                  "hide": {
+                    "hideWhenExpression": "isEmpty(tbProgramType) || tbProgramType !== '160052AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  }
+                }
+              ]
             },
             {
               "label": "MDR Treatment Start Date",
               "type": "obs",
-              "required": false,
               "id": "mdrRxDate",
               "questionOptions": {
                 "rendering": "date",
@@ -620,7 +783,22 @@
                 ],
                 "answers": []
               },
-              "validators": []
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "true",
+                  "unspecified": "false",
+                  "hide": {
+                    "hideWhenExpression": "isEmpty(tbProgramType) || tbProgramType !== '160052AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
+                  "validators": [
+                    {
+                      "type": "date",
+                      "allowFutureDates": "false"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -650,7 +828,15 @@
                 ],
                 "answers": []
               },
-              "validators": []
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "false",
+                  "unspecified": "false",
+                  "hide": {},
+                  "validators": []
+                }
+              ]
             },
             {
               "label": "Treatment supporter’s address",
@@ -662,12 +848,19 @@
                 "concept": "160641AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 "answers": []
               },
-              "validators": []
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "false",
+                  "unspecified": "false",
+                  "hide": {},
+                  "validators": []
+                }
+              ]
             },
             {
               "label": "Relationship to patient",
               "type": "obs",
-              "required": false,
               "id": "relationshipToPatient",
               "questionOptions": {
                 "rendering": "select",
@@ -707,12 +900,19 @@
                   }
                 ]
               },
-              "validators": []
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "false",
+                  "unspecified": "false",
+                  "hide": {},
+                  "validators": []
+                }
+              ]
             },
             {
               "label": "Treatment supporter’s cell phone no.",
               "type": "obs",
-              "required": false,
               "id": "rxPhoneNo",
               "questionOptions": {
                 "rendering": "text",
@@ -726,7 +926,15 @@
                 ],
                 "answers": []
               },
-              "validators": []
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "false",
+                  "unspecified": "false",
+                  "hide": {},
+                  "validators": []
+                }
+              ]
             }
           ]
         }
@@ -739,6 +947,50 @@
           "label": "Tuberculosis Treatment Outcome",
           "isExpanded": "true",
           "questions": [
+            {
+              "label": "Outcome date, tuberculosis treatment",
+              "type": "obs",
+              "required": true,
+              "id": "outcomeTBRx",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "159787AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "159787"
+                  },
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "AMPATH",
+                    "value": "6207"
+                  },
+                  {
+                    "relationship": "NARROWER-THAN",
+                    "type": "SNOMED CT",
+                    "value": "439771001"
+                  }
+                ],
+                "answers": []
+              },
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "false",
+                  "unspecified": "false",
+                  "hide": {
+                    "hideWhenExpression": "isEmpty(tbRegDate)"
+                  },
+                  "validators": [
+                    {
+                      "type": "date",
+                      "allowFutureDates": "false"
+                    }
+                  ]
+                }
+              ]
+            },
             {
               "label": "TB Treatment Outcome",
               "type": "obs",
@@ -799,7 +1051,18 @@
                     "label": "Not assessed"
                   }
                 ]
-              }
+              },
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "false",
+                  "unspecified": "false",
+                  "hide": {
+                    "hideWhenExpression": "isEmpty(tbRegDate) || isEmpty(outcomeTBRx)"
+                  },
+                  "validators": []
+                }
+              ]
             },
             {
               "label": "TB treatment end date",
@@ -828,7 +1091,22 @@
                 ],
                 "answers": []
               },
-              "validators": []
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "false",
+                  "unspecified": "false",
+                  "hide": {
+                    "hideWhenExpression": "isEmpty(tbRxOutcome) || tbRxOutcome === '160034AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' ||  tbRxOutcome === '160737AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' "
+                  },
+                  "validators": [
+                    {
+                      "type": "date",
+                      "allowFutureDates": "false"
+                    }
+                  ]
+                }
+              ]
             },
             {
               "label": "Death Date",
@@ -862,38 +1140,26 @@
                 ],
                 "answers": []
               },
-              "validators": []
-            },
-            {
-              "label": "Outcome date, tuberculosis treatment",
-              "type": "obs",
-              "id": "outcomeTBRx",
-              "questionOptions": {
-                "rendering": "date",
-                "concept": "159787AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                "conceptMappings": [
-                  {
-                    "relationship": "SAME-AS",
-                    "type": "CIEL",
-                    "value": "159787"
+              "behaviours": [
+                {
+                  "intent": "*",
+                  "required": "false",
+                  "unspecified": "false",
+                  "hide": {
+                    "hideWhenExpression": "tbRxOutcome !== '160034AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
                   },
-                  {
-                    "relationship": "NARROWER-THAN",
-                    "type": "AMPATH",
-                    "value": "6207"
-                  },
-                  {
-                    "relationship": "NARROWER-THAN",
-                    "type": "SNOMED CT",
-                    "value": "439771001"
-                  }
-                ],
-                "answers": []
-              },
-              "validators": []
+                  "validators": [
+                    {
+                      "type": "date",
+                      "allowFutureDates": "false"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
+        
       ]
     }
   ],
