@@ -1171,6 +1171,26 @@
   ],
   "processor": "EncounterFormProcessor",
   "encounterType": "9a199b59-b185-485b-b9b3-a9754e65ae57",
+  "postSubmissionActions": [
+    {
+      "actionId": "ProgramEnrollmentSubmissionAction",
+      "enabled":"tbProgramType === '160541AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'",
+      "config": {
+      "enrollmentDate": "tbRegDate",
+      "programUuid": "58005eb2-4560-4ada-b7bb-67a5cffa0a27",
+      "completionDate": "outcomeTBRx"
+    }
+  },
+  {
+    "actionId": "ProgramEnrollmentSubmissionAction",
+    "enabled":"tbProgramType === '160052AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'",
+    "config": {
+    "enrollmentDate": "tbRegDate",
+    "programUuid": "00f37871-0578-4ebc-af1d-e4b3ce75310d",
+    "completionDate": "outcomeTBRx"
+  }
+}
+  ],
   "encounter": "TB Program Enrolment",
   "referencedForms": [],
   "uuid": "554b2017-e512-3fc8-9c6e-7baf9e69db9d",
