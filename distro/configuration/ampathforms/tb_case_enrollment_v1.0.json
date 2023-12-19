@@ -32,7 +32,7 @@
               "behaviours": [
                 {
                   "intent": "*",
-                  "required": "false",
+                  "required": "true",
                   "unspecified": "false",
                   "hide": {},
                   "validators": []
@@ -225,7 +225,7 @@
                 "answers": [
                   {
                     "concept": "159977AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Newly diagnosed TB without prior treatment"
+                    "label": "Newly diagnosed no prior treatment"
                   },
                   {
                     "concept": "160033AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -383,19 +383,19 @@
                   },
                   {
                     "concept": "164366AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Rifampicin resistant mycobacterium tuberculosis"
+                    "label": "Rifampicin resistant TB"
                   },
                   {
                     "concept": "164367AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Poly-resistance mycobacterium tuberculosis"
+                    "label": "Poly-resistance TB"
                   },
                   {
                     "concept": "159345AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Multi-drug resistant tuberculosis infection"
+                    "label": "Multi-drug resistant TB"
                   },
                   {
                     "concept": "159346AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "Extremely drug-resistant tuberculosis infection"
+                    "label": "Extremely drug-resistant TB"
                   }
                 ]
               },
@@ -482,8 +482,9 @@
                   "intent": "*",
                   "unspecified": "false",
                   "required": "false",
-                  "hide": {                    
-                    "hideWhenExpression": "isEmpty(everTestedForHIV) || everTestedForHIV === '1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"},
+                  "hide": {
+                    "hideWhenExpression": "isEmpty(everTestedForHIV) || everTestedForHIV === '1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                  },
                   "validators": [
                     {
                       "type": "date",
@@ -643,7 +644,7 @@
                 "answers": [
                   {
                     "concept": "160049AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "standard treatment"
+                    "label": "Standard treatment"
                   },
                   {
                     "concept": "160050AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
@@ -651,7 +652,7 @@
                   },
                   {
                     "concept": "160048AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                    "label": "empiric treatment"
+                    "label": "Empiric treatment"
                   }
                 ]
               },
@@ -730,7 +731,7 @@
                   "required": "false",
                   "unspecified": "false",
                   "hide": {
-                    "hideWhenExpression": "isEmpty(tbProgramType) || tbProgramType !== '160052AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                    "hideWhenExpression": "isEmpty(drRegimenType) || isEmpty(tbProgramType) || tbProgramType !== '160052AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || drRegimenType !== '160049AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
                   }
                 }
               ]
@@ -757,7 +758,7 @@
                   "required": "false",
                   "unspecified": "false",
                   "hide": {
-                    "hideWhenExpression": "isEmpty(tbProgramType) || tbProgramType !== '160052AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
+                    "hideWhenExpression": "isEmpty(drRegimenType) || isEmpty(tbProgramType) || tbProgramType !== '160052AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' || drRegimenType === '160049AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'"
                   }
                 }
               ]
@@ -795,6 +796,11 @@
                     {
                       "type": "date",
                       "allowFutureDates": "false"
+                    },
+                    {
+                      "type": "js_expression",
+                      "failsWhenExpression": "myValue < useFieldValue('tbRegDate')",
+                      "message": "Treatment before enrolment"
                     }
                   ]
                 }
@@ -986,6 +992,11 @@
                     {
                       "type": "date",
                       "allowFutureDates": "false"
+                    },
+                    {
+                      "type": "js_expression",
+                      "failsWhenExpression": "myValue < useFieldValue('tbRegDate')",
+                      "message": "Outcome is before enrolment"
                     }
                   ]
                 }
@@ -994,7 +1005,6 @@
             {
               "label": "TB Treatment Outcome",
               "type": "obs",
-              "required": false,
               "id": "tbRxOutcome",
               "questionOptions": {
                 "rendering": "radio",
@@ -1159,7 +1169,6 @@
             }
           ]
         }
-        
       ]
     }
   ],
@@ -1174,22 +1183,22 @@
   "postSubmissionActions": [
     {
       "actionId": "ProgramEnrollmentSubmissionAction",
-      "enabled":"tbProgramType === '160541AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'",
+      "enabled": "tbProgramType === '160541AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'",
       "config": {
-      "enrollmentDate": "tbRegDate",
-      "programUuid": "58005eb2-4560-4ada-b7bb-67a5cffa0a27",
-      "completionDate": "outcomeTBRx"
+        "enrollmentDate": "tbRegDate",
+        "programUuid": "58005eb2-4560-4ada-b7bb-67a5cffa0a27",
+        "completionDate": "outcomeTBRx"
+      }
+    },
+    {
+      "actionId": "ProgramEnrollmentSubmissionAction",
+      "enabled": "tbProgramType === '160052AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'",
+      "config": {
+        "enrollmentDate": "tbRegDate",
+        "programUuid": "00f37871-0578-4ebc-af1d-e4b3ce75310d",
+        "completionDate": "outcomeTBRx"
+      }
     }
-  },
-  {
-    "actionId": "ProgramEnrollmentSubmissionAction",
-    "enabled":"tbProgramType === '160052AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'",
-    "config": {
-    "enrollmentDate": "tbRegDate",
-    "programUuid": "00f37871-0578-4ebc-af1d-e4b3ce75310d",
-    "completionDate": "outcomeTBRx"
-  }
-}
   ],
   "encounter": "TB Program Enrolment",
   "referencedForms": [],
