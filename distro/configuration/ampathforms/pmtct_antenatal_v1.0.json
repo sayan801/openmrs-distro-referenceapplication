@@ -96,6 +96,7 @@
                   "intent":"*",
                   "required":"true",
                   "unspecified":"false",
+                  "readonly": "mode == 'edit'",
                   "hide":{
                     "hideWhenExpression":"false"
                   },
