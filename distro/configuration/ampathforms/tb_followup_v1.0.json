@@ -1390,7 +1390,7 @@
   "processor": "EncounterFormProcessor",
   "encounterType": "1881304a-4854-4927-b0b1-a6231d61e43c",
   "uuid": "79b05c37-0def-4482-a345-c63b99fbd565",
-  "encounter": "TB Follow-up Form",
+  "encounter": "TB Treatment and Follow-up",
   "referencedForms": [],
   "allowUnspecifiedAll": true
 }
