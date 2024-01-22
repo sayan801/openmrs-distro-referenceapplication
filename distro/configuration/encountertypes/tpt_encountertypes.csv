@@ -1,0 +1,6 @@
+Uuid,Void/Retire,Name,Description,View privilege,Edit privilege,_order:1000
+67a71486-1a54-468f-ac3e-7091a9a79584,,Vitals,For capturing vital signs,,,
+5021b1a1-e7f6-44b4-ba02-da2f2bcf8718,,Attachment Upload,Encounters used to record uploads of attachments.,,,
+3596fafb-6f6f-4396-8c87-6e63a0f1bd71,,Lab Results,Encounter for capturing lab results,,,
+dc6ce80c-83f8-4ace-a638-21df78542551,,TPT Enrolment,Encounter for TB preventative treatment (TPT) Enrolment,,,
+1ac3de3f-8fc2-43a7-addb-e805c393ecae,,TPT Treatment and Follow-up,Encounter for TB preventative treatment (TPT) Treatment and Follow-up,,,

@@ -1,0 +1,10 @@
+{
+  "name": "TPT Followup & Treatment form",
+  "published": true,
+  "retired": false,
+  "encounter": "TPT Treatment and Follow-up",
+  "encounterType": "1ac3de3f-8fc2-43a7-addb-e805c393ecae",
+  "uuid": "118f4512-f5b2-4d0f-9dc2-a2d0165790c0",
+  "description": "This form captures followup information for a TB preventative treatment (TPT) client",
+  "version": "1.0"
+}

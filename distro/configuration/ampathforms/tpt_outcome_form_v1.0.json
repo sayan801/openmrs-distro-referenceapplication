@@ -1,0 +1,10 @@
+{
+  "name": "TPT outcome form",
+  "published": true,
+  "retired": false,
+  "encounter": "TPT Enrolment",
+  "encounterType": "dc6ce80c-83f8-4ace-a638-21df78542551",
+  "uuid": "d98674e9-3997-4a3a-9cba-4ce953eb9c3a",
+  "description": "This form captures the outcome for a TB preventative treatment (TPT) client",
+  "version": "1.0"
+}
