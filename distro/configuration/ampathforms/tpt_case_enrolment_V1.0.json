@@ -1,0 +1,317 @@
+{
+    "name": "TPT Case Enrolment form",
+    "pages": [
+      {
+        "label": "TPT Enrollment",
+        "sections": [
+          {
+            "label": "Service Identifiers",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "TPT Treatment Program",
+                "type": "obs",
+                "required": false,
+                "id": "tptRxProgram",
+                "questionOptions": {
+                  "rendering": "text",
+                  "concept": "164128AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [],
+                  "answers": []
+                },
+                "validators": []
+              },
+              {
+                "label": "TPT Treatment ID",
+                "type": "obs",
+                "required": true,
+                "id": "tptTreatmentID",
+                "questionOptions": {
+                  "rendering": "text",
+                  "concept": "162727AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "162727"
+                    }
+                  ],
+                  "answers": []
+                },
+                "validators": []
+              },
+              {
+                "label": "Enrollment Date",
+                "type": "obs",
+                "required": true,
+                "id": "enrollmentDate",
+                "questionOptions": {
+                  "rendering": "date",
+                  "concept": "164852AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [],
+                  "answers": []
+                },
+                "validators": []
+              }
+            ]
+          },
+          {
+            "label": "Indication",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Reason for tuberculosis prophylaxis",
+                "type": "obs",
+                "required": true,
+                "id": "reasonForTPT",
+                "questionOptions": {
+                  "rendering": "radio",
+                  "concept": "162276AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [],
+                  "answers": [
+                    {
+                      "concept": "162278AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Child exposed to tuberculosis"
+                    },
+                    {
+                      "concept": "138571AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "HIV positive"
+                    },
+                    {
+                      "concept": "deb58a7d-1c89-4ce4-bfd9-2276d5530089",
+                      "label": "Contact With and Suspected Exposure"
+                    },
+                    {
+                      "concept": "c61a0bdb-d775-4fa2-882b-17f4f7538b30",
+                      "label": "Health care worker"
+                    },
+                    {
+                      "concept": "162277AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "In prison"
+                    }
+                  ]
+                },
+                "validators": []
+              }
+            ]
+          },
+          {
+            "label": "Regimen",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Tuberculosis prophylaxis started",
+                "type": "obs",
+                "required": false,
+                "id": "tptRx",
+                "questionOptions": {
+                  "rendering": "select",
+                  "concept": "1264AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [],
+                  "answers": [
+                    {
+                      "concept": "4df2a7d8-eb98-4d15-8bed-1b408891ee75",
+                      "label": "Isoniazid + Rifapentine (3HP)"
+                    },
+                    {
+                      "concept": "a27faf7e-8be5-4c8b-84de-be6c0967acc6",
+                      "label": "Isoniazid prophylaxis - 9 Months (9H)"
+                    },
+                    {
+                      "concept": "107f0b45-869c-4ddb-b56b-13994a486523",
+                      "label": "Isoniazid prophylaxis - Six Months (6H)"
+                    },
+                    {
+                      "concept": "65889206-ebc7-4aea-afd3-dc3641ba8cad",
+                      "label": "Rifampicin Monotherapy prophylaxis - Four Months (4R)"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": "Date started on tuberculosis prophylaxis",
+                "type": "obs",
+                "required": false,
+                "id": "dateStartedTPT",
+                "questionOptions": {
+                  "rendering": "date",
+                  "concept": "162320AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "162320"
+                    }
+                  ],
+                  "answers": []
+                },
+                "validators": []
+              }
+            ]
+          },
+          {
+            "label": "Treatment Supporter",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "Treatment Supporter name",
+                "type": "obs",
+                "required": false,
+                "id": "supporterName",
+                "questionOptions": {
+                  "rendering": "text",
+                  "concept": "160638AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "160638"
+                    }
+                  ],
+                  "answers": []
+                },
+                "validators": []
+              },
+              {
+                "label": "Treatment supporter Address",
+                "type": "obs",
+                "required": false,
+                "id": "supporterAddress",
+                "questionOptions": {
+                  "rendering": "text",
+                  "concept": "160641AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [],
+                  "answers": []
+                },
+                "validators": []
+              },
+              {
+                "label": "Relationship to Patient",
+                "type": "obs",
+                "required": false,
+                "id": "relationToPatient",
+                "questionOptions": {
+                  "rendering": "radio",
+                  "concept": "160640AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "160640"
+                    }
+                  ],
+                  "answers": [
+                    {
+                      "concept": "973AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Grandparent"
+                    },
+                    {
+                      "concept": "160639AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Guardian"
+                    },
+                    {
+                      "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Other non-coded"
+                    },
+                    {
+                      "concept": "1527AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Parent"
+                    },
+                    {
+                      "concept": "5617AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Partner or spouse"
+                    },
+                    {
+                      "concept": "972AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Sibling"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": "Treatment supporter phone number",
+                "type": "obs",
+                "required": false,
+                "id": "phoneNumber",
+                "questionOptions": {
+                  "rendering": "text",
+                  "concept": "159635AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "SNOMED CT",
+                      "value": "184103008"
+                    }
+                  ],
+                  "answers": []
+                },
+                "validators": []
+              }
+            ]
+          },
+          {
+            "label": "TPT Treatment Outcome",
+            "isExpanded": "true",
+            "questions": [
+              {
+                "label": "TPT Outcome",
+                "type": "obs",
+                "required": false,
+                "id": "tptOutcome",
+                "questionOptions": {
+                  "rendering": "radio",
+                  "concept": "1266AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [],
+                  "answers": [
+                    {
+                      "concept": "1267AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Completed"
+                    },
+                    {
+                      "concept": "102AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Toxicity, drug"
+                    },
+                    {
+                      "concept": "983AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                      "label": "Weight change"
+                    }
+                  ]
+                },
+                "validators": []
+              },
+              {
+                "label": "Date of Outcome",
+                "type": "obs",
+                "required": false,
+                "id": "dateOfOutcome",
+                "questionOptions": {
+                  "rendering": "date",
+                  "concept": "163284AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                  "conceptMappings": [
+                    {
+                      "relationship": "SAME-AS",
+                      "type": "CIEL",
+                      "value": "163284"
+                    }
+                  ],
+                  "answers": []
+                },
+                "validators": []
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "processor": "EncounterFormProcessor",
+    "referencedForms": [],
+    "published": true,
+    "retired": false,
+    "encounter": "TPT Enrolment",
+    "encounterType": "dc6ce80c-83f8-4ace-a638-21df78542551",
+    "uuid": "0811422a-1e91-4bba-9dcd-320779cad0db",
+    "description": "This form captures enrolment information for a TB preventative treatment (TPT) client ",
+    "version": "1.0"
+  }
