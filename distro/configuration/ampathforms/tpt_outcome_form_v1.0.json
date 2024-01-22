@@ -1,10 +1,101 @@
 {
   "name": "TPT outcome form",
+  "pages": [
+    {
+      "label": "Treatment Outcome",
+      "sections": [
+        {
+          "label": "Treatment Outcome",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Outcome",
+              "type": "obs",
+              "required": false,
+              "id": "tptRxOutcome",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "1266AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [],
+                "answers": [
+                  {
+                    "concept": "1267AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Treatment completed"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other Reason"
+                  },
+                  {
+                    "concept": "102AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Drug toxicity"
+                  },
+                  {
+                    "concept": "983AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Weight Change"
+                  },
+                  {
+                    "concept": "5240AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Lost to followup"
+                  },
+                  {
+                    "concept": "160034AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Died"
+                  },
+                  {
+                    "concept": "160737AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Not assessed"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+          "label": "Treatment Outcome date",
+          "type": "obs",
+          "required": "false",
+          "id": "tptRxEndDate",
+          "questionOptions": {
+            "rendering": "date",
+            "concept": "163284AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "conceptMappings": [
+              {
+                "relationship": "SAME-AS",
+                "type": "CIEL",
+                "value": "163284"
+              }
+            ],
+            "answers": []
+          },
+          "behaviours": [
+            {
+              "intent": "*",
+              "required": "false",
+              "unspecified": "false",
+              "hide": {
+                "hideWhenExpression": ""
+              },
+              "validators": [
+                {
+                  "type": "date",
+                  "allowFutureDates": "false"
+                }
+              ]
+            }
+          ]
+        }
+          ]
+        }
+      ]
+    }
+  ],
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
   "published": true,
   "retired": false,
   "encounter": "TPT Enrolment",
   "encounterType": "dc6ce80c-83f8-4ace-a638-21df78542551",
   "uuid": "d98674e9-3997-4a3a-9cba-4ce953eb9c3a",
-  "description": "This form captures the outcome for a TB preventative treatment (TPT) client",
+  "description": "This form captures the outcome for a TB preventative treatment (TPT) client ",
   "version": "1.0"
 }
