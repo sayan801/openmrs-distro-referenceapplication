@@ -1,10 +1,475 @@
 {
   "name": "TPT Followup & Treatment form",
+  "pages": [
+    {
+      "label": "TPT Treatment Followup",
+      "sections": [
+        {
+          "label": "Visit Details",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Case ID",
+              "type": "obs",
+              "required": false,
+              "id": "caseID",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "162576AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "162576"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            }
+          ]
+        },
+        {
+          "label": "TB Screening",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Screened for TB?",
+              "type": "obs",
+              "required": false,
+              "id": "screenedForTB",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "c0661c0f-348b-4941-812b-c531a0a67f2e",
+                "conceptMappings": [],
+                "answers": [
+                  {
+                    "concept": "664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Negative"
+                  },
+                  {
+                    "concept": "662edd6a-9f8a-4dfa-9956-a6ec42018c72",
+                    "label": "Presumptive Tuberculosis"
+                  },
+                  {
+                    "concept": "166519AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Screening not done"
+                  },
+                  {
+                    "concept": "159798AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "currently on tuberculosis treatment"
+                  },
+                  {
+                    "concept": "166449AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Currently taking tuberculosis prophylaxis"
+                  }
+                ]
+              },
+              "validators": []
+            }
+          ]
+        },
+        {
+          "label": "Investigations",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Tuberculosis test type",
+              "type": "obs",
+              "required": false,
+              "id": "tbTestType",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "165254AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "165254"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            },
+            {
+              "label": "Tuberculosis test type",
+              "type": "obs",
+              "required": false,
+              "id": "testType",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "165254AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "165254"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "164945AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "GeneXpert MTB/Rif Lab set"
+                  },
+                  {
+                    "concept": "159961AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "tuberculosis smear microscopy method"
+                  },
+                  {
+                    "concept": "12AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "X-ray, chest"
+                  }
+                ]
+              },
+              "validators": []
+            }
+          ]
+        },
+        {
+          "label": "TPT Adherence",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Overall treatment adherence",
+              "type": "obs",
+              "required": false,
+              "id": "adherenceTPT",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "164075AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [],
+                "answers": [
+                  {
+                    "concept": "164076AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Excellent"
+                  },
+                  {
+                    "concept": "159406AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Fair"
+                  },
+                  {
+                    "concept": "159405AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Good"
+                  },
+                  {
+                    "concept": "159407AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Poor"
+                  },
+                  {
+                    "concept": "1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Unknown"
+                  },
+                  {
+                    "concept": "164077AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Very good"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": " Reason for poor Adherence",
+              "type": "obs",
+              "required": false,
+              "id": "reasonForPoorAdherence",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "160582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "160582"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "PIH",
+                    "value": "3140"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "121725AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Alcohol abuse"
+                  },
+                  {
+                    "concept": "819AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Cannot afford treatment"
+                  },
+                  {
+                    "concept": "160589AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Concerned about privacy/stigma"
+                  },
+                  {
+                    "concept": "119537AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Depression"
+                  },
+                  {
+                    "concept": "102AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Toxicity, drug"
+                  },
+                  {
+                    "concept": "160588AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Pill burden"
+                  },
+                  {
+                    "concept": "160583AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Shares medications with others"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other non-coded"
+                  },
+                  {
+                    "concept": "1754AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Medications unavailable"
+                  },
+                  {
+                    "concept": "160584AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Lost or ran out of medication"
+                  },
+                  {
+                    "concept": "160585AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Felt too ill to take medication"
+                  },
+                  {
+                    "concept": "160587AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Forgot to take medication"
+                  },
+                  {
+                    "concept": "160586AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Felt better and stopped taking medication"
+                  },
+                  {
+                    "concept": "820AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Transport problems"
+                  },
+                  {
+                    "concept": "1778AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Treatment or procedure not carried out due to fear of side effects"
+                  }
+                ]
+              },
+              "validators": []
+            }
+          ]
+        },
+        {
+          "label": "Adverse Drug Reaction to TPT",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Reaction to TPT",
+              "type": "obs",
+              "required": false,
+              "id": "reactionToTPT",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "160646AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [],
+                "answers": [
+                  {
+                    "concept": "148888AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Anaphylaxis"
+                  },
+                  {
+                    "concept": "142412AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Diarrhea"
+                  },
+                  {
+                    "concept": "138111AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Hyperuricaemia"
+                  },
+                  {
+                    "concept": "137162AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Influenza-like symptoms"
+                  },
+                  {
+                    "concept": "5978AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Nausea"
+                  },
+                  {
+                    "concept": "114736AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Optic Neuritis"
+                  },
+                  {
+                    "concept": "133073AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Neurotoxicity"
+                  },
+                  {
+                    "concept": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Other non-coded"
+                  },
+                  {
+                    "concept": "131103AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Ototoxicity"
+                  },
+                  {
+                    "concept": "118983AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Peripheral neuropathy"
+                  },
+                  {
+                    "concept": "512AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Rash"
+                  },
+                  {
+                    "concept": "141600AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Shortness of breath"
+                  },
+                  {
+                    "concept": "159098AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Toxic liver disease"
+                  },
+                  {
+                    "concept": "122983AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Vomiting"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "Severity of ADR",
+              "type": "obs",
+              "required": false,
+              "id": "severityADR",
+              "questionOptions": {
+                "rendering": "select",
+                "concept": "162642AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "SNOMED CT",
+                    "value": "405162009"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "162642"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "162693AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Life threatening severity"
+                  },
+                  {
+                    "concept": "1498AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Mild"
+                  },
+                  {
+                    "concept": "1499AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Moderate"
+                  },
+                  {
+                    "concept": "1107AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "None"
+                  },
+                  {
+                    "concept": "1500AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Severe"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "Date of Onset",
+              "type": "obs",
+              "required": false,
+              "id": "dateOfOnset",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "81a50873-81c8-4c2e-8892-b2cd635b704c",
+                "conceptMappings": [],
+                "answers": []
+              },
+              "validators": []
+            },
+            {
+              "label": "Action Taken",
+              "type": "obs",
+              "required": false,
+              "id": "actionTaken",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "164378AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [],
+                "answers": []
+              },
+              "validators": []
+            }
+          ]
+        },
+        {
+          "label": "Tuberculosis Prophylaxis plan",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Prophylaxis plan",
+              "type": "obs",
+              "required": false,
+              "id": "prophylaxisPlan",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "1265AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [],
+                "answers": [
+                  {
+                    "concept": "1257AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Continue regimen"
+                  },
+                  {
+                    "concept": "1260AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Stop all"
+                  }
+                ]
+              },
+              "validators": []
+            }
+          ]
+        },
+        {
+          "label": "Appointment",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Return visit Date",
+              "type": "obs",
+              "required": false,
+              "id": "returnVisitDate",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "5096AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "5096"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "AMPATH",
+                    "value": "5096"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
   "published": true,
   "retired": false,
   "encounter": "TPT Treatment and Follow-up",
   "encounterType": "1ac3de3f-8fc2-43a7-addb-e805c393ecae",
   "uuid": "118f4512-f5b2-4d0f-9dc2-a2d0165790c0",
-  "description": "This form captures followup information for a TB preventative treatment (TPT) client",
+  "description": "This form captures followup information for a TB preventative treatment (TPT) client ",
   "version": "1.0"
 }
