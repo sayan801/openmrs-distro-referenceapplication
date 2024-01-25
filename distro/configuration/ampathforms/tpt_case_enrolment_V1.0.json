@@ -250,57 +250,6 @@
                 "validators": []
               }
             ]
-          },
-          {
-            "label": "TPT Treatment Outcome",
-            "isExpanded": "true",
-            "questions": [
-              {
-                "label": "TPT Outcome",
-                "type": "obs",
-                "required": false,
-                "id": "tptOutcome",
-                "questionOptions": {
-                  "rendering": "radio",
-                  "concept": "1266AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                  "conceptMappings": [],
-                  "answers": [
-                    {
-                      "concept": "1267AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                      "label": "Completed"
-                    },
-                    {
-                      "concept": "102AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                      "label": "Toxicity, drug"
-                    },
-                    {
-                      "concept": "983AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                      "label": "Weight change"
-                    }
-                  ]
-                },
-                "validators": []
-              },
-              {
-                "label": "Date of Outcome",
-                "type": "obs",
-                "required": false,
-                "id": "dateOfOutcome",
-                "questionOptions": {
-                  "rendering": "date",
-                  "concept": "163284AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-                  "conceptMappings": [
-                    {
-                      "relationship": "SAME-AS",
-                      "type": "CIEL",
-                      "value": "163284"
-                    }
-                  ],
-                  "answers": []
-                },
-                "validators": []
-              }
-            ]
           }
         ]
       }
@@ -311,7 +260,7 @@
     "retired": false,
     "encounter": "TPT Enrolment",
     "encounterType": "dc6ce80c-83f8-4ace-a638-21df78542551",
-    "uuid": "0811422a-1e91-4bba-9dcd-320779cad0db",
+    "uuid": "71080512-07e6-345f-864f-93e892420258    ",
     "description": "This form captures enrolment information for a TB preventative treatment (TPT) client ",
     "version": "1.0"
   }
