@@ -254,6 +254,12 @@
         ]
       }
     ],
+    "availableIntents": [
+        {
+          "intent": "*",
+          "display": "TPT Case Enrolment form"
+        }
+      ],
     "processor": "EncounterFormProcessor",
     "referencedForms": [],
     "published": true,
