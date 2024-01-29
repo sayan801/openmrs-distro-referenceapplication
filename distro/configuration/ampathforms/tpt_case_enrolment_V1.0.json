@@ -254,13 +254,19 @@
         ]
       }
     ],
+    "availableIntents": [
+        {
+          "intent": "*",
+          "display": "TPT Case Enrolment form"
+        }
+      ],
     "processor": "EncounterFormProcessor",
     "referencedForms": [],
     "published": true,
     "retired": false,
     "encounter": "TPT Enrolment",
     "encounterType": "dc6ce80c-83f8-4ace-a638-21df78542551",
-    "uuid": "71080512-07e6-345f-864f-93e892420258    ",
+    "uuid": "71080512-07e6-345f-864f-93e892420258",
     "description": "This form captures enrolment information for a TB preventative treatment (TPT) client ",
     "version": "1.0"
   }

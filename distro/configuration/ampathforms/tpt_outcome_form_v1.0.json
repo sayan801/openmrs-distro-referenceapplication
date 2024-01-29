@@ -89,6 +89,12 @@
       ]
     }
   ],
+  "availableIntents": [
+    {
+      "intent": "*",
+      "display": "TPT outcome form"
+    }
+  ],
   "processor": "EncounterFormProcessor",
   "referencedForms": [],
   "published": true,
