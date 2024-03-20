@@ -72,5 +72,38 @@
       "infantPostnatal": "af1f1b24-d2e8-4282-b308-0bf79b365584",
       "motherPostnatal": "269bcc7f-04f8-4ddc-883d-7a3a0d569aad"
     }
+  },
+  "@openmrs/esm-home-app": {
+    "extensionSlots": {
+      "homepage-dashboard-slot": {
+        "order": [
+          "home-widget-db-link",
+          "clinical-appointments-dashboard-link",
+          "dispensing-dashboard-link",
+          "service-queues-dashboard-link",
+          "billing-dashboard-link",
+          "ohri-home-programs-text",
+          "covid-cases-dashboard-ext",
+          "maternal-child-health-results-summary",
+          "tb-cases-dashboard-ext",
+          "ohri-hiv-prevention-dashboard-ext",
+          "care-and-treatment-dashboard-ext"
+        ],
+        "add": [
+          "dispensing-dashboard-link"
+        ],
+        "remove": [
+          "patient-lists-dashboard-link"
+        ]
+      },
+      "homepage-widgets-slot": {
+        "remove": [
+          "home-appointments"
+        ],
+        "add": [
+          "ohri-patient-list"
+        ]
+      }
+    }
   }
 }
