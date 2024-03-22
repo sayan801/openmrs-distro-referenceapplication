@@ -1,27 +1,8 @@
 {
   "@openmrs/esm-patient-chart-app": {
-    "extensionSlots": {
-      "patient-chart-dashboard-slot": {
-        "remove": [
-        ]
-      }
-    },
     "notesConceptUuids": ["161011AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "437d1e25-e7ab-481c-aabc-01f21c6cdef1"],
     "logo": {
       "src": "ohri_logo_dark.svg"
-    }
-  },
-  "@openmrs/esm-patient-banner-app": {
-    "extensionSlots": {
-      "patient-actions-slot": {
-        "remove": [
-          "add-patient-to-patient-list-button",
-          "start-visit-button",
-          "stop-visit-button",
-          "cancel-visit-button",
-          "add-past-visit-button"
-        ]
-      }
     }
   },
   "@ohri/openmrs-esm-ohri-core-app": {
@@ -39,19 +20,9 @@
     "Brand color #3": "#0078A6"
   },
   "@openmrs/esm-primary-navigation-app": {
-    "extensionSlots": {
-      "app-menu-slot": {
-        "remove": [
-          "dispensing-link"
-        ]
-      }
-    },
     "logo": {
       "src": "ohri_logo_dark.svg"
     }
-  },
-  "@openmrs/esm-dispensing-app": {
-    "appName": "Dispensing"
   },
   "@openmrs/esm-login-app": {
     "logo": {
@@ -84,12 +55,6 @@
           "tb-cases-dashboard-ext",
           "ohri-hiv-prevention-dashboard-ext",
           "care-and-treatment-dashboard-ext"
-        ],
-        "add": [
-          "dispensing-dashboard-link"
-        ],
-        "remove": [
-          "patient-lists-dashboard-link"
         ]
       }
     }
