@@ -3,7 +3,6 @@
     "extensionSlots": {
       "patient-chart-dashboard-slot": {
         "remove": [
-          "immunization-summary-dashboard"
         ]
       }
     },
@@ -57,9 +56,6 @@
   "@openmrs/esm-login-app": {
     "logo": {
       "src": "ohri_logo_light.svg"
-    },
-    "links": {
-      "loginSuccess": "${openmrsSpaBase}/dashboard/home"
     }
   },
   "@ohri/openmrs-esm-ohri-pmtct": {
@@ -94,14 +90,6 @@
         ],
         "remove": [
           "patient-lists-dashboard-link"
-        ]
-      },
-      "homepage-widgets-slot": {
-        "remove": [
-          "home-appointments"
-        ],
-        "add": [
-          "ohri-patient-list"
         ]
       }
     }
