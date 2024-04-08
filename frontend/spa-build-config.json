@@ -40,7 +40,8 @@
     "@ohri/openmrs-esm-ohri-cervical-cancer-app": "next",
     "@ohri/openmrs-esm-ohri-form-render-app": "next",
     "@openmrs/esm-stock-management-app": "next",
-    "@openmrs/esm-billing-app": "next"
+    "@openmrs/esm-billing-app": "next",
+    "@ohri/openmrs-esm-ohri-opd-app": "next"
   },
   "spaPath": "$SPA_PATH",
   "apiUrl": "$API_URL",
