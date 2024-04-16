@@ -2027,7 +2027,7 @@
             {
               "label": "Order Basket Launcher (place holder)",
               "required": false,
-              "id": "orderBasketWorkspaceLauncher",
+              "id": "orderBasketLabWorkspaceLauncher",
               "questionOptions": {
                 "rendering": "workspace-launcher",
                 "buttonLabel": "Add Lab Orders",
@@ -2210,9 +2210,7 @@
                       }
                     ]
                   },
-                  "validators": [
-                    {}
-                  ]
+                  "validators": []
                 },
                 {
                   "label": "Diagnosis order",
@@ -2440,7 +2438,7 @@
             {
               "label": "Order Basket Launcher (place holder)",
               "required": false,
-              "id": "orderBasketWorkspaceLauncher",
+              "id": "orderBasketDrugWorkspaceLauncher",
               "questionOptions": {
                 "rendering": "workspace-launcher",
                 "buttonLabel": "Add Drug",
@@ -2462,7 +2460,7 @@
               "required": false,
               "id": "referralFor",
               "questionOptions": {
-                "rendering": "multiCheckbox",
+                "rendering": "checkbox",
                 "concept": "1272AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
                 "conceptMappings": [
                   {
