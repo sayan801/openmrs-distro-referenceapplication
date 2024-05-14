@@ -1,0 +1,509 @@
+{
+  "name": "React demo form",
+  "uuid": "xxxx",
+  "processor": "EncounterFormProcessor",
+  "referencedForms": [],
+  "pages": [
+    {
+      "label": "Page 2 - ui-select-extended",
+      "sections": [
+        {
+          "label": "Section 2.1 - Exanded Section",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Date & time with tooltip",
+              "type": "encounterDatetime",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              },
+              "required": "false",
+              "default": "",
+              "id": "encDate",
+              "validators": [
+                {
+                  "type": "date"
+                }
+              ],
+              "questionInfo": "This is an example of a tool tip"
+            },
+            {
+              "type": "encounterProvider",
+              "label": "Encounter Provider:",
+              "id": "provider",
+              "required": "true",
+              "default": "",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              }
+            },
+            {
+              "type": "encounterLocation",
+              "label": "Encounter Location",
+              "id": "location",
+              "required": "true",
+              "questionOptions": {
+                "rendering": "ui-select-extended"
+              }
+            }
+          ]
+        },
+        {
+          "label": "Hidden Section",
+          "isExpanded": "false",
+          "questions": [
+            {
+              "label": "Hidden Question - Text",
+              "type": "obs",
+              "required": false,
+              "id": "hidQuestion",
+              "questionOptions": {
+                "rendering": "text",
+                "concept": "160632AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "BROADER-THAN",
+                    "type": "LOINC",
+                    "value": "48767-8"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "AMPATH",
+                    "value": "1915"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "160632"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            },
+            {
+              "label": "Hidden Question - Text Area",
+              "type": "obs",
+              "required": false,
+              "id": "textArea",
+              "questionOptions": {
+                "rendering": "textarea",
+                "concept": "161011AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "161011"
+                  },
+                  {
+                    "relationship": "BROADER-THAN",
+                    "type": "LOINC",
+                    "value": "48767-8"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Page 2 - Rendering",
+      "sections": [
+        {
+          "label": "Section 2.1",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "A Radio",
+              "type": "obs",
+              "required": false,
+              "id": "radioQuestion",
+              "questionOptions": {
+                "rendering": "radio",
+                "concept": "164181AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [],
+                "answers": [
+                  {
+                    "concept": "138571AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Positive"
+                  },
+                  {
+                    "concept": "664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Negative"
+                  },
+                  {
+                    "concept": "1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Unknown"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "Date (before encounter date)",
+              "type": "obs",
+              "required": false,
+              "id": "dateQuestion",
+              "questionOptions": {
+                "rendering": "date",
+                "concept": "81a50873-81c8-4c2e-8892-b2cd635b704c",
+                "conceptMappings": [],
+                "answers": []
+              },
+              "validators": [
+                {
+                  "type": "date",
+                  "allowFutureDates": "true"
+                },
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "myValue > useFieldValue('encDate')",
+                  "message": "Cannot be after enrolment"
+                }
+              ]
+            },
+            {
+              "label": "multiCheckBox",
+              "type": "obs",
+              "required": false,
+              "id": "mcbQuestion",
+              "questionOptions": {
+                "rendering": "checkbox",
+                "concept": "162554AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "162554"
+                  }
+                ],
+                "answers": [
+                  {
+                    "concept": "138571AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Positive"
+                  },
+                  {
+                    "concept": "664AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Negative"
+                  },
+                  {
+                    "concept": "1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "label": "Unknown"
+                  }
+                ]
+              },
+              "validators": []
+            },
+            {
+              "label": "number (1 to 100) ",
+              "type": "obs",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "162582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "max": "1",
+                "min": "100",
+                "showDate": "",
+                "conceptMappings": [
+                  {
+                    "type": "CIEL",
+                    "value": "162582"
+                  },
+                  {
+                    "type": "SNOMED CT",
+                    "value": "CT: 252109000"
+                  }
+                ]
+              },
+              "id": "numeric"
+            },
+            {
+              "label": "Repeating Group",
+              "type": "obsGroup",
+              "questionOptions": {
+                "rendering": "repeating",
+                "concept": "162867AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+              },
+              "id": "adrs",
+              "questions": [
+                {
+                  "label": "Medicine Causing Reaction",
+                  "type": "obs",
+                  "id": "adrMed",
+                  "questionOptions": {
+                    "concept": "1193AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "rendering": "select",
+                    "answers": [
+                      {
+                        "concept": "70056AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Abacavir"
+                      },
+                      {
+                        "concept": "162298AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "ACE inhibitors"
+                      },
+                      {
+                        "concept": "70878AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Allopurinol"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "label": "Severity",
+                  "type": "obs",
+                  "id": "adrSeverity",
+                  "questionOptions": {
+                    "concept": "162760AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "rendering": "select",
+                    "answers": [
+                      {
+                        "concept": "1067AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Not graded"
+                      },
+                      {
+                        "concept": "1498AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Mild"
+                      },
+                      {
+                        "concept": "1499AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Moderate"
+                      },
+                      {
+                        "concept": "1500AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Severe"
+                      },
+                      {
+                        "concept": "162819AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                        "label": "Life threatening"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "label": "Group",
+              "type": "obsGroup",
+              "id": "groupexample",
+              "questionOptions": {
+                "concept": "1628AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "group"
+              },
+              "validators": [],
+              "questions": [
+                {
+                  "label": "Grouped variable 1",
+                  "type": "obs",
+                  "id": "group1",
+                  "questionOptions": {
+                    "concept": "162725AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "rendering": "text"
+                  }
+                },
+                {
+                  "label": "Grouped variabele 2",
+                  "type": "obs",
+                  "id": "dose",
+                  "questionOptions": {
+                    "concept": "1443AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                    "rendering": "number"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Page 3 - Performing Calculations",
+      "sections": [
+        {
+          "label": "Calcuations",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Height (cm)",
+              "type": "obs",
+              "required": false,
+              "id": "height",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "5090"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "AMPATH",
+                    "value": "5090"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "PIH",
+                    "value": "5090"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            },
+            {
+              "label": "Weight",
+              "type": "obs",
+              "required": false,
+              "id": "weight",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "PIH",
+                    "value": "5089"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "CIEL",
+                    "value": "5089"
+                  },
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "AMPATH",
+                    "value": "5089"
+                  },
+                  {
+                    "relationship": "BROADER-THAN",
+                    "type": "LOINC",
+                    "value": "3141-9"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            },
+            {
+              "label": "BMI:Kg/M2 (Calculated)",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "1342AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "max": "100",
+                "min": "0",
+                "calculate": {
+                  "calculateExpression": "calcBMI(height,weight)"
+                }
+              },
+              "type": "obs",
+              "validators": []
+            }
+          ]
+        },
+        {
+          "label": "EDD",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "LMP:",
+              "id": "lmp",
+              "questionOptions": {
+                "concept": "1427AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "date"
+              },
+              "type": "obs",
+              "validators": [
+                {
+                  "type": "date"
+                }
+              ]
+            },
+            {
+              "label": "EDD (Calculated):",
+              "id": "edd",
+              "required": "true",
+              "questionOptions": {
+                "concept": "5596AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "rendering": "date",
+                "calculate": {
+                  "calculateExpression": "moment(lmp).isValid() ? moment(lmp).add(280, 'days').toDate():''"
+                }
+              },
+              "type": "obs",
+              "validators": [
+                {
+                  "type": "js_expression",
+                  "failsWhenExpression": "(new moment(lmp)).isAfter((new moment(myValue)), 'day') || (new moment(lmp)).isSame((new moment(myValue)), 'day')",
+                  "message": "EDD should be greater than the encounter date."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Math",
+          "isExpanded": "true",
+          "questions": [
+            {
+              "label": "Number 1",
+              "type": "obs",
+              "required": false,
+              "id": "num1",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "159635AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [
+                  {
+                    "relationship": "SAME-AS",
+                    "type": "SNOMED CT",
+                    "value": "184103008"
+                  }
+                ],
+                "answers": []
+              },
+              "validators": []
+            },
+            {
+              "label": "number 2",
+              "type": "obs",
+              "required": false,
+              "id": "num2",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "164803AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "conceptMappings": [],
+                "answers": []
+              },
+              "validators": []
+            },
+            {
+              "label": "Calculated (num 1 * num2)/10",
+              "type": "obs",
+              "required": false,
+              "id": "calcnum",
+              "questionOptions": {
+                "rendering": "number",
+                "concept": "162582AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+                "answers": [],
+                "calculate": {
+                  "calculateExpression": "(num1 * num2) / 10"
+                }
+              },
+              "validators": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "encounterType": "dd528487-82a5-4082-9c72-ed246bd49591",
+  "encounter": "Consultation",
+  "version": "0.1",
+  "published": false,
+  "retired": false,
+  "description": "Form demonstrating RFE features"
+}
