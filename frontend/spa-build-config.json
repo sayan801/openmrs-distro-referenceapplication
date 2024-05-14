@@ -5,7 +5,7 @@
     "@openmrs/esm-login-app": "next",
     "@openmrs/esm-primary-navigation-app": "next",
     "@openmrs/esm-home-app": "next",
-    "@openmrs/esm-form-engine-app": "7.1.1-pre.4373",
+    "@openmrs/esm-form-engine-app": "next",
     "@openmrs/esm-generic-patient-widgets-app": "next",
     "@openmrs/esm-patient-allergies-app": "next",
     "@openmrs/esm-patient-attachments-app": "next",
@@ -41,7 +41,8 @@
     "@ohri/openmrs-esm-ohri-form-render-app": "next",
     "@openmrs/esm-stock-management-app": "next",
     "@openmrs/esm-billing-app": "next",
-    "@ohri/openmrs-esm-ohri-opd-app": "next"
+    "@ohri/openmrs-esm-ohri-opd-app": "next",
+    "@openmrs/esm-form-builder-app": "next"
   },
   "spaPath": "$SPA_PATH",
   "apiUrl": "$API_URL",
