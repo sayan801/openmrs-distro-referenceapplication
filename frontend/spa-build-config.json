@@ -42,7 +42,8 @@
     "@openmrs/esm-stock-management-app": "next",
     "@openmrs/esm-billing-app": "next",
     "@ohri/openmrs-esm-ohri-opd-app": "next",
-    "@openmrs/esm-form-builder-app": "next"
+    "@openmrs/esm-form-builder-app": "next",
+    "@openmrs/esm-laboratory-app": "next"
   },
   "spaPath": "$SPA_PATH",
   "apiUrl": "$API_URL",
