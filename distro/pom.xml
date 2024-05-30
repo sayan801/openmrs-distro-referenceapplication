@@ -26,7 +26,7 @@
     <openmrs.version>2.6.1</openmrs.version>
     <initializer.version>2.6.0</initializer.version>
     <fhir2.version>1.11.0</fhir2.version>
-    <webservices.rest.version>2.42.0-SNAPSHOT</webservices.rest.version>
+    <webservices.rest.version>2.44.0-SNAPSHOT</webservices.rest.version>
     <addresshierarchy.version>2.17.0-SNAPSHOT</addresshierarchy.version>
     <idgen.version>4.10.0</idgen.version>
     <legacyui.version>1.16.0</legacyui.version>
@@ -76,7 +76,7 @@
     <!-- <casereport.version>2.0-SNAPSHOT</casereport.version> -->
 
     <!-- Stock Management and Billing -->
-    <!--<stockmanagement.version>2.0.0-SNAPSHOT</stockmanagement.version>-->
+    <stockmanagement.version>2.0.1-SNAPSHOT</stockmanagement.version>
     <billing.version>1.0.0-SNAPSHOT</billing.version>
 
   </properties>
