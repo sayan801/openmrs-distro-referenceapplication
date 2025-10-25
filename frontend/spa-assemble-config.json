@@ -41,7 +41,8 @@
     "@openmrs/esm-stock-management-app": "next",
     "@openmrs/esm-system-admin-app": "next",
     "@openmrs/esm-user-onboarding-app": "next",
-    "@openmrs/esm-ward-app": "next"
+    "@openmrs/esm-ward-app": "next",
+    "@ritaroypaul/esm-hello-world-app": "1.0.5"
   },
   "excludedFrontendModules": []
 }
