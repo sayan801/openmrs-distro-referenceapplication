@@ -11,7 +11,7 @@ services:
   frontend:
     build:
       context: ./frontend
-    image: technicise/openmrs-reference-application--3-frontend:${TAG:-qa}
+    image: technicise/openmrs-reference-application-3-frontend:${TAG:-qa}
     restart: "unless-stopped"
     environment:
       SPA_PATH: /openmrs/spa

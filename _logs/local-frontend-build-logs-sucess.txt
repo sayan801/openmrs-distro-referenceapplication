@@ -1,0 +1,99 @@
+chandra@chandra-latitude-ubuntu22:/media/chandra/b664505e-129c-4c0d-a87b-9efb6469eca2/home/chandra/code/openmrs-distro-referenceapplication$ sudo docker compose build
+[+] Building 385.3s (72/72) FINISHED                                                                                                                        docker:default
+ => [backend internal] load build definition from Dockerfile                                                                                                          0.0s
+ => => transferring dockerfile: 1.93kB                                                                                                                                0.0s
+ => [certbot internal] load build definition from Dockerfile                                                                                                          0.0s
+ => => transferring dockerfile: 207B                                                                                                                                  0.0s
+ => [gateway] resolve image config for docker-image://docker.io/docker/dockerfile:1.3                                                                                 8.8s
+ => [backend] resolve image config for docker-image://docker.io/docker/dockerfile:1                                                                                   3.7s
+ => CACHED [gateway] docker-image://docker.io/docker/dockerfile:1.3@sha256:42399d4635eddd7a9b8a24be879d2f9a930d0ed040a61324cfdf59ef1357b3b2                           0.0s
+ => CACHED [backend] docker-image://docker.io/docker/dockerfile:1@sha256:b6afd42430b15f2d2a4c5a02b919e98a525b785b1aaff16747d2f623364e39b6                             0.0s
+ => [certbot internal] load .dockerignore                                                                                                                             0.2s
+ => => transferring context: 2B                                                                                                                                       0.0s
+ => [certbot internal] load metadata for docker.io/certbot/certbot:v4.0.0                                                                                             1.8s
+ => [backend internal] load build definition from Dockerfile                                                                                                          0.0s
+ => [backend internal] load metadata for docker.io/openmrs/openmrs-core:2.8.x-dev-amazoncorretto-21                                                                   2.0s
+ => [backend internal] load metadata for docker.io/openmrs/openmrs-core:2.8.x-amazoncorretto-21                                                                       2.1s
+ => [certbot 1/3] FROM docker.io/certbot/certbot:v4.0.0@sha256:0e40d51116b9e1058466aa2fd8f342b1d676dfbc17e47877a9e02c3e2460580a                                       0.0s
+ => [certbot internal] load build context                                                                                                                             0.2s
+ => => transferring context: 70B                                                                                                                                      0.0s
+ => [backend internal] load .dockerignore                                                                                                                             0.3s
+ => => transferring context: 101B                                                                                                                                     0.0s
+ => CACHED [certbot 2/3] RUN apk --no-cache add curl                                                                                                                  0.0s
+ => CACHED [certbot 3/3] COPY ./scripts /certbot/scripts                                                                                                              0.0s
+ => [certbot] exporting to image                                                                                                                                      0.1s
+ => => exporting layers                                                                                                                                               0.0s
+ => => writing image sha256:11c8e54a200928b12e8cb5c3d526b498c2c109dbfce3b45cbe9583ae3ce6114c                                                                          0.0s
+ => => naming to docker.io/library/openmrs-distro-referenceapplication-certbot                                                                                        0.0s
+ => [backend dev  1/11] FROM docker.io/openmrs/openmrs-core:2.8.x-dev-amazoncorretto-21@sha256:a24a6ae5b56ef6b4696c0409ab05880868d48cef9b03d367835f2b3c0f9d9d66       0.0s
+ => [backend stage-1 1/6] FROM docker.io/openmrs/openmrs-core:2.8.x-amazoncorretto-21@sha256:b92b8b6f3fdb86d309b0db1c1f8cccd150ea4acc5e3fb83b35a9b80c609153b7         0.0s
+ => [backend internal] load build context                                                                                                                             0.1s
+ => => transferring context: 299B                                                                                                                                     0.0s
+ => CACHED [backend dev  2/11] WORKDIR /openmrs_distro                                                                                                                0.0s
+ => CACHED [backend dev  3/11] COPY pom.xml ./                                                                                                                        0.0s
+ => CACHED [backend dev  4/11] COPY distro ./distro/                                                                                                                  0.0s
+ => CACHED [backend dev  5/11] RUN --mount=type=secret,id=m2settings,target=/usr/share/maven/ref/settings-docker.xml if [[ "install" != "deploy" || "$(arch)" = "x86  0.0s
+ => CACHED [backend dev  6/11] RUN cp /openmrs_distro/distro/target/sdk-distro/web/openmrs_core/openmrs.war /openmrs/distribution/openmrs_core/                       0.0s
+ => CACHED [backend dev  7/11] RUN cp /openmrs_distro/distro/target/sdk-distro/web/openmrs-distro.properties /openmrs/distribution/                                   0.0s
+ => CACHED [backend dev  8/11] RUN cp -R /openmrs_distro/distro/target/sdk-distro/web/openmrs_modules /openmrs/distribution/openmrs_modules/                          0.0s
+ => CACHED [backend dev  9/11] RUN cp -R /openmrs_distro/distro/target/sdk-distro/web/openmrs_owas /openmrs/distribution/openmrs_owas/                                0.0s
+ => CACHED [backend dev 10/11] RUN cp -R /openmrs_distro/distro/target/sdk-distro/web/openmrs_config /openmrs/distribution/openmrs_config/                            0.0s
+ => CACHED [backend dev 11/11] RUN mvn -s /usr/share/maven/ref/settings-docker.xml -U -P distro clean                                                                 0.0s
+ => CACHED [backend stage-1 2/6] COPY --from=dev /openmrs/distribution/openmrs_core/openmrs.war /openmrs/distribution/openmrs_core/                                   0.0s
+ => CACHED [backend stage-1 3/6] COPY --from=dev /openmrs/distribution/openmrs-distro.properties /openmrs/distribution/                                               0.0s
+ => CACHED [backend stage-1 4/6] COPY --from=dev /openmrs/distribution/openmrs_modules /openmrs/distribution/openmrs_modules                                          0.0s
+ => CACHED [backend stage-1 5/6] COPY --from=dev /openmrs/distribution/openmrs_owas /openmrs/distribution/openmrs_owas                                                0.0s
+ => CACHED [backend stage-1 6/6] COPY --from=dev  /openmrs/distribution/openmrs_config /openmrs/distribution/openmrs_config                                           0.0s
+ => [certbot] resolving provenance for metadata file                                                                                                                  0.0s
+ => [backend] exporting to image                                                                                                                                      0.0s
+ => => exporting layers                                                                                                                                               0.0s
+ => => writing image sha256:6119417537a1028adbcf2fb1158574b8f2a5b4562145f3dea6a0ca02fdb22d3b                                                                          0.0s
+ => => naming to docker.io/openmrs/openmrs-reference-application-3-backend:qa                                                                                         0.0s
+ => [backend] resolving provenance for metadata file                                                                                                                  0.0s
+ => [frontend internal] load build definition from Dockerfile                                                                                                         0.0s
+ => => transferring dockerfile: 1.46kB                                                                                                                                0.0s
+ => [frontend internal] load .dockerignore                                                                                                                            0.0s
+ => => transferring context: 2B                                                                                                                                       0.0s
+ => [gateway internal] load metadata for docker.io/library/nginx:1.25-alpine                                                                                          3.4s
+ => [frontend internal] load metadata for docker.io/library/node:22-alpine                                                                                            1.7s
+ => [frontend dev 1/8] FROM docker.io/library/node:22-alpine@sha256:bd26af08779f746650d95a2e4d653b0fd3c8030c44284b6b98d701c9b5eb66b9                                  0.0s
+ => [frontend internal] load build context                                                                                                                            0.0s
+ => => transferring context: 188B                                                                                                                                     0.0s
+ => [gateway 1/7] FROM docker.io/library/nginx:1.25-alpine@sha256:516475cc129da42866742567714ddc681e5eed7b9ee0b9e9c015e464b4221a00                                    0.0s
+ => CACHED [frontend dev 2/8] RUN mkdir -p /app                                                                                                                       0.0s
+ => CACHED [frontend dev 3/8] WORKDIR /app                                                                                                                            0.0s
+ => CACHED [frontend dev 4/8] COPY spa-assemble-config.json .                                                                                                         0.0s
+ => CACHED [frontend dev 5/8] COPY spa-build-config.json .                                                                                                            0.0s
+ => [frontend dev 6/8] RUN npx --legacy-peer-deps openmrs@next assemble --manifest --mode config --config spa-assemble-config.json --target ./spa                   259.4s
+ => [frontend dev 7/8] RUN npx --legacy-peer-deps openmrs@next build --build-config spa-build-config.json --target ./spa                                             92.9s
+ => [frontend dev 8/8] RUN if [ ! -f ./spa/index.html ]; then echo 'Build failed. Please check the logs above for details. This may have happened because of an upda  0.4s
+ => CACHED [frontend stage-1 2/8] RUN apk update &&     apk upgrade &&     apk add --no-cache moreutils                                                               0.0s
+ => CACHED [frontend stage-1 3/8] RUN rm -rf /usr/share/nginx/html/*                                                                                                  0.0s
+ => CACHED [frontend stage-1 4/8] COPY startup.sh /usr/local/bin/startup.sh                                                                                           0.0s
+ => CACHED [frontend stage-1 5/8] RUN chmod +x /usr/local/bin/startup.sh                                                                                              0.0s
+ => CACHED [frontend stage-1 6/8] COPY nginx.conf /etc/nginx/nginx.conf                                                                                               0.0s
+ => [frontend stage-1 7/8] COPY --from=dev /app/spa /usr/share/nginx/html                                                                                             3.8s
+ => [frontend stage-1 8/8] COPY config-core_demo.json /usr/share/nginx/html                                                                                           0.6s
+ => [frontend] exporting to image                                                                                                                                     2.9s
+ => => exporting layers                                                                                                                                               2.7s
+ => => writing image sha256:95f97ea948cde6d8bcf0e239b43c688ff7230c2b3b29146fcbe98d269cee304f                                                                          0.0s
+ => => naming to docker.io/technicise/openmrs-reference-application--3-frontend:qa                                                                                    0.1s
+ => [frontend] resolving provenance for metadata file                                                                                                                 0.0s
+ => [gateway internal] load build definition from Dockerfile                                                                                                          0.1s
+ => => transferring dockerfile: 513B                                                                                                                                  0.0s
+ => [gateway internal] load .dockerignore                                                                                                                             0.1s
+ => => transferring context: 2B                                                                                                                                       0.0s
+ => [gateway internal] load build context                                                                                                                             0.0s
+ => => transferring context: 192B                                                                                                                                     0.0s
+ => CACHED [gateway 2/7] COPY nginx.conf /etc/nginx/nginx.conf                                                                                                        0.0s
+ => CACHED [gateway 3/7] COPY default.conf.template /etc/nginx/conf-templates/                                                                                        0.0s
+ => CACHED [gateway 4/7] COPY default-ssl.conf.template /etc/nginx/conf-templates/                                                                                    0.0s
+ => CACHED [gateway 5/7] COPY docker-entrypoint.sh /usr/local/bin/                                                                                                    0.0s
+ => CACHED [gateway 6/7] COPY watch-certs.sh /usr/local/bin/                                                                                                          0.0s
+ => CACHED [gateway 7/7] RUN chmod +x /usr/local/bin/docker-entrypoint.sh /usr/local/bin/watch-certs.sh                                                               0.0s
+ => [gateway] exporting to image                                                                                                                                      0.0s
+ => => exporting layers                                                                                                                                               0.0s
+ => => writing image sha256:b7da4520b664f1544fea5b08d9b0e3f5d878a0daad112706bcc626fe92f9d2f5                                                                          0.0s
+ => => naming to docker.io/openmrs/openmrs-reference-application-3-gateway:qa                                                                                         0.0s
+ => [gateway] resolving provenance for metadata file                                                                                                                  0.0s
+chandra@chandra-latitude-ubuntu22:/media/chandra/b664505e-129c-4c0d-a87b-9efb6469eca2/home/chandra/code/openmrs-distro-referenceapplication$ 
