@@ -1,0 +1,995 @@
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,360| Foreign key constraint added to bed_patient_assignment_map (bed_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,361| ChangeSet liquibase.xml::08102013_3::arathy ran successfully in 61ms
+backend-1   | Running Changeset: liquibase.xml::08102013_4::arathy
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,366| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,435| Foreign key constraint added to bed_patient_assignment_map (patient_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,435| ChangeSet liquibase.xml::08102013_4::arathy ran successfully in 71ms
+backend-1   | Running Changeset: liquibase.xml::08102013_5::arathy
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,441| Creating snapshot
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:11,461| Name 'PK_BED_LOCATION_MAP' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,461| Table bed_location_map created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,462| ChangeSet liquibase.xml::08102013_5::arathy ran successfully in 23ms
+backend-1   | Running Changeset: liquibase.xml::08102013_6::arathy
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,469| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,520| Foreign key constraint added to bed_location_map (location_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,520| ChangeSet liquibase.xml::08102013_6::arathy ran successfully in 53ms
+backend-1   | Running Changeset: liquibase.xml::08102013_7::arathy
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,572| Columns status(varchar(255)) added to bed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,573| ChangeSet liquibase.xml::08102013_7::arathy ran successfully in 49ms
+backend-1   | Running Changeset: liquibase.xml::08102013_8::arathy
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,595| Default value added to bed.status
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,595| ChangeSet liquibase.xml::08102013_8::arathy ran successfully in 17ms
+backend-1   | Running Changeset: liquibase.xml::bed_management_module_18112013_1::Arathy,Banka
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,600| Creating snapshot
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:11,625| Name 'PK_BED_TYPE' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,625| Table bed_type created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,625| ChangeSet liquibase.xml::bed_management_module_18112013_1::Arathy,Banka ran successfully in 26ms
+backend-1   | Running Changeset: liquibase.xml::bed_management_module_18112013_2::Arathy,Banka
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,661| Columns bed_type_id(int) added to bed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,661| ChangeSet liquibase.xml::bed_management_module_18112013_2::Arathy,Banka ran successfully in 27ms
+backend-1   | Running Changeset: liquibase.xml::bed_management_module_18112013_3::Arathy,Banka
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,672| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,735| Foreign key constraint added to bed (bed_type_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,735| ChangeSet liquibase.xml::bed_management_module_18112013_3::Arathy,Banka ran successfully in 70ms
+backend-1   | Running Changeset: liquibase.xml::27112013_1::tw
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,778| Columns encounter_id(int) added to bed_patient_assignment_map
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,842| Foreign key constraint added to bed_patient_assignment_map (encounter_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,842| ChangeSet liquibase.xml::27112013_1::tw ran successfully in 102ms
+backend-1   | Running Changeset: liquibase.xml::28112013_1::tw
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,885| Columns uuid(char(38)) added to bed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,886| ChangeSet liquibase.xml::28112013_1::tw ran successfully in 36ms
+backend-1   | Running Changeset: liquibase.xml::28112013_2::tw
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,934| Columns creator(int) added to bed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,934| ChangeSet liquibase.xml::28112013_2::tw ran successfully in 46ms
+backend-1   | Running Changeset: liquibase.xml::28112013_3::tw
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,966| Columns date_created(datetime) added to bed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:11,966| ChangeSet liquibase.xml::28112013_3::tw ran successfully in 27ms
+backend-1   | Running Changeset: liquibase.xml::28112013_4::tw
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,005| Columns changed_by(int) added to bed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,006| ChangeSet liquibase.xml::28112013_4::tw ran successfully in 34ms
+backend-1   | Running Changeset: liquibase.xml::28112013_5::tw
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,052| Columns date_changed(datetime) added to bed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,052| ChangeSet liquibase.xml::28112013_5::tw ran successfully in 36ms
+backend-1   | Running Changeset: liquibase.xml::28112013_6::tw
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,101| Columns voided(BOOLEAN) added to bed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,101| ChangeSet liquibase.xml::28112013_6::tw ran successfully in 40ms
+backend-1   | Running Changeset: liquibase.xml::28112013_7::tw
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,132| Columns voided_by(int) added to bed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,132| ChangeSet liquibase.xml::28112013_7::tw ran successfully in 24ms
+backend-1   | Running Changeset: liquibase.xml::28112013_8::tw
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,173| Columns date_voided(datetime) added to bed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,174| ChangeSet liquibase.xml::28112013_8::tw ran successfully in 38ms
+backend-1   | Running Changeset: liquibase.xml::28112013_9::tw
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,204| Columns void_reason(varchar(255)) added to bed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,204| ChangeSet liquibase.xml::28112013_9::tw ran successfully in 26ms
+backend-1   | Running Changeset: liquibase.xml::28112013_10::tw
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,250| Unique constraint added to bed(uuid)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,313| Foreign key constraint added to bed (creator)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,391| Foreign key constraint added to bed (changed_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,479| Foreign key constraint added to bed (voided_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,480| ChangeSet liquibase.xml::28112013_10::tw ran successfully in 273ms
+backend-1   | Running Changeset: liquibase.xml::28112013_11::tw
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,517| Columns uuid(char(38)) added to bed_patient_assignment_map
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,518| ChangeSet liquibase.xml::28112013_11::tw ran successfully in 33ms
+backend-1   | Running Changeset: liquibase.xml::28112013_12::tw
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,566| Columns creator(int) added to bed_patient_assignment_map
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,566| ChangeSet liquibase.xml::28112013_12::tw ran successfully in 42ms
+backend-1   | Running Changeset: liquibase.xml::28112013_13::tw
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,585| Columns date_created(datetime) added to bed_patient_assignment_map
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,586| ChangeSet liquibase.xml::28112013_13::tw ran successfully in 17ms
+backend-1   | Running Changeset: liquibase.xml::28112013_14::tw
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,637| Columns changed_by(int) added to bed_patient_assignment_map
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,638| ChangeSet liquibase.xml::28112013_14::tw ran successfully in 46ms
+backend-1   | Running Changeset: liquibase.xml::28112013_15::tw
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,658| Columns date_changed(datetime) added to bed_patient_assignment_map
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,658| ChangeSet liquibase.xml::28112013_15::tw ran successfully in 16ms
+backend-1   | Running Changeset: liquibase.xml::28112013_16::tw
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,708| Columns voided(BOOLEAN) added to bed_patient_assignment_map
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,708| ChangeSet liquibase.xml::28112013_16::tw ran successfully in 43ms
+backend-1   | Running Changeset: liquibase.xml::28112013_17::tw
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,730| Columns voided_by(int) added to bed_patient_assignment_map
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,730| ChangeSet liquibase.xml::28112013_17::tw ran successfully in 16ms
+backend-1   | Running Changeset: liquibase.xml::28112013_18::tw
+frontend-1  | 127.0.0.1 - - [26/Oct/2025:16:34:12 +0000] "GET / HTTP/1.1" 200 3311 "-" "curl/8.14.1"
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,779| Columns date_voided(datetime) added to bed_patient_assignment_map
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,779| ChangeSet liquibase.xml::28112013_18::tw ran successfully in 46ms
+backend-1   | Running Changeset: liquibase.xml::28112013_19::tw
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,823| Columns void_reason(varchar(255)) added to bed_patient_assignment_map
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,823| ChangeSet liquibase.xml::28112013_19::tw ran successfully in 36ms
+backend-1   | Running Changeset: liquibase.xml::28112013_20::tw
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,880| Unique constraint added to bed_patient_assignment_map(uuid)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:12,970| Foreign key constraint added to bed_patient_assignment_map (creator)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,077| Foreign key constraint added to bed_patient_assignment_map (changed_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,163| Foreign key constraint added to bed_patient_assignment_map (voided_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,163| ChangeSet liquibase.xml::28112013_20::tw ran successfully in 335ms
+backend-1   | Running Changeset: liquibase.xml::bedmanagement-201401171410::banka-tw
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,171| New row inserted into privilege
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,179| ChangeSet liquibase.xml::bedmanagement-201401171410::banka-tw ran successfully in 11ms
+backend-1   | Running Changeset: liquibase.xml::bedmanagement-201514101449::padma
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,188| New row inserted into privilege
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,191| ChangeSet liquibase.xml::bedmanagement-201514101449::padma ran successfully in 5ms
+backend-1   | Running Changeset: liquibase.xml::bedmanagement-201514101455::padma
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,199| New row inserted into privilege
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,203| ChangeSet liquibase.xml::bedmanagement-201514101455::padma ran successfully in 6ms
+backend-1   | Running Changeset: liquibase.xml::bedmanagement-201514101836::padma
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,210| New row inserted into privilege
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,214| ChangeSet liquibase.xml::bedmanagement-201514101836::padma ran successfully in 6ms
+backend-1   | Running Changeset: liquibase.xml::bedmanagement-20151410183::padma
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,222| New row inserted into privilege
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,226| ChangeSet liquibase.xml::bedmanagement-20151410183::padma ran successfully in 6ms
+backend-1   | Running Changeset: liquibase.xml::bedmanagement-201625111153::Sourav, Chethan
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,236| Creating snapshot
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:13,267| Name 'PK_BED_TAG' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,267| Table bed_tag created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,330| Foreign key constraint added to bed_tag (creator)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,400| Foreign key constraint added to bed_tag (changed_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,472| Foreign key constraint added to bed_tag (voided_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,472| ChangeSet liquibase.xml::bedmanagement-201625111153::Sourav, Chethan ran successfully in 237ms
+backend-1   | Running Changeset: liquibase.xml::201625111155::Sourav, Chethan
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,499| Creating snapshot
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:13,537| Name 'PK_BED_TAG_MAP' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,538| Table bed_tag_map created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,600| Foreign key constraint added to bed_tag_map (bed_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,666| Foreign key constraint added to bed_tag_map (bed_tag_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,738| Foreign key constraint added to bed_tag_map (creator)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,829| Foreign key constraint added to bed_tag_map (changed_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,922| Foreign key constraint added to bed_tag_map (voided_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,922| ChangeSet liquibase.xml::201625111155::Sourav, Chethan ran successfully in 424ms
+backend-1   | Running Changeset: liquibase.xml::bedmanagement-201703221515::Santhosh, Maharjun
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,931| New row inserted into privilege
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,933| ChangeSet liquibase.xml::bedmanagement-201703221515::Santhosh, Maharjun ran successfully in 3ms
+backend-1   | Running Changeset: liquibase.xml::bedmanagement-201703221516::Santhosh, Maharjun
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,937| New row inserted into privilege
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,939| ChangeSet liquibase.xml::bedmanagement-201703221516::Santhosh, Maharjun ran successfully in 3ms
+backend-1   | Running Changeset: liquibase.xml::bedmanagement-201802121200::SanishMaharjan
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:13,972| Columns uuid(char(38)),creator(int),date_created(datetime),changed_by(int),date_changed(datetime),retired(BOOLEAN),retire_reason(varchar(255)),retired_by(int),date_retired(datetime) added to bed_type
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,020| Foreign key constraint added to bed_type (creator)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,084| Foreign key constraint added to bed_type (changed_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,150| Foreign key constraint added to bed_type (retired_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,150| ChangeSet liquibase.xml::bedmanagement-201802121200::SanishMaharjan ran successfully in 208ms
+backend-1   | Running Changeset: liquibase.xml::201809040219::Mahitha, Swathi
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,219| NOT NULL constraint has been added to bed_location_map.bed_id
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,220| ChangeSet liquibase.xml::201809040219::Mahitha, Swathi ran successfully in 65ms
+backend-1   | Running Changeset: liquibase.xml::201807041155::Mahitha
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,228| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,284| Foreign key constraint added to bed_location_map (bed_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,285| ChangeSet liquibase.xml::201807041155::Mahitha ran successfully in 59ms
+backend-1   | Running Changeset: liquibase.xml::201806272055::Saikumar
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,294| New row inserted into global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,297| ChangeSet liquibase.xml::201806272055::Saikumar ran successfully in 5ms
+backend-1   | Running Changeset: liquibase.xml::201806272357::Saikumar
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,307| New row inserted into global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,311| ChangeSet liquibase.xml::201806272357::Saikumar ran successfully in 6ms
+backend-1   | Running Changeset: liquibase.xml::BM-201808291611::Angshu
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,333| New row inserted into global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,340| ChangeSet liquibase.xml::BM-201808291611::Angshu ran successfully in 22ms
+backend-1   | Running Changeset: liquibase.xml::BM-201810051013::Dubey
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,404| Null constraint dropped from bed_location_map.bed_id
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,404| ChangeSet liquibase.xml::BM-201810051013::Dubey ran successfully in 57ms
+backend-1   | Running Changeset: liquibase.xml::BM-201810051512::angshu
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,414| New row inserted into privilege
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,423| ChangeSet liquibase.xml::BM-201810051512::angshu ran successfully in 10ms
+backend-1   | Running Changeset: liquibase.xml::BM-201810051515::angshu
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,429| New row inserted into privilege
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,433| ChangeSet liquibase.xml::BM-201810051515::angshu ran successfully in 5ms
+backend-1   | Running Changeset: liquibase.xml::BM-201810051518::angshu
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,440| New row inserted into privilege
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,443| ChangeSet liquibase.xml::BM-201810051518::angshu ran successfully in 5ms
+backend-1   | Running Changeset: liquibase.xml::BM-201810051531::angshu
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,452| New row inserted into privilege
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,453| ChangeSet liquibase.xml::BM-201810051531::angshu ran successfully in 4ms
+backend-1   | Running Changeset: liquibase.xml::BM-201810051532::angshu
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,461| New row inserted into privilege
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,463| ChangeSet liquibase.xml::BM-201810051532::angshu ran successfully in 5ms
+backend-1   | Running Changeset: liquibase.xml::BM-201810051533::angshu
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,468| Data updated in role_privilege
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,468| ChangeSet liquibase.xml::BM-201810051533::angshu ran successfully in 1ms
+backend-1   | Running Changeset: liquibase.xml::BM-201810051534::angshu
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,473| Data updated in role_privilege
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,473| ChangeSet liquibase.xml::BM-201810051534::angshu ran successfully in 1ms
+backend-1   | Running Changeset: liquibase.xml::BM-201810051535::angshu
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,477| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,478| ChangeSet liquibase.xml::BM-201810051535::angshu ran successfully in 2ms
+backend-1   | Running Changeset: liquibase.xml::BM-201810051536::angshu
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,482| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,483| ChangeSet liquibase.xml::BM-201810051536::angshu ran successfully in 2ms
+backend-1   | Running Changeset: liquibase.xml::BM_202308131856::slubwama
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,547| Column bed_location_map.row_number renamed to bed_row_number
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,547| ChangeSet liquibase.xml::BM_202308131856::slubwama ran successfully in 60ms
+backend-1   | Running Changeset: liquibase.xml::BM_202308131857::slubwama
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,619| Column bed_location_map.column_number renamed to bed_column_number
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,619| ChangeSet liquibase.xml::BM_202308131857::slubwama ran successfully in 68ms
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,626| Successfully released change log lock
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,678| Parsed changelog file 'liquibase.xml'
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,679| Reading from openmrs.liquibasechangelog
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,802| Successfully acquired change log lock
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,804| Reading from openmrs.liquibasechangelog
+backend-1   | Running Changeset: liquibase.xml::Create-privilege-create-teleconsultation-202211211339::Kushboo
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,939| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,943| ChangeSet liquibase.xml::Create-privilege-create-teleconsultation-202211211339::Kushboo ran successfully in 5ms
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:14,956| Successfully released change log lock
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:15,033| Parsed changelog file 'liquibase.xml'
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:15,034| Reading from openmrs.liquibasechangelog
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:15,118| Successfully acquired change log lock
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:15,120| Reading from openmrs.liquibasechangelog
+backend-1   | Running Changeset: liquibase.xml::20120316-1300::mseaton
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:15,243| Creating snapshot
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:15,286| Name 'PK_CALCULATION_REGISTRATION' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:15,286| Table calculation_registration created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:15,286| ChangeSet liquibase.xml::20120316-1300::mseaton ran successfully in 43ms
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:15,292| Successfully released change log lock
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:15,634| Parsed changelog file 'liquibase.xml'
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:15,635| Reading from openmrs.liquibasechangelog
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:15,725| Successfully acquired change log lock
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:15,727| Reading from openmrs.liquibasechangelog
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:15,839| Due to mariadb SQL limitations, modifyDataType will lose primary key/autoincrement/not null/comment settings explicitly redefined in the change. Use <sql> or <modifySql> to re-specify all configuration if this is the case
+backend-1   | Running Changeset: liquibase.xml::reporting_report_design_1::mseaton
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:15,948| Creating snapshot
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:16,185| Name 'PK_REPORTING_REPORT_DESIGN' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:16,185| Table reporting_report_design created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:16,466| Foreign key constraint added to reporting_report_design (report_definition_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:16,764| Foreign key constraint added to reporting_report_design (creator)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:17,132| Foreign key constraint added to reporting_report_design (changed_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:17,512| Foreign key constraint added to reporting_report_design (retired_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:17,512| ChangeSet liquibase.xml::reporting_report_design_1::mseaton ran successfully in 1566ms
+backend-1   | Running Changeset: liquibase.xml::reporting_report_design_2::mseaton
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:17,772| Columns report_definition_uuid(varchar(38)) added to reporting_report_design
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:17,775| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:17,775| ChangeSet liquibase.xml::reporting_report_design_2::mseaton ran successfully in 233ms
+backend-1   | Running Changeset: liquibase.xml::reporting_report_design_3::mseaton
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:18,265| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:18,265| ChangeSet liquibase.xml::reporting_report_design_3::mseaton ran successfully in 461ms
+backend-1   | Running Changeset: liquibase.xml::reporting_report_design_4::mseaton
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:18,321| Foreign key report_definition_id_for_reporting_report_design dropped
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:18,322| ChangeSet liquibase.xml::reporting_report_design_4::mseaton ran successfully in 51ms
+backend-1   | Running Changeset: liquibase.xml::reporting_report_design_5::mseaton
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:18,432| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:18,486| Index report_definition_uuid_for_reporting_report_design created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:18,486| ChangeSet liquibase.xml::reporting_report_design_5::mseaton ran successfully in 161ms
+backend-1   | Running Changeset: liquibase.xml::reporting_report_design_6::mseaton
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:18,530| Column reporting_report_design.report_definition_id dropped
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:18,530| ChangeSet liquibase.xml::reporting_report_design_6::mseaton ran successfully in 38ms
+backend-1   | Running Changeset: liquibase.xml::reporting_report_design_resource_1::mseaton
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:18,545| Creating snapshot
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:18,580| Name 'PK_REPORTING_REPORT_DESIGN_RESOURCE' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:18,580| Table reporting_report_design_resource created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:18,649| Foreign key constraint added to reporting_report_design_resource (report_design_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:18,726| Foreign key constraint added to reporting_report_design_resource (creator)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:18,824| Foreign key constraint added to reporting_report_design_resource (changed_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:18,909| Foreign key constraint added to reporting_report_design_resource (retired_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:18,909| ChangeSet liquibase.xml::reporting_report_design_resource_1::mseaton ran successfully in 367ms
+backend-1   | Running Changeset: liquibase.xml::reporting_report_request_1::mseaton
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:18,914| Creating snapshot
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:18,956| Name 'PK_REPORTING_REPORT_REQUEST' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:18,956| Table reporting_report_request created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,036| Foreign key constraint added to reporting_report_request (requested_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,036| ChangeSet liquibase.xml::reporting_report_request_1::mseaton ran successfully in 123ms
+backend-1   | Running Changeset: liquibase.xml::reporting_report_request_2::mseaton
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,078| Columns schedule(varchar(100)) added to reporting_report_request
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,079| ChangeSet liquibase.xml::reporting_report_request_2::mseaton ran successfully in 38ms
+backend-1   | Running Changeset: liquibase.xml::reporting_report_request_3::mseaton
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,119| Columns process_automatically(boolean) added to reporting_report_request
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,119| ChangeSet liquibase.xml::reporting_report_request_3::mseaton ran successfully in 36ms
+backend-1   | Running Changeset: liquibase.xml::reporting_report_request_4::mseaton
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,157| Columns minimum_days_to_preserve(int) added to reporting_report_request
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,157| ChangeSet liquibase.xml::reporting_report_request_4::mseaton ran successfully in 31ms
+backend-1   | Running Changeset: liquibase.xml::reporting_report_processor_1::mseaton
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,166| Creating snapshot
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:19,206| Name 'PK_REPORTING_REPORT_PROCESSOR' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,207| Table reporting_report_processor created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,271| Foreign key constraint added to reporting_report_processor (creator)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,356| Foreign key constraint added to reporting_report_processor (changed_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,449| Foreign key constraint added to reporting_report_processor (retired_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,449| ChangeSet liquibase.xml::reporting_report_processor_1::mseaton ran successfully in 287ms
+backend-1   | Running Changeset: liquibase.xml::reporting_report_processor_2::mseaton
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,460| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,466| Marking ChangeSet: "liquibase.xml::reporting_report_processor_2::mseaton" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Table openmrs.reporting_report_request_processor does not exist
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::reporting_report_processor_3::mseaton
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,499| Columns report_design_id(int) added to reporting_report_processor
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,587| Foreign key constraint added to reporting_report_processor (report_design_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,588| ChangeSet liquibase.xml::reporting_report_processor_3::mseaton ran successfully in 114ms
+backend-1   | Running Changeset: liquibase.xml::reporting_report_processor_4::mseaton
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,627| Columns processor_mode(varchar(255)) added to reporting_report_processor
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,629| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,630| ChangeSet liquibase.xml::reporting_report_processor_4::mseaton ran successfully in 36ms
+backend-1   | Running Changeset: liquibase.xml::reporting_migration_1::mseaton
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,635| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,637| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,638| ChangeSet liquibase.xml::reporting_migration_1::mseaton ran successfully in 5ms
+backend-1   | Running Changeset: liquibase.xml::reporting_migration_2::mseaton
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,645| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,645| ChangeSet liquibase.xml::reporting_migration_2::mseaton ran successfully in 4ms
+backend-1   | Running Changeset: liquibase.xml::reporting_id_set_cleanup::mseaton
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,651| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,656| Marking ChangeSet: "liquibase.xml::reporting_id_set_cleanup::mseaton" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Table openmrs.reporting_idset does not exist
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::drop_report_definition_uuid_constraint::mgoodrich
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,666| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,668| Marking ChangeSet: "liquibase.xml::drop_report_definition_uuid_constraint::mgoodrich" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Foreign Key `report_definition_uuid for reporting_report_design` does not exist
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::drop_report_definition_uuid_index::mgoodrich
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,770| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,771| Marking ChangeSet: "liquibase.xml::drop_report_definition_uuid_index::mgoodrich" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Index `report_definition_uuid for reporting_report_design` does not exist
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::drop_creator_for_reporting_report_design::mgoodrich
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,777| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,778| Marking ChangeSet: "liquibase.xml::drop_creator_for_reporting_report_design::mgoodrich" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Foreign Key `creator for reporting_report_design` does not exist
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::drop_changed_by_for_reporting_report_design::mgoodrich
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,784| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,785| Marking ChangeSet: "liquibase.xml::drop_changed_by_for_reporting_report_design::mgoodrich" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Foreign Key `changed_by for reporting_report_design` does not exist
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::drop_retired_by_for_reporting_report_design::mgoodrich
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,793| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,796| Marking ChangeSet: "liquibase.xml::drop_retired_by_for_reporting_report_design::mgoodrich" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Foreign Key `retired_by for reporting_report_design` does not exist
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::drop_report_design_id_for_reporting_report_design_resource::mgoodrich
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,804| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,806| Marking ChangeSet: "liquibase.xml::drop_report_design_id_for_reporting_report_design_resource::mgoodrich" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Foreign Key `report_design_id for reporting_report_design_resource` does not exist
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::drop_creator_for_reporting_report_design_resource::mgoodrich
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,818| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,821| Marking ChangeSet: "liquibase.xml::drop_creator_for_reporting_report_design_resource::mgoodrich" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Foreign Key `creator for reporting_report_design_resource` does not exist
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::drop_changed_by_for_reporting_report_design_resource::mgoodrich
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,830| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,832| Marking ChangeSet: "liquibase.xml::drop_changed_by_for_reporting_report_design_resource::mgoodrich" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Foreign Key `changed_by for reporting_report_design_resource` does not exist
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::drop_retired_by_for_reporting_report_design_resource::mgoodrich
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,840| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,842| Marking ChangeSet: "liquibase.xml::drop_retired_by_for_reporting_report_design_resource::mgoodrich" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Foreign Key `retired_by for reporting_report_design_resource` does not exist
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::drop_requested_by_for_reporting_report_request::mgoodrich
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,851| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,853| Marking ChangeSet: "liquibase.xml::drop_requested_by_for_reporting_report_request::mgoodrich" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Foreign Key `requested_by for reporting_report_request` does not exist
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::drop_creator_for_reporting_report_processor::mgoodrich
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,861| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,863| Marking ChangeSet: "liquibase.xml::drop_creator_for_reporting_report_processor::mgoodrich" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Foreign Key `creator for reporting_report_processor` does not exist
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::drop_changed_by_for_reporting_report_processor::mgoodrich
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,874| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,878| Marking ChangeSet: "liquibase.xml::drop_changed_by_for_reporting_report_processor::mgoodrich" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Foreign Key `changed_by for reporting_report_processor` does not exist
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::drop_retired_by_reporting_report_processor::mgoodrich
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,912| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:19,918| Marking ChangeSet: "liquibase.xml::drop_retired_by_reporting_report_processor::mgoodrich" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Foreign Key `retired_by for reporting_report_processor` does not exist
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::add_report_definition_uuid_index::mgoodrich
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:20,037| Marking ChangeSet: "liquibase.xml::add_report_definition_uuid_index::mgoodrich" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Not precondition failed
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::add_creator_for_reporting_report_design::mgoodrich
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:20,045| Marking ChangeSet: "liquibase.xml::add_creator_for_reporting_report_design::mgoodrich" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Not precondition failed
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::add_changed_by_for_reporting_report_design::mgoodrich
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:20,053| Marking ChangeSet: "liquibase.xml::add_changed_by_for_reporting_report_design::mgoodrich" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Not precondition failed
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::add_retired_by_for_reporting_report_design::mgoodrich
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:20,062| Marking ChangeSet: "liquibase.xml::add_retired_by_for_reporting_report_design::mgoodrich" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Not precondition failed
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::add_report_design_id_for_reporting_report_design_resource::mgoodrich
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:20,073| Marking ChangeSet: "liquibase.xml::add_report_design_id_for_reporting_report_design_resource::mgoodrich" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Not precondition failed
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::add_creator_for_reporting_report_design_resource::mgoodrich
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:20,090| Marking ChangeSet: "liquibase.xml::add_creator_for_reporting_report_design_resource::mgoodrich" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Not precondition failed
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::add_changed_by_for_reporting_report_design_resource::mgoodrich
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:20,104| Marking ChangeSet: "liquibase.xml::add_changed_by_for_reporting_report_design_resource::mgoodrich" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Not precondition failed
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::add_retired_by_for_reporting_report_design_resource::mgoodrich
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:20,117| Marking ChangeSet: "liquibase.xml::add_retired_by_for_reporting_report_design_resource::mgoodrich" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Not precondition failed
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::add_requested_by_for_reporting_report_request::mgoodrich
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:20,132| Marking ChangeSet: "liquibase.xml::add_requested_by_for_reporting_report_request::mgoodrich" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Not precondition failed
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::add_creator_for_reporting_report_processor::mgoodrich
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:20,140| Marking ChangeSet: "liquibase.xml::add_creator_for_reporting_report_processor::mgoodrich" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Not precondition failed
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::add_changed_by_for_reporting_report_processor::mgoodrich
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:20,150| Marking ChangeSet: "liquibase.xml::add_changed_by_for_reporting_report_processor::mgoodrich" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Not precondition failed
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::add_retired_by_for_reporting_report_processor::mgoodrich
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:20,160| Marking ChangeSet: "liquibase.xml::add_retired_by_for_reporting_report_processor::mgoodrich" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : Not precondition failed
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::update_content_type_database_type::alalo
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:20,255| reporting_report_design_resource.content_type datatype was changed to varchar(100)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:20,255| ChangeSet liquibase.xml::update_content_type_database_type::alalo ran successfully in 88ms
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:20,262| Successfully released change log lock
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:20,695| Parsed changelog file 'liquibase.xml'
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:20,696| Reading from openmrs.liquibasechangelog
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:20,864| Successfully acquired change log lock
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:20,867| Reading from openmrs.liquibasechangelog
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:21,236| Successfully released change log lock
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:21,483| Parsed changelog file 'liquibase.xml'
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:21,484| Reading from openmrs.liquibasechangelog
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:21,588| Successfully acquired change log lock
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:21,589| Reading from openmrs.liquibasechangelog
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:21,743| Successfully released change log lock
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:21,836| Parsed changelog file 'liquibase.xml'
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:21,836| Reading from openmrs.liquibasechangelog
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:21,951| Successfully acquired change log lock
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:21,952| Reading from openmrs.liquibasechangelog
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:22,061| Due to mariadb SQL limitations, modifyDataType will lose primary key/autoincrement/not null/comment settings explicitly redefined in the change. Use <sql> or <modifySql> to re-specify all configuration if this is the case
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:22,061| Due to mariadb SQL limitations, setNullable will lose primary key/autoincrement/not null/comment settings explicitly redefined in the change. Use <sql> or <modifySql> to re-specify all configuration if this is the case
+backend-1   | Running Changeset: liquibase.xml::43889130-55c2-49e9-b72b-a9eae9a31da7::Partners In Health
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,163| Creating snapshot
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:22,219| Name 'PK_IDGEN_IDENTIFIER_SOURCE' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,220| Table idgen_identifier_source created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,220| ChangeSet liquibase.xml::43889130-55c2-49e9-b72b-a9eae9a31da7::Partners In Health ran successfully in 58ms
+backend-1   | Running Changeset: liquibase.xml::a7a39c84-cb48-427e-9141-ee851c283132::Partners In Health
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,230| Creating snapshot
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:22,278| Name 'PK_IDGEN_SEQ_ID_GEN' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,278| Table idgen_seq_id_gen created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,279| ChangeSet liquibase.xml::a7a39c84-cb48-427e-9141-ee851c283132::Partners In Health ran successfully in 51ms
+backend-1   | Running Changeset: liquibase.xml::a92f91c0-162b-42d9-a33b-c1412dc2948d::Partners In Health
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,287| Creating snapshot
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:22,324| Name 'PK_IDGEN_REMOTE_SOURCE' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,324| Table idgen_remote_source created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,324| ChangeSet liquibase.xml::a92f91c0-162b-42d9-a33b-c1412dc2948d::Partners In Health ran successfully in 38ms
+backend-1   | Running Changeset: liquibase.xml::b50c8351-3c6c-40eb-be40-bbdaed78c5a0::Partners In Health
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,332| Creating snapshot
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:22,375| Name 'PK_IDGEN_ID_POOL' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,375| Table idgen_id_pool created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,376| ChangeSet liquibase.xml::b50c8351-3c6c-40eb-be40-bbdaed78c5a0::Partners In Health ran successfully in 46ms
+backend-1   | Running Changeset: liquibase.xml::9b1eb03d-bd27-428b-8359-5877797b0fb8::Partners In Health
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,389| Creating snapshot
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:22,449| Name 'PK_IDGEN_POOLED_IDENTIFIER' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,449| Table idgen_pooled_identifier created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,450| ChangeSet liquibase.xml::9b1eb03d-bd27-428b-8359-5877797b0fb8::Partners In Health ran successfully in 64ms
+backend-1   | Running Changeset: liquibase.xml::82b51fe1-e6ad-423c-80a0-d2a48a3efe6c::Partners In Health
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,464| Creating snapshot
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:22,523| Name 'PK_IDGEN_AUTO_GENERATION_OPTION' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,523| Table idgen_auto_generation_option created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,524| ChangeSet liquibase.xml::82b51fe1-e6ad-423c-80a0-d2a48a3efe6c::Partners In Health ran successfully in 64ms
+backend-1   | Running Changeset: liquibase.xml::4b4ee08c-262f-48f0-a37e-2372614e1a58::Partners In Health
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,534| Creating snapshot
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:22,578| Name 'PK_IDGEN_LOG_ENTRY' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,578| Table idgen_log_entry created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,578| ChangeSet liquibase.xml::4b4ee08c-262f-48f0-a37e-2372614e1a58::Partners In Health ran successfully in 45ms
+backend-1   | Running Changeset: liquibase.xml::17a1d838-bf40-45d0-9e2b-6d177ff7ad62::Partners In Health
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,583| Creating snapshot
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:22,630| Name 'PK_IDGEN_RESERVED_IDENTIFIER' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,630| Table idgen_reserved_identifier created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,630| ChangeSet liquibase.xml::17a1d838-bf40-45d0-9e2b-6d177ff7ad62::Partners In Health ran successfully in 48ms
+backend-1   | Running Changeset: liquibase.xml::e931b3c1-94b6-4169-90f4-1c6bf49d4883::Partners In Health
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,670| Columns refill_with_scheduled_task(tinyint(1)) added to idgen_id_pool
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,671| ChangeSet liquibase.xml::e931b3c1-94b6-4169-90f4-1c6bf49d4883::Partners In Health ran successfully in 34ms
+backend-1   | Running Changeset: liquibase.xml::3e32c214-9f9a-4424-8590-43ca68396aa6::Partners In Health
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,727| Columns user(varchar(50)) added to idgen_remote_source
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,727| ChangeSet liquibase.xml::3e32c214-9f9a-4424-8590-43ca68396aa6::Partners In Health ran successfully in 50ms
+backend-1   | Running Changeset: liquibase.xml::1df31052-65ce-4b81-8a9c-86c58c87c042::Partners In Health
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,768| Columns password(varchar(20)) added to idgen_remote_source
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,768| ChangeSet liquibase.xml::1df31052-65ce-4b81-8a9c-86c58c87c042::Partners In Health ran successfully in 32ms
+backend-1   | Running Changeset: liquibase.xml::aea80abc-8e1b-44f2-9574-c64741750cec::Jeremy Keiper
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,824| Column idgen_seq_id_gen.length renamed to min_length
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,824| ChangeSet liquibase.xml::aea80abc-8e1b-44f2-9574-c64741750cec::Jeremy Keiper ran successfully in 46ms
+backend-1   | Running Changeset: liquibase.xml::f3244825-c3d1-4789-99bd-03a014ae56a4::Jeremy Keiper
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,868| Columns max_length(int(11)) added to idgen_seq_id_gen
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,868| ChangeSet liquibase.xml::f3244825-c3d1-4789-99bd-03a014ae56a4::Jeremy Keiper ran successfully in 36ms
+backend-1   | Running Changeset: liquibase.xml::a5b34ba3-2cb0-46b5-bb47-4e07da4a7acd::Jeremy Keiper
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,877| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,878| ChangeSet liquibase.xml::a5b34ba3-2cb0-46b5-bb47-4e07da4a7acd::Jeremy Keiper ran successfully in 5ms
+backend-1   | Running Changeset: liquibase.xml::d5bc38a3-35e3-4a16-b1b2-df6f4c32ec7a::Partners In Health
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,930| Columns location(int(11)) added to idgen_auto_generation_option
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,931| ChangeSet liquibase.xml::d5bc38a3-35e3-4a16-b1b2-df6f4c32ec7a::Partners In Health ran successfully in 47ms
+backend-1   | Running Changeset: liquibase.xml::02fb6cc1-d45c-4985-8117-0d313975fd81::Partners In Health
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:22,939| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:23,018| Foreign key constraint added to idgen_auto_generation_option (location)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:23,018| ChangeSet liquibase.xml::02fb6cc1-d45c-4985-8117-0d313975fd81::Partners In Health ran successfully in 82ms
+backend-1   | Running Changeset: liquibase.xml::4dce863f-bb66-4aa3-9663-22a23be24689::Partners In Health
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:23,053| Foreign key identifier_type for idgen_auto_generation_option dropped
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:23,053| ChangeSet liquibase.xml::4dce863f-bb66-4aa3-9663-22a23be24689::Partners In Health ran successfully in 30ms
+backend-1   | Running Changeset: liquibase.xml::e8258234-2133-4270-9370-301c908f1e2b::Partners In Health
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:23,191| Index identifier_type dropped from table idgen_auto_generation_option
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:23,191| ChangeSet liquibase.xml::e8258234-2133-4270-9370-301c908f1e2b::Partners In Health ran successfully in 127ms
+backend-1   | Running Changeset: liquibase.xml::0f79a646-4f62-4fef-b035-421ad8f73ba2::Partners In Health
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:23,195| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:23,260| Foreign key constraint added to idgen_auto_generation_option (identifier_type)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:23,261| ChangeSet liquibase.xml::0f79a646-4f62-4fef-b035-421ad8f73ba2::Partners In Health ran successfully in 67ms
+backend-1   | Running Changeset: liquibase.xml::0h78646-4fef-b035-kj9gh8a2::Mekom Solutions
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:23,301| idgen_seq_id_gen.prefix datatype was changed to varchar(100)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:23,302| ChangeSet liquibase.xml::0h78646-4fef-b035-kj9gh8a2::Mekom Solutions ran successfully in 37ms
+backend-1   | Running Changeset: liquibase.xml::c7084acb-9cc5-4643-ad6d-6302acc76d69::Samuel Male
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:23,341| Columns uuid(char(38)) added to idgen_auto_generation_option
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:23,342| ChangeSet liquibase.xml::c7084acb-9cc5-4643-ad6d-6302acc76d69::Samuel Male ran successfully in 34ms
+backend-1   | Running Changeset: liquibase.xml::daa579e7-b8de-4858-bfe5-c9ef2606db5e::Samuel Male
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:23,354| Marking ChangeSet: "liquibase.xml::daa579e7-b8de-4858-bfe5-c9ef2606db5e::Samuel Male" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : DBMS Precondition failed: expected mysql, got mariadb
+backend-1   |           liquibase.xml : DBMS Precondition failed: expected oracle, got mariadb
+backend-1   |           liquibase.xml : DBMS Precondition failed: expected mssql, got mariadb
+backend-1   |           liquibase.xml : DBMS Precondition failed: expected postgresql, got mariadb
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::9b5c919c-2223-41d2-824a-b65869666028::Ian Bacher
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:23,365| Data updated in idgen_auto_generation_option
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:23,365| ChangeSet liquibase.xml::9b5c919c-2223-41d2-824a-b65869666028::Ian Bacher ran successfully in 4ms
+backend-1   | Running Changeset: liquibase.xml::6b164990-ccd3-4508-9c08-11d27786da17::Samuel Male
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:23,447| NOT NULL constraint has been added to idgen_auto_generation_option.uuid
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:23,499| Index idgen_auto_generation_option_uuid_index created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:23,500| ChangeSet liquibase.xml::6b164990-ccd3-4508-9c08-11d27786da17::Samuel Male ran successfully in 125ms
+backend-1   | Running Changeset: liquibase.xml::9f33b50e-77e9-46df-b3ea-070c5360a5a3::loliveira
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:23,533| idgen_seq_id_gen.suffix datatype was changed to varchar(100)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:23,534| ChangeSet liquibase.xml::9f33b50e-77e9-46df-b3ea-070c5360a5a3::loliveira ran successfully in 31ms
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:23,544| Successfully released change log lock
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:23,757| Parsed changelog file 'liquibase.xml'
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:23,758| Reading from openmrs.liquibasechangelog
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:23,861| Successfully acquired change log lock
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:23,862| Reading from openmrs.liquibasechangelog
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:23,983| Due to mariadb SQL limitations, setNullable will lose primary key/autoincrement/not null/comment settings explicitly redefined in the change. Use <sql> or <modifySql> to re-specify all configuration if this is the case
+backend-1   | Running Changeset: liquibase.xml::openhmis.cashier-001-v3.0.0-01::jecihjoy
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:24,066| Creating snapshot
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:24,091| Name 'PK_CASHIER_BILLABLE_SERVICE' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:24,091| Table cashier_billable_service created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:24,091| ChangeSet liquibase.xml::openhmis.cashier-001-v3.0.0-01::jecihjoy ran successfully in 26ms
+backend-1   | Running Changeset: liquibase.xml::openhmis.cashier-v1.0-1::ibewes
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:24,164| Name 'PK_CASHIER_ITEM' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:24,164| Table cashier_item created
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:24,185| Name 'PK_CASHIER_ITEM_ATTRIBUTE_TYPE' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:24,185| Table cashier_item_attribute_type created
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:24,234| Name 'PK_CASHIER_ITEM_ATTRIBUTE' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:24,234| Table cashier_item_attribute created
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:24,268| Name 'PK_CASHIER_ITEM_CODE' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:24,268| Table cashier_item_code created
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:24,288| Name 'PK_CASHIER_DEPARTMENT' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:24,289| Table cashier_department created
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:24,342| Name 'PK_CASHIER_CASH_POINT' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:24,343| Table cashier_cash_point created
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:24,364| Name 'PK_CASHIER_TIMESHEET' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:24,364| Table cashier_timesheet created
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:24,397| Name 'PK_CASHIER_BILL' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:24,397| Table cashier_bill created
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:24,428| Name 'PK_CASHIER_BILL_LINE_ITEM' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:24,428| Table cashier_bill_line_item created
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:24,459| Name 'PK_CASHIER_PAYMENT_MODE' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:24,460| Table cashier_payment_mode created
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:24,508| Name 'PK_CASHIER_BILL_PAYMENT' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:24,508| Table cashier_bill_payment created
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:24,536| Name 'PK_CASHIER_PAYMENT_MODE_ATTRIBUTE_TYPE' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:24,537| Table cashier_payment_mode_attribute_type created
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:24,580| Name 'PK_CASHIER_BILL_PAYMENT_ATTRIBUTE' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:24,581| Table cashier_bill_payment_attribute created
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:24,612| Name 'PK_CASHIER_SEQ_RECEIPT_NUMBER_GENERATOR' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:24,612| Table cashier_seq_receipt_number_generator created
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:24,645| Name 'PK_CASHIER_SEQ_GROUP_SEQUENCE' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:24,646| Table cashier_seq_group_sequence created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:24,685| Index cashier_item_name_idx created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:24,736| Index cashier_item_department_name_idx created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:24,769| Index cashier_timesheet_provider_clock_in created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:24,828| Index cashier_bill_receipt_number_idx created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:24,861| Index cashier_bill_patient_id_idx created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:24,905| Index cashier_seq_group_sequence_sequence_group_idx created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:24,981| Foreign key constraint added to cashier_item (creator)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:25,077| Foreign key constraint added to cashier_item (changed_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:25,181| Foreign key constraint added to cashier_item (retired_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:25,269| Foreign key constraint added to cashier_item (department_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:25,326| Foreign key constraint added to cashier_item_attribute_type (creator)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:25,404| Foreign key constraint added to cashier_item_attribute_type (changed_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:25,482| Foreign key constraint added to cashier_item_attribute_type (retired_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:25,541| Foreign key constraint added to cashier_item_attribute (item_attribute_type_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:25,613| Foreign key constraint added to cashier_item_attribute (item_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:25,694| Foreign key constraint added to cashier_item_attribute (creator)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:25,779| Foreign key constraint added to cashier_item_attribute (changed_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:25,878| Foreign key constraint added to cashier_item_attribute (voided_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:25,950| Foreign key constraint added to cashier_item_code (item_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:26,019| Foreign key constraint added to cashier_item_code (creator)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:26,093| Foreign key constraint added to cashier_item_code (changed_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:26,175| Foreign key constraint added to cashier_item_code (retired_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:26,243| Foreign key constraint added to cashier_department (creator)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:26,312| Foreign key constraint added to cashier_department (changed_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:26,386| Foreign key constraint added to cashier_department (retired_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:26,441| Foreign key constraint added to cashier_cash_point (creator)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:26,505| Foreign key constraint added to cashier_cash_point (changed_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:26,575| Foreign key constraint added to cashier_cash_point (retired_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:26,636| Foreign key constraint added to cashier_timesheet (provider_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:26,713| Foreign key constraint added to cashier_timesheet (cash_point_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:26,797| Foreign key constraint added to cashier_timesheet (creator)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:26,883| Foreign key constraint added to cashier_timesheet (changed_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:26,963| Foreign key constraint added to cashier_timesheet (voided_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:27,039| Foreign key constraint added to cashier_bill (provider_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:27,117| Foreign key constraint added to cashier_bill (patient_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:27,364| Foreign key constraint added to cashier_bill (cash_point_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:27,841| Foreign key constraint added to cashier_bill (creator)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:28,346| Foreign key constraint added to cashier_bill (changed_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:28,817| Foreign key constraint added to cashier_bill (voided_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:29,318| Foreign key constraint added to cashier_bill (adjusted_bill_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:29,378| Foreign key constraint added to cashier_bill_line_item (bill_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:29,457| Foreign key constraint added to cashier_bill_line_item (item_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:29,544| Foreign key constraint added to cashier_bill_line_item (creator)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:29,637| Foreign key constraint added to cashier_bill_line_item (changed_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:29,732| Foreign key constraint added to cashier_bill_line_item (voided_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:29,791| Foreign key constraint added to cashier_payment_mode (creator)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:29,869| Foreign key constraint added to cashier_payment_mode (changed_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:29,958| Foreign key constraint added to cashier_payment_mode (retired_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:30,033| Foreign key constraint added to cashier_payment_mode_attribute_type (payment_mode_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:30,116| Foreign key constraint added to cashier_payment_mode_attribute_type (creator)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:30,197| Foreign key constraint added to cashier_payment_mode_attribute_type (changed_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:30,288| Foreign key constraint added to cashier_payment_mode_attribute_type (retired_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:30,349| Foreign key constraint added to cashier_bill_payment (bill_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:30,418| Foreign key constraint added to cashier_bill_payment (payment_mode_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:30,502| Foreign key constraint added to cashier_bill_payment (creator)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:30,585| Foreign key constraint added to cashier_bill_payment (changed_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:30,673| Foreign key constraint added to cashier_bill_payment (voided_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:30,735| Foreign key constraint added to cashier_bill_payment_attribute (bill_payment_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:30,805| Foreign key constraint added to cashier_bill_payment_attribute (payment_mode_attribute_type_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:30,806| ChangeSet liquibase.xml::openhmis.cashier-v1.0-1::ibewes ran successfully in 6684ms
+backend-1   | Running Changeset: liquibase.xml::openhmis.cashier-001-v3.0.0-241220::jecihjoy
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:30,818| Creating snapshot
+backend-1   | WARN - Slf4JLogger.log(41) |2025-10-26T16:34:30,860| Name 'PK_CASHIER_ITEM_PRICE' ignored for PRIMARY key.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:30,861| Table cashier_item_price created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:30,930| Foreign key constraint added to cashier_item_price (item_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,006| Foreign key constraint added to cashier_item_price (service_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,089| Foreign key constraint added to cashier_item_price (creator)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,179| Foreign key constraint added to cashier_item_price (changed_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,274| Foreign key constraint added to cashier_item_price (voided_by)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,369| Foreign key constraint added to cashier_item_price (payment_mode)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,369| ChangeSet liquibase.xml::openhmis.cashier-001-v3.0.0-241220::jecihjoy ran successfully in 553ms
+backend-1   | Running Changeset: liquibase.xml::openhmis.cashier-001-v1.0-3::ibewes
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,414| Columns amount_tendered(decimal(10,2)) added to cashier_bill_payment
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,414| ChangeSet liquibase.xml::openhmis.cashier-001-v1.0-3::ibewes ran successfully in 40ms
+backend-1   | Running Changeset: liquibase.xml::openhmis.cashier-001-v1.5-1::shortend
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,457| Columns receipt_printed(boolean) added to cashier_bill
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,457| ChangeSet liquibase.xml::openhmis.cashier-001-v1.5-1::shortend ran successfully in 39ms
+backend-1   | Running Changeset: liquibase.xml::openhmis.cashier-901-v2.0-1::ibewes
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,643| Foreign key cashier_bill_line_item_item_id_fk dropped
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,727| Foreign key constraint added to cashier_bill_line_item (item_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,728| ChangeSet liquibase.xml::openhmis.cashier-901-v2.0-1::ibewes ran successfully in 264ms
+backend-1   | Running Changeset: liquibase.xml::openhmis.cashier-001-v2.0.0-2::Benjamin Mwalimu
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,772| Columns adjustment_reason(varchar(500)) added to cashier_bill
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,773| ChangeSet liquibase.xml::openhmis.cashier-001-v2.0.0-2::Benjamin Mwalimu ran successfully in 39ms
+backend-1   | Running Changeset: liquibase.xml::openhmis.cashier-001-v2.0.0-3::Benjamin Mwalimu
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,808| Columns location_id(int) added to cashier_cash_point
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,885| Foreign key constraint added to cashier_cash_point (location_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,886| ChangeSet liquibase.xml::openhmis.cashier-001-v2.0.0-3::Benjamin Mwalimu ran successfully in 107ms
+backend-1   | Running Changeset: liquibase.xml::openhmis.cashier-001-v2.0.0-4::marios
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,891| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,892| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,893| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,894| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,895| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,896| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,898| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,899| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,901| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,902| ChangeSet liquibase.xml::openhmis.cashier-001-v2.0.0-4::marios ran successfully in 13ms
+backend-1   | Running Changeset: liquibase.xml::openhmis.cashier-001-v2.0.0-5::marios
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,916| Marking ChangeSet: "liquibase.xml::openhmis.cashier-001-v2.0.0-5::marios" as ran despite precondition failure due to onFail='MARK_RAN': 
+backend-1   |           liquibase.xml : SQL Precondition failed.  Expected '1' got '0'
+backend-1   | 
+backend-1   | Running Changeset: liquibase.xml::openhmis.cashier-001-v2.0.0-7::aderkey
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,985| Columns _status(varchar(10)) added to cashier_bill
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,990| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,992| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,994| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:31,997| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,003| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,041| Column cashier_bill.status dropped
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,082| Column cashier_bill._status renamed to status
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,175| NOT NULL constraint has been added to cashier_bill.status
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,219| Columns _sequence_type(varchar(20)) added to cashier_seq_receipt_number_generator
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,220| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,221| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,223| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,250| Column cashier_seq_receipt_number_generator.sequence_type dropped
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,295| Column cashier_seq_receipt_number_generator._sequence_type renamed to sequence_type
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,345| NOT NULL constraint has been added to cashier_seq_receipt_number_generator.sequence_type
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,375| Columns _grouping_type(varchar(25)) added to cashier_seq_receipt_number_generator
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,377| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,379| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,381| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,382| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,419| Column cashier_seq_receipt_number_generator.grouping_type dropped
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,451| Column cashier_seq_receipt_number_generator._grouping_type renamed to grouping_type
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,508| NOT NULL constraint has been added to cashier_seq_receipt_number_generator.grouping_type
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,509| ChangeSet liquibase.xml::openhmis.cashier-001-v2.0.0-7::aderkey ran successfully in 563ms
+backend-1   | Running Changeset: liquibase.xml::openhmis.cashier-001-v2.0.0-8::marios
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,533| Columns price_id(int) added to cashier_bill_line_item
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,533| ChangeSet liquibase.xml::openhmis.cashier-001-v2.0.0-8::marios ran successfully in 19ms
+backend-1   | Running Changeset: liquibase.xml::openhmis.cashier-001-v2.0.0-9::marios
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,622| Null constraint dropped from cashier_bill_line_item.price_id
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,623| Data updated in cashier_bill_line_item
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,624| ChangeSet liquibase.xml::openhmis.cashier-001-v2.0.0-9::marios ran successfully in 84ms
+backend-1   | Running Changeset: liquibase.xml::openhmis.cashier-001-v2.2.0-0::ibewes
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,667| Columns sort_order(int) added to cashier_payment_mode
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,668| ChangeSet liquibase.xml::openhmis.cashier-001-v2.2.0-0::ibewes ran successfully in 33ms
+backend-1   | Running Changeset: liquibase.xml::openhmis.cashier-001-v3.0.0-0::Aojwang
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,709| Columns payment_status(varchar(10)) added to cashier_bill_line_item
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,709| ChangeSet liquibase.xml::openhmis.cashier-001-v3.0.0-0::Aojwang ran successfully in 36ms
+backend-1   | Running Changeset: liquibase.xml::openhmis.cashier-001-v3.0.0-0334::jecihjoy
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,747| Columns service_id(int) added to cashier_bill_line_item
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,826| Columns item_id(INT) of cashier_bill_line_item modified
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,927| Foreign key constraint added to cashier_bill_line_item (service_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,927| ChangeSet liquibase.xml::openhmis.cashier-001-v3.0.0-0334::jecihjoy ran successfully in 211ms
+backend-1   | Running Changeset: liquibase.xml::openhmis.cashier-001-v3.0.0-01992024::jecihjoy
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:32,962| Columns concept_id(int) added to cashier_billable_service
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,034| Foreign key constraint added to cashier_billable_service (concept_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,034| ChangeSet liquibase.xml::openhmis.cashier-001-v3.0.0-01992024::jecihjoy ran successfully in 101ms
+backend-1   | Running Changeset: liquibase.xml::openhmis.cashier-001-v3.0.0-202402131429::jecihjoy
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,081| Columns order_id(int) added to cashier_bill_line_item
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,179| Foreign key constraint added to cashier_bill_line_item (order_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,179| ChangeSet liquibase.xml::openhmis.cashier-001-v3.0.0-202402131429::jecihjoy ran successfully in 141ms
+backend-1   | Running Changeset: liquibase.xml::cashier_create_index_on_date_created_202406051539::aojwang
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,240| Index cashier_date_created created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,240| ChangeSet liquibase.xml::cashier_create_index_on_date_created_202406051539::aojwang ran successfully in 54ms
+backend-1   | Running Changeset: liquibase.xml::openmrs.billing-001-v3.0.0-20251007::Wikum Weerakutti
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,248| Data updated in global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,250| Data updated in global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,253| Data updated in global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,254| Data updated in global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,255| Data updated in global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,256| Data updated in global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,258| Data updated in global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,258| Data updated in global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,260| Data updated in global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,262| Data updated in global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,265| Data updated in global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,267| Data updated in global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,269| Data updated in global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,271| Data updated in global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,272| Data updated in global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,273| Data updated in global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,274| Data updated in global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,275| Data updated in global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,276| ChangeSet liquibase.xml::openmrs.billing-001-v3.0.0-20251007::Wikum Weerakutti ran successfully in 32ms
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,285| Successfully released change log lock
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,688| Parsed changelog file 'liquibase.xml'
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,689| Reading from openmrs.liquibasechangelog
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,780| Successfully acquired change log lock
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,781| Reading from openmrs.liquibasechangelog
+backend-1   | Running Changeset: liquibase.xml::create-appointment_speciality_table-201707031130::Shruthi,Pushpa
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:33,950| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,007| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,008| ChangeSet liquibase.xml::create-appointment_speciality_table-201707031130::Shruthi,Pushpa ran successfully in 61ms
+backend-1   | Running Changeset: liquibase.xml::create-appointment_service_table-201707031130::Shruthi,Pushpa
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,018| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,078| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,079| ChangeSet liquibase.xml::create-appointment_service_table-201707031130::Shruthi,Pushpa ran successfully in 63ms
+backend-1   | Running Changeset: liquibase.xml::appointments_-201707031031::Shruthi P
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,094| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,098| ChangeSet liquibase.xml::appointments_-201707031031::Shruthi P ran successfully in 8ms
+backend-1   | Running Changeset: liquibase.xml::create-weekly_service_availability_table-201707071130::Shruthi,Pushpa
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,113| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,157| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,158| ChangeSet liquibase.xml::create-weekly_service_availability_table-201707071130::Shruthi,Pushpa ran successfully in 48ms
+backend-1   | Running Changeset: liquibase.xml::create-appointment_service_type_table-201707191650::Santhosh, Pramida
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,169| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,222| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,222| ChangeSet liquibase.xml::create-appointment_service_type_table-201707191650::Santhosh, Pramida ran successfully in 58ms
+backend-1   | Running Changeset: liquibase.xml::create-patient_appointment_table-201707211030::Deepak
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,229| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,302| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,302| ChangeSet liquibase.xml::create-patient_appointment_table-201707211030::Deepak ran successfully in 76ms
+backend-1   | Running Changeset: liquibase.xml::create-column-teleconsultation-202012212044::Vishal, Angshu
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,330| Columns teleconsultation(boolean) added to patient_appointment
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,331| ChangeSet liquibase.xml::create-column-teleconsultation-202012212044::Vishal, Angshu ran successfully in 23ms
+backend-1   | Running Changeset: liquibase.xml::drop_index_on_appointment_service_table-201707251710::Santhosh, Maharjun
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,490| Index name_UNIQUE dropped from table appointment_service
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,490| ChangeSet liquibase.xml::drop_index_on_appointment_service_table-201707251710::Santhosh, Maharjun ran successfully in 154ms
+backend-1   | Running Changeset: liquibase.xml::add_color_column_to_appointment_service_table-201707251432::Santhosh, Maharjun
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,525| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,526| ChangeSet liquibase.xml::add_color_column_to_appointment_service_table-201707251432::Santhosh, Maharjun ran successfully in 33ms
+backend-1   | Running Changeset: liquibase.xml::drop_index_on_appointment_service_type_table-201708031638::Santhosh, Pramida
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,672| Index service_name_dur_UNIQUE dropped from table appointment_service_type
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,672| ChangeSet liquibase.xml::drop_index_on_appointment_service_type_table-201708031638::Santhosh, Pramida ran successfully in 140ms
+backend-1   | Running Changeset: liquibase.xml::create-patient_appointment_audit_table-201708311030::Shruthi
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,676| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,718| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,718| ChangeSet liquibase.xml::create-patient_appointment_audit_table-201708311030::Shruthi ran successfully in 43ms
+backend-1   | Running Changeset: liquibase.xml::create-appointment-status-change-task-20170912101533::Kaustav
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,727| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,731| ChangeSet liquibase.xml::create-appointment-status-change-task-20170912101533::Kaustav ran successfully in 8ms
+backend-1   | Running Changeset: liquibase.xml::create-appointment-status-change-task-201709121099999::Bahmni
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,744| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,751| ChangeSet liquibase.xml::create-appointment-status-change-task-201709121099999::Bahmni ran successfully in 10ms
+backend-1   | Running Changeset: liquibase.xml::Create-privilege-view-appointments-201709201603::Santhosh, Pramida
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,761| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,764| ChangeSet liquibase.xml::Create-privilege-view-appointments-201709201603::Santhosh, Pramida ran successfully in 6ms
+backend-1   | Running Changeset: liquibase.xml::Create-privilege-manage-appointments-201709201605::Santhosh, Pramida
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,774| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,776| ChangeSet liquibase.xml::Create-privilege-manage-appointments-201709201605::Santhosh, Pramida ran successfully in 5ms
+backend-1   | Running Changeset: liquibase.xml::Create-privilege-view-appointment-services-201709201606::Santhosh, Pramida
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,784| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,787| ChangeSet liquibase.xml::Create-privilege-view-appointment-services-201709201606::Santhosh, Pramida ran successfully in 6ms
+backend-1   | Running Changeset: liquibase.xml::Create-privilege-manage-appointment-services-201709201607::Santhosh, Pramida
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,795| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,797| ChangeSet liquibase.xml::Create-privilege-manage-appointment-services-201709201607::Santhosh, Pramida ran successfully in 5ms
+backend-1   | Running Changeset: liquibase.xml::Create-privilege-manage-appointment-specialities-201709201608::Bailly, Rurangirwa
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,809| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,811| ChangeSet liquibase.xml::Create-privilege-manage-appointment-specialities-201709201608::Bailly, Rurangirwa ran successfully in 5ms
+backend-1   | Running Changeset: liquibase.xml::global-property-past-appointments-sql-09022021::Maharjun, Shireesha
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,835| SQL in file patientPastAppointments.sql executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,839| ChangeSet liquibase.xml::global-property-past-appointments-sql-09022021::Maharjun, Shireesha ran successfully in 17ms
+backend-1   | Running Changeset: liquibase.xml::global-property-past-appointments-sql-update::Himabindu
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,857| SQL in file patientPastAppointments_v2.sql executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,861| ChangeSet liquibase.xml::global-property-past-appointments-sql-update::Himabindu ran successfully in 10ms
+backend-1   | Running Changeset: liquibase.xml::global-property-past-appointments-sql-202402211800::Bahmni
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,883| SQL in file patientPastAppointments_v3.sql executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,890| ChangeSet liquibase.xml::global-property-past-appointments-sql-202402211800::Bahmni ran successfully in 21ms
+backend-1   | Running Changeset: liquibase.xml::global-property-upcoming-appointments-sql-09022021::Maharjun, Shireesha
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,908| SQL in file patientUpcomingAppointments.sql executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,919| ChangeSet liquibase.xml::global-property-upcoming-appointments-sql-09022021::Maharjun, Shireesha ran successfully in 20ms
+backend-1   | Running Changeset: liquibase.xml::global-property-upcoming-appointments-sql-update::Shankar, Mahesh
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,942| SQL in file patientUpcomingAppointments_v2.sql executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,955| ChangeSet liquibase.xml::global-property-upcoming-appointments-sql-update::Shankar, Mahesh ran successfully in 25ms
+backend-1   | Running Changeset: liquibase.xml::global-property-upcoming-appointments-sql-202402211805::Bahmni
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,979| SQL in file patientUpcomingAppointments_v3.sql executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:34,985| ChangeSet liquibase.xml::global-property-upcoming-appointments-sql-202402211805::Bahmni ran successfully in 15ms
+backend-1   | Running Changeset: liquibase.xml::Create-Available-for-appointments-201712121212-2::Maharjun, Saikumar
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,002| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,008| ChangeSet liquibase.xml::Create-Available-for-appointments-201712121212-2::Maharjun, Saikumar ran successfully in 12ms
+backend-1   | Running Changeset: liquibase.xml::201806261146::Suman
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,024| New row inserted into global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,028| ChangeSet liquibase.xml::201806261146::Suman ran successfully in 8ms
+backend-1   | Running Changeset: liquibase.xml::201806261149::Suman
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,046| New row inserted into global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,050| ChangeSet liquibase.xml::201806261149::Suman ran successfully in 7ms
+backend-1   | Running Changeset: liquibase.xml::201806261612::Suman
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,065| New row inserted into global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,078| ChangeSet liquibase.xml::201806261612::Suman ran successfully in 18ms
+backend-1   | Running Changeset: liquibase.xml::201806261614::Suman
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,092| New row inserted into global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,094| ChangeSet liquibase.xml::201806261614::Suman ran successfully in 5ms
+backend-1   | Running Changeset: liquibase.xml::patient_appointment_provider_table_201807251345::angshu
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,106| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,159| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,159| ChangeSet liquibase.xml::patient_appointment_provider_table_201807251345::angshu ran successfully in 57ms
+backend-1   | Running Changeset: liquibase.xml::patient_appointment_provider_migration_201807281845::angshu
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,171| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,171| ChangeSet liquibase.xml::patient_appointment_provider_migration_201807281845::angshu ran successfully in 3ms
+backend-1   | Running Changeset: liquibase.xml::201808241255::Saikumar, Neha
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,182| New row inserted into privilege
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,188| ChangeSet liquibase.xml::201808241255::Saikumar, Neha ran successfully in 9ms
+backend-1   | Running Changeset: liquibase.xml::reset_appointment_status_privilege_201808241255::Saikumar, Sowmika
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,211| New row inserted into privilege
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,221| ChangeSet liquibase.xml::reset_appointment_status_privilege_201808241255::Saikumar, Sowmika ran successfully in 14ms
+backend-1   | Running Changeset: liquibase.xml::201910091141::Dubey
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,232| New row inserted into global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,236| ChangeSet liquibase.xml::201910091141::Dubey ran successfully in 7ms
+backend-1   | Running Changeset: liquibase.xml::patient_appointment_recurring_time_migration_201905131216::Vinay, Alekhya
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,247| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,270| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,271| ChangeSet liquibase.xml::patient_appointment_recurring_time_migration_201905131216::Vinay, Alekhya ran successfully in 28ms
+backend-1   | Running Changeset: liquibase.xml::patient_appointment_occurrence_migration_201905131217::Vinay, Alekhya
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,279| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,338| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,339| ChangeSet liquibase.xml::patient_appointment_occurrence_migration_201905131217::Vinay, Alekhya ran successfully in 63ms
+backend-1   | Running Changeset: liquibase.xml::add_related_appointment_id_patient_appointment_20190718::Sneha, Alekhya
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,457| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,457| ChangeSet liquibase.xml::add_related_appointment_id_patient_appointment_20190718::Sneha, Alekhya ran successfully in 108ms
+backend-1   | Running Changeset: liquibase.xml::add_initial_appointment_status_appointment_service::Dubey
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,498| Columns initial_appointment_status(varchar(45)) added to appointment_service
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,498| ChangeSet liquibase.xml::add_initial_appointment_status_appointment_service::Dubey ran successfully in 37ms
+backend-1   | Running Changeset: liquibase.xml::202001021618::Sukreet
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,510| New row inserted into privilege
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,513| ChangeSet liquibase.xml::202001021618::Sukreet ran successfully in 5ms
+backend-1   | Running Changeset: liquibase.xml::202001031712::Sowmika, Bindu
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,522| New row inserted into global_property
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,526| ChangeSet liquibase.xml::202001031712::Sowmika, Bindu ran successfully in 6ms
+backend-1   | Running Changeset: liquibase.xml::default-202009011116::Deedee Lee
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,533| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,535| ChangeSet liquibase.xml::default-202009011116::Deedee Lee ran successfully in 5ms
+backend-1   | Running Changeset: liquibase.xml::create-column-tele_health_video_link-202106211857::Angshu
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,577| Columns tele_health_video_link(varchar(255)) added to patient_appointment
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,578| ChangeSet liquibase.xml::create-column-tele_health_video_link-202106211857::Angshu ran successfully in 39ms
+backend-1   | Running Changeset: liquibase.xml::drop-column-appointment-teleconsultation-202107061351::Angshu
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,630| Column patient_appointment.teleconsultation dropped
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,631| ChangeSet liquibase.xml::drop-column-appointment-teleconsultation-202107061351::Angshu ran successfully in 45ms
+backend-1   | Running Changeset: liquibase.xml::appointments_sql_diff::Nathan Ruhanga
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,852| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,853| ChangeSet liquibase.xml::appointments_sql_diff::Nathan Ruhanga ran successfully in 209ms
+backend-1   | Running Changeset: liquibase.xml::create-column-priority-for-appointment-202304191703::Kavitha, Umair
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,895| Columns priority(varchar(45)) added to patient_appointment
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:35,896| ChangeSet liquibase.xml::create-column-priority-for-appointment-202304191703::Kavitha, Umair ran successfully in 39ms
+backend-1   | Running Changeset: liquibase.xml::remove-not-null-constraint-202402271826::Kavitha, Umair
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:36,075| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:36,075| ChangeSet liquibase.xml::remove-not-null-constraint-202402271826::Kavitha, Umair ran successfully in 173ms
+backend-1   | Running Changeset: liquibase.xml::add-patient-appointment-fulfilling-encounter-map-table-20240501::mgoodrich
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:36,082| Creating snapshot
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:36,107| Table patient_appointment_fulfilling_encounter_map created
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:36,150| Primary key added to patient_appointment_fulfilling_encounter_map (patient_appointment_id,fulfilling_encounter_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:36,196| Foreign key constraint added to patient_appointment_fulfilling_encounter_map (patient_appointment_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:36,261| Foreign key constraint added to patient_appointment_fulfilling_encounter_map (fulfilling_encounter_id)
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:36,261| ChangeSet liquibase.xml::add-patient-appointment-fulfilling-encounter-map-table-20240501::mgoodrich ran successfully in 180ms
+backend-1   | Running Changeset: liquibase.xml::add_date_appointment_scheduled_20240528::aojwang
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:36,308| Columns date_appointment_scheduled(DATETIME) added to patient_appointment
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:36,308| ChangeSet liquibase.xml::add_date_appointment_scheduled_20240528::aojwang ran successfully in 41ms
+backend-1   | Running Changeset: liquibase.xml::fill_date_appointment_scheduled_20240603::aojwang
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:36,318| Custom SQL executed
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:36,319| ChangeSet liquibase.xml::fill_date_appointment_scheduled_20240603::aojwang ran successfully in 3ms
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:36,329| Successfully released change log lock
+backend-1   | WARN - AppointmentProperties.load(22) |2025-10-26T16:34:36,530| Property file not found: /openmrs/data/appointment.properties
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:36,618| Parsed changelog file 'liquibase.xml'
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:36,620| Reading from openmrs.liquibasechangelog
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:36,761| Successfully acquired change log lock
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:36,762| Reading from openmrs.liquibasechangelog
+backend-1   | Running Changeset: liquibase.xml::delete-concepts-checksums-20211025::iniz
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:36,902| Finished deleting all checksums files for the concepts domain.
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:36,903| ChangeSet liquibase.xml::delete-concepts-checksums-20211025::iniz ran successfully in 13ms
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:36,944| Successfully released change log lock
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:37,101| Parsed changelog file 'liquibase.xml'
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:37,102| Reading from openmrs.liquibasechangelog
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:37,224| Successfully acquired change log lock
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:37,225| Reading from openmrs.liquibasechangelog
+backend-1   | INFO - Slf4JLogger.log(43) |2025-10-26T16:34:37,391| Successfully released change log lock
+backend-1   | INFO - ServiceContext.startRefreshingContext(841) |2025-10-26T16:34:37,807| Refreshing Context
+backend-1   | INFO - StorageServiceCondition.matches(38) |2025-10-26T16:34:40,254| Selected storage type: local
+frontend-1  | 127.0.0.1 - - [26/Oct/2025:16:34:42 +0000] "GET / HTTP/1.1" 200 3311 "-" "curl/8.14.1"
+backend-1   | INFO - StorageServiceCondition.matches(38) |2025-10-26T16:34:43,108| Selected storage type: local
+backend-1   | INFO - StorageServiceCondition.matches(38) |2025-10-26T16:34:43,347| Selected storage type: local
+frontend-1  | 127.0.0.1 - - [26/Oct/2025:16:35:12 +0000] "GET / HTTP/1.1" 200 3311 "-" "curl/8.14.1"
+backend-1   | WARN - IdgenTask.run(32) |2025-10-26T16:35:30,692| Not running scheduled task. DaemonToken = null; enabled = false
+backend-1   | INFO - Context.setAuthenticationScheme(198) |2025-10-26T16:35:31,230| An authentication scheme override was provided. Using this one in place of the OpenMRS default authentication scheme.
+backend-1   | java.lang.IllegalStateException: Filters cannot be added to context [/openmrs] as the context has been initialised
+backend-1   |   at org.apache.catalina.core.ApplicationContext.checkState(ApplicationContext.java:1227)
+backend-1   |   at org.apache.catalina.core.ApplicationContext.addFilter(ApplicationContext.java:730)
+backend-1   |   at org.apache.catalina.core.ApplicationContext.addFilter(ApplicationContext.java:712)
+backend-1   |   at org.apache.catalina.core.ApplicationContextFacade.addFilter(ApplicationContextFacade.java:432)
+backend-1   |   at org.openmrs.web.WebComponentRegistrar.setServletContext(WebComponentRegistrar.java:39)
+backend-1   |   at org.springframework.web.context.support.ServletContextAwareProcessor.postProcessBeforeInitialization(ServletContextAwareProcessor.java:108)
+backend-1   |   at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440)
+backend-1   |   at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
+backend-1   |   at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+backend-1   |   at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+backend-1   |   at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+backend-1   |   at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+backend-1   |   at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+backend-1   |   at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+backend-1   |   at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+backend-1   |   at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:921)
+backend-1   |   at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+backend-1   |   at org.openmrs.module.ModuleUtil.refreshApplicationContext(ModuleUtil.java:886)
+backend-1   |   at org.openmrs.module.web.WebModuleUtil.refreshWAC(WebModuleUtil.java:948)
+backend-1   |   at org.openmrs.web.Listener.performWebStartOfModules(Listener.java:722)
+backend-1   |   at org.openmrs.web.Listener.performWebStartOfModules(Listener.java:700)
+backend-1   |   at org.openmrs.web.Listener.startOpenmrs(Listener.java:361)
+backend-1   |   at org.openmrs.web.WebDaemon.lambda$startOpenmrs$0(WebDaemon.java:42)
+backend-1   |   at org.openmrs.api.context.Daemon.lambda$runInDaemonThreadInternal$5(Daemon.java:452)
+backend-1   |   at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+backend-1   |   at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+backend-1   |   at java.base/java.lang.Thread.run(Thread.java:1583)
+backend-1   | INFO - ServiceContext.doneRefreshingContext(852) |2025-10-26T16:35:37,994| Done refreshing Context
+backend-1   | WARN - BrokerService.checkSystemUsageLimits(1886) |2025-10-26T16:35:38,813| Store limit is 102400 mb, whilst the data directory: /openmrs/data/activemq-data/localhost/KahaDB only has 513 mb of usable space
+backend-1   | ERROR - BrokerService.checkSystemUsageLimits(1925) |2025-10-26T16:35:38,814| Temporary Store limit is 51200 mb, whilst the temporary data directory: /openmrs/data/activemq-data/localhost/tmp_storage only has 513 mb of usable space
+frontend-1  | 127.0.0.1 - - [26/Oct/2025:16:35:43 +0000] "GET / HTTP/1.1" 200 3311 "-" "curl/8.14.1"
+backend-1   | ERROR - AddressConfigurationLoader.loadAddressConfiguration(67) |2025-10-26T16:35:53,180| Address hierarchy configuration file appears invalid, skipping the loading process: /openmrs/data/configuration/addresshierarchy/addressConfiguration.xml
+backend-1   | ERROR - AddressConfigurationLoader.loadAddressConfiguration(67) |2025-10-26T16:36:01,266| Address hierarchy configuration file appears invalid, skipping the loading process: /openmrs/data/configuration/addresshierarchy/addressConfiguration.xml
+frontend-1  | 127.0.0.1 - - [26/Oct/2025:16:36:13 +0000] "GET / HTTP/1.1" 200 3311 "-" "curl/8.14.1"
+frontend-1  | 127.0.0.1 - - [26/Oct/2025:16:36:43 +0000] "GET / HTTP/1.1" 200 3311 "-" "curl/8.14.1"
+frontend-1  | 127.0.0.1 - - [26/Oct/2025:16:37:13 +0000] "GET / HTTP/1.1" 200 3311 "-" "curl/8.14.1"
+frontend-1  | 127.0.0.1 - - [26/Oct/2025:16:37:43 +0000] "GET / HTTP/1.1" 200 3311 "-" "curl/8.14.1"
+frontend-1  | 127.0.0.1 - - [26/Oct/2025:16:38:13 +0000] "GET / HTTP/1.1" 200 3311 "-" "curl/8.14.1"
+frontend-1  | 127.0.0.1 - - [26/Oct/2025:16:38:43 +0000] "GET / HTTP/1.1" 200 3311 "-" "curl/8.14.1"
+
+
+frontend-1  | 127.0.0.1 - - [26/Oct/2025:16:39:13 +0000] "GET / HTTP/1.1" 200 3311 "-" "curl/8.14.1"
+frontend-1  | 127.0.0.1 - - [26/Oct/2025:16:39:43 +0000] "GET / HTTP/1.1" 200 3311 "-" "curl/8.14.1"
+backend-1   | WARN - TimerSchedulerTask.saveLastExecutionTime(74) |2025-10-26T16:39:59,015| Unable to save the last execution time for task. Task.taskDefinition is null in class org.openmrs.scheduler.tasks.TaskThreadedInitializationWrapper
+frontend-1  | 127.0.0.1 - - [26/Oct/2025:16:40:13 +0000] "GET / HTTP/1.1" 200 3311 "-" "curl/8.14.1"
