@@ -1,0 +1,99 @@
+home/chandra/code/openmrs-distro-referenceapplication$ sudo docker compose build
+[+] Building 270.6s (50/59)                                                                                                                                                                                           docker:default
+ => [certbot internal] load build definition from Dockerfile                                                                                                                                                                    0.1s
+ => => transferring dockerfile: 207B                                                                                                                                                                                            0.0s
+ => [backend internal] load build definition from Dockerfile                                                                                                                                                                    0.1s
+ => => transferring dockerfile: 1.93kB                                                                                                                                                                                          0.0s
+ => [backend] resolve image config for docker-image://docker.io/docker/dockerfile:1                                                                                                                                             3.4s
+ => [frontend] resolve image config for docker-image://docker.io/docker/dockerfile:1.3                                                                                                                                          3.7s
+ => CACHED [frontend] docker-image://docker.io/docker/dockerfile:1.3@sha256:42399d4635eddd7a9b8a24be879d2f9a930d0ed040a61324cfdf59ef1357b3b2                                                                                    0.0s
+ => CACHED [backend] docker-image://docker.io/docker/dockerfile:1@sha256:b6afd42430b15f2d2a4c5a02b919e98a525b785b1aaff16747d2f623364e39b6                                                                                       0.0s
+ => [certbot internal] load .dockerignore                                                                                                                                                                                       0.2s
+ => => transferring context: 2B                                                                                                                                                                                                 0.0s
+ => [certbot internal] load metadata for docker.io/certbot/certbot:v4.0.0                                                                                                                                                       3.6s
+ => [backend internal] load build definition from Dockerfile                                                                                                                                                                    0.0s
+ => [backend internal] load metadata for docker.io/openmrs/openmrs-core:2.8.x-amazoncorretto-21                                                                                                                                 3.1s
+ => [backend internal] load metadata for docker.io/openmrs/openmrs-core:2.8.x-dev-amazoncorretto-21                                                                                                                             8.8s
+ => [certbot 1/3] FROM docker.io/certbot/certbot:v4.0.0@sha256:0e40d51116b9e1058466aa2fd8f342b1d676dfbc17e47877a9e02c3e2460580a                                                                                                 0.0s
+ => [certbot internal] load build context                                                                                                                                                                                       0.0s
+ => => transferring context: 70B                                                                                                                                                                                                0.0s
+ => CACHED [certbot 2/3] RUN apk --no-cache add curl                                                                                                                                                                            0.0s
+ => CACHED [certbot 3/3] COPY ./scripts /certbot/scripts                                                                                                                                                                        0.0s
+ => [certbot] exporting to image                                                                                                                                                                                                0.0s
+ => => exporting layers                                                                                                                                                                                                         0.0s
+ => => writing image sha256:11c8e54a200928b12e8cb5c3d526b498c2c109dbfce3b45cbe9583ae3ce6114c                                                                                                                                    0.0s
+ => => naming to docker.io/library/openmrs-distro-referenceapplication-certbot                                                                                                                                                  0.0s
+ => [certbot] resolving provenance for metadata file                                                                                                                                                                            0.0s
+ => [backend internal] load .dockerignore                                                                                                                                                                                       0.0s
+ => => transferring context: 101B                                                                                                                                                                                               0.0s
+ => [backend dev  1/11] FROM docker.io/openmrs/openmrs-core:2.8.x-dev-amazoncorretto-21@sha256:a24a6ae5b56ef6b4696c0409ab05880868d48cef9b03d367835f2b3c0f9d9d66                                                                 0.0s
+ => [backend stage-1 1/6] FROM docker.io/openmrs/openmrs-core:2.8.x-amazoncorretto-21@sha256:b92b8b6f3fdb86d309b0db1c1f8cccd150ea4acc5e3fb83b35a9b80c609153b7                                                                   0.0s
+ => [backend internal] load build context                                                                                                                                                                                       0.0s
+ => => transferring context: 299B                                                                                                                                                                                               0.0s
+ => CACHED [backend dev  2/11] WORKDIR /openmrs_distro                                                                                                                                                                          0.0s
+ => CACHED [backend dev  3/11] COPY pom.xml ./                                                                                                                                                                                  0.0s
+ => CACHED [backend dev  4/11] COPY distro ./distro/                                                                                                                                                                            0.0s
+ => CACHED [backend dev  5/11] RUN --mount=type=secret,id=m2settings,target=/usr/share/maven/ref/settings-docker.xml if [[ "install" != "deploy" || "$(arch)" = "x86_64" ]]; then mvn -s /usr/share/maven/ref/settings-docker.  0.0s
+ => CACHED [backend dev  6/11] RUN cp /openmrs_distro/distro/target/sdk-distro/web/openmrs_core/openmrs.war /openmrs/distribution/openmrs_core/                                                                                 0.0s
+ => CACHED [backend dev  7/11] RUN cp /openmrs_distro/distro/target/sdk-distro/web/openmrs-distro.properties /openmrs/distribution/                                                                                             0.0s
+ => CACHED [backend dev  8/11] RUN cp -R /openmrs_distro/distro/target/sdk-distro/web/openmrs_modules /openmrs/distribution/openmrs_modules/                                                                                    0.0s
+ => CACHED [backend dev  9/11] RUN cp -R /openmrs_distro/distro/target/sdk-distro/web/openmrs_owas /openmrs/distribution/openmrs_owas/                                                                                          0.0s
+ => CACHED [backend dev 10/11] RUN cp -R /openmrs_distro/distro/target/sdk-distro/web/openmrs_config /openmrs/distribution/openmrs_config/                                                                                      0.0s
+ => CACHED [backend dev 11/11] RUN mvn -s /usr/share/maven/ref/settings-docker.xml -U -P distro clean                                                                                                                           0.0s
+ => CACHED [backend stage-1 2/6] COPY --from=dev /openmrs/distribution/openmrs_core/openmrs.war /openmrs/distribution/openmrs_core/                                                                                             0.0s
+ => CACHED [backend stage-1 3/6] COPY --from=dev /openmrs/distribution/openmrs-distro.properties /openmrs/distribution/                                                                                                         0.0s
+ => CACHED [backend stage-1 4/6] COPY --from=dev /openmrs/distribution/openmrs_modules /openmrs/distribution/openmrs_modules                                                                                                    0.0s
+ => CACHED [backend stage-1 5/6] COPY --from=dev /openmrs/distribution/openmrs_owas /openmrs/distribution/openmrs_owas                                                                                                          0.0s
+ => CACHED [backend stage-1 6/6] COPY --from=dev  /openmrs/distribution/openmrs_config /openmrs/distribution/openmrs_config                                                                                                     0.0s
+ => [backend] exporting to image                                                                                                                                                                                                0.0s
+ => => exporting layers                                                                                                                                                                                                         0.0s
+ => => writing image sha256:6119417537a1028adbcf2fb1158574b8f2a5b4562145f3dea6a0ca02fdb22d3b                                                                                                                                    0.0s
+ => => naming to docker.io/openmrs/openmrs-reference-application-3-backend:qa                                                                                                                                                   0.0s
+ => [backend] resolving provenance for metadata file                                                                                                                                                                            0.0s
+ => [frontend internal] load build definition from Dockerfile                                                                                                                                                                   0.0s
+ => => transferring dockerfile: 1.46kB                                                                                                                                                                                          0.0s
+ => [frontend internal] load .dockerignore                                                                                                                                                                                      0.0s
+ => => transferring context: 2B                                                                                                                                                                                                 0.0s
+ => [frontend internal] load metadata for docker.io/library/node:22-alpine                                                                                                                                                      2.0s
+ => [frontend internal] load metadata for docker.io/library/nginx:1.25-alpine                                                                                                                                                   2.0s
+ => [frontend stage-1 1/8] FROM docker.io/library/nginx:1.25-alpine@sha256:516475cc129da42866742567714ddc681e5eed7b9ee0b9e9c015e464b4221a00                                                                                     0.0s
+ => [frontend dev 1/8] FROM docker.io/library/node:22-alpine@sha256:bd26af08779f746650d95a2e4d653b0fd3c8030c44284b6b98d701c9b5eb66b9                                                                                            0.0s
+ => [frontend internal] load build context                                                                                                                                                                                      0.0s
+ => => transferring context: 2.27kB                                                                                                                                                                                             0.0s
+ => CACHED [frontend dev 2/8] RUN mkdir -p /app                                                                                                                                                                                 0.0s
+ => CACHED [frontend dev 3/8] WORKDIR /app                                                                                                                                                                                      0.0s
+ => [frontend dev 4/8] COPY spa-assemble-config.json .                                                                                                                                                                          0.1s
+ => [frontend dev 5/8] COPY spa-build-config.json .                                                                                                                                                                             0.1s
+ => ERROR [frontend dev 6/8] RUN npx --legacy-peer-deps openmrs@next assemble --manifest --mode config --config spa-assemble-config.json --target ./spa                                                                       253.3s
+------
+ > [frontend dev 6/8] RUN npx --legacy-peer-deps openmrs@next assemble --manifest --mode config --config spa-assemble-config.json --target ./spa:
+3.985 npm warn exec The following package was not found and will be installed: openmrs@8.0.1-pre.3444
+127.3 npm warn deprecated @npmcli/move-file@2.0.1: This functionality has been moved to @npmcli/fs
+128.2 npm warn deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+129.4 npm warn deprecated workbox-cacheable-response@6.6.0: workbox-background-sync@6.6.0
+129.4 npm warn deprecated rollup-plugin-terser@7.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
+129.4 npm warn deprecated workbox-google-analytics@6.6.0: It is not compatible with newer versions of GA starting with v4, as long as you are using GAv3 it should be ok, but the package is not longer being maintained
+131.7 npm warn deprecated phin@2.9.3: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+134.6 npm warn deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+144.1 npm warn deprecated gauge@4.0.4: This package is no longer supported.
+144.2 npm warn deprecated are-we-there-yet@3.0.1: This package is no longer supported.
+144.2 npm warn deprecated npmlog@6.0.2: This package is no longer supported.
+144.5 npm warn deprecated read-package-json@6.0.4: This package is no longer supported. Please use @npmcli/package-json instead.
+145.3 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+164.3 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+165.1 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+166.3 npm warn deprecated source-map@0.8.0-beta.0: The work that was done in this beta branch won't be included in future versions
+166.6 npm warn deprecated phin@3.7.1: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+169.0 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+169.0 npm warn deprecated glob@8.1.0: Glob versions prior to v9 are no longer supported
+171.5 npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+216.2 [openmrs] Reading configuration /app/spa-assemble-config.json ...
+216.2 [openmrs] Assembling dependencies and building import map and routes registry...
+251.0 [openmrs] request to https://registry.npmjs.org/@openmrs/esm-patient-flags-app/-/esm-patient-flags-app-11.3.1-pre.9133.tgz failed, reason: Socket timeout
+251.0 npm notice
+251.0 npm notice New major version of npm available! 10.9.4 -> 11.6.2
+251.0 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.6.2
+251.0 npm notice To update run: npm install -g npm@11.6.2
+251.0 npm notice
+------
+failed to solve: process "/bin/sh -c npx --legacy-peer-deps openmrs@${APP_SHELL_VERSION:-next} assemble --manifest --mode config --config spa-assemble-config.json --target ./spa" did not complete successfully: exit code: 1
