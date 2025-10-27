@@ -42,7 +42,7 @@
     "@openmrs/esm-system-admin-app": "next",
     "@openmrs/esm-user-onboarding-app": "next",
     "@openmrs/esm-ward-app": "next",
-    "@ritaroypaul/esm-hello-world-app": "next"
+    "@ritaroypaul/esm-hello-world-app": "latest"
   },
   "excludedFrontendModules": []
 }
