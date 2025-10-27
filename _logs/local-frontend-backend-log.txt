@@ -993,3 +993,241 @@ frontend-1  | 127.0.0.1 - - [26/Oct/2025:16:39:13 +0000] "GET / HTTP/1.1" 200 33
 frontend-1  | 127.0.0.1 - - [26/Oct/2025:16:39:43 +0000] "GET / HTTP/1.1" 200 3311 "-" "curl/8.14.1"
 backend-1   | WARN - TimerSchedulerTask.saveLastExecutionTime(74) |2025-10-26T16:39:59,015| Unable to save the last execution time for task. Task.taskDefinition is null in class org.openmrs.scheduler.tasks.TaskThreadedInitializationWrapper
 frontend-1  | 127.0.0.1 - - [26/Oct/2025:16:40:13 +0000] "GET / HTTP/1.1" 200 3311 "-" "curl/8.14.1"
+
+
+backend-1   | ERROR - ImportTask$1.run(108) |2025-10-26T16:41:17,697| Failed to import mapping org.openmrs.module.openconceptlab.client.OclMapping@573bb9c1[externalId=fdea7bc0-2ecf-4058-9246-41137305b7fe]
+backend-1   | org.openmrs.module.openconceptlab.importer.ImportException: Cannot save mapping /orgs/openmrs/sources/OrderConvSets/mappings/104e173f-f1d9-47c2-847d-0fac673c6676/
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:527) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.module.openconceptlab.importer.ImportTask$1.run(ImportTask.java:99) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.api.context.Daemon.lambda$runInDaemonThreadInternal$5(Daemon.java:452) ~[openmrs-api-2.8.1.jar:?]
+backend-1   |   at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+backend-1   |   at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+backend-1   | Caused by: org.openmrs.module.openconceptlab.importer.SavingException: Cannot create mapping to concept with URL /orgs/CIEL/sources/CIEL/concepts/1297/, because the concept has not been imported
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:389) ~[openconceptlab.jar:?]
+backend-1   |   ... 7 more
+backend-1   | ERROR - ImportTask$1.run(108) |2025-10-26T16:41:17,744| Failed to import mapping org.openmrs.module.openconceptlab.client.OclMapping@26818026[externalId=11e8edb4-615d-4990-ba1a-5e0d6de74722]
+backend-1   | org.openmrs.module.openconceptlab.importer.ImportException: Cannot save mapping /orgs/openmrs/sources/OrderConvSets/mappings/33e0f33d-1fa6-4fdb-be76-3eafabd42ce3/
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:527) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.module.openconceptlab.importer.ImportTask$1.run(ImportTask.java:99) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.api.context.Daemon.lambda$runInDaemonThreadInternal$5(Daemon.java:452) ~[openmrs-api-2.8.1.jar:?]
+backend-1   |   at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+backend-1   |   at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+backend-1   | Caused by: org.openmrs.module.openconceptlab.importer.SavingException: Cannot create mapping to concept with URL /orgs/CIEL/sources/CIEL/concepts/161153/, because the concept has not been imported
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:389) ~[openconceptlab.jar:?]
+backend-1   |   ... 7 more
+backend-1   | ERROR - ImportTask$1.run(108) |2025-10-26T16:41:17,760| Failed to import mapping org.openmrs.module.openconceptlab.client.OclMapping@37334179[externalId=7ff5f3ce-9e2e-4eb5-bd40-cf762c0854e5]
+backend-1   | org.openmrs.module.openconceptlab.importer.ImportException: Cannot save mapping /orgs/openmrs/sources/OrderConvSets/mappings/1450b040-ba93-4c38-914b-ddcda99d595f/
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:527) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.module.openconceptlab.importer.ImportTask$1.run(ImportTask.java:99) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.api.context.Daemon.lambda$runInDaemonThreadInternal$5(Daemon.java:452) ~[openmrs-api-2.8.1.jar:?]
+backend-1   |   at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+backend-1   |   at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+backend-1   | Caused by: org.openmrs.module.openconceptlab.importer.SavingException: Cannot create mapping to concept with URL /orgs/CIEL/sources/CIEL/concepts/163001/, because the concept has not been imported
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:389) ~[openconceptlab.jar:?]
+backend-1   |   ... 7 more
+backend-1   | ERROR - ImportTask$1.run(108) |2025-10-26T16:41:18,283| Failed to import mapping org.openmrs.module.openconceptlab.client.OclMapping@77161fee[externalId=ac07c54c-0c98-4a62-903f-25815e3a2e30]
+backend-1   | org.openmrs.module.openconceptlab.importer.ImportException: Cannot save mapping /orgs/MSF/sources/MSF/mappings/13639/
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:527) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.module.openconceptlab.importer.ImportTask$1.run(ImportTask.java:99) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.api.context.Daemon.lambda$runInDaemonThreadInternal$5(Daemon.java:452) ~[openmrs-api-2.8.1.jar:?]
+backend-1   |   at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+backend-1   |   at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+backend-1   | Caused by: org.openmrs.module.openconceptlab.importer.SavingException: Cannot create mapping to concept with URL /orgs/MSF/sources/MSF/concepts/5953/, because the concept has not been imported
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:389) ~[openconceptlab.jar:?]
+backend-1   |   ... 7 more
+backend-1   | ERROR - ImportTask$1.run(108) |2025-10-26T16:41:18,286| Failed to import mapping org.openmrs.module.openconceptlab.client.OclMapping@6f6f5c5b[externalId=2641006e-d18c-40ba-9c9e-a39398ff4bab]
+backend-1   | org.openmrs.module.openconceptlab.importer.ImportException: Cannot save mapping /orgs/openmrs/sources/OrderConvSets/mappings/80c7185c-b521-4a1b-b74d-94783c630d21/
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:527) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.module.openconceptlab.importer.ImportTask$1.run(ImportTask.java:99) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.api.context.Daemon.lambda$runInDaemonThreadInternal$5(Daemon.java:452) ~[openmrs-api-2.8.1.jar:?]
+backend-1   |   at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+backend-1   |   at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+backend-1   | Caused by: org.openmrs.module.openconceptlab.importer.SavingException: Cannot create mapping to concept with URL /orgs/CIEL/sources/CIEL/concepts/1038/, because the concept has not been imported
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:389) ~[openconceptlab.jar:?]
+backend-1   |   ... 7 more
+backend-1   | ERROR - ImportTask$1.run(108) |2025-10-26T16:41:18,295| Failed to import mapping org.openmrs.module.openconceptlab.client.OclMapping@603ff2f[externalId=f9a96717-3234-4038-a9c7-8f8e6979cd65]
+backend-1   | org.openmrs.module.openconceptlab.importer.ImportException: Cannot save mapping /orgs/MSF/sources/MSF/mappings/13638/
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:527) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.module.openconceptlab.importer.ImportTask$1.run(ImportTask.java:99) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.api.context.Daemon.lambda$runInDaemonThreadInternal$5(Daemon.java:452) ~[openmrs-api-2.8.1.jar:?]
+backend-1   |   at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+backend-1   |   at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+backend-1   | Caused by: org.openmrs.module.openconceptlab.importer.SavingException: Cannot create mapping to concept with URL /orgs/MSF/sources/MSF/concepts/5952/, because the concept has not been imported
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:389) ~[openconceptlab.jar:?]
+backend-1   |   ... 7 more
+backend-1   | ERROR - ImportTask$1.run(108) |2025-10-26T16:41:18,787| Failed to import mapping org.openmrs.module.openconceptlab.client.OclMapping@5b2a4771[externalId=07f7579d-1e39-4126-ae5f-534fcddd8dd6]
+backend-1   | org.openmrs.module.openconceptlab.importer.ImportException: Cannot save mapping /orgs/MSF/sources/MSF/mappings/13063/
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:527) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.module.openconceptlab.importer.ImportTask$1.run(ImportTask.java:99) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.api.context.Daemon.lambda$runInDaemonThreadInternal$5(Daemon.java:452) ~[openmrs-api-2.8.1.jar:?]
+backend-1   |   at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+backend-1   |   at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+backend-1   | Caused by: org.openmrs.module.openconceptlab.importer.SavingException: Cannot create mapping to concept with URL /orgs/MSF/sources/MSF/concepts/4008/, because the concept has not been imported
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:389) ~[openconceptlab.jar:?]
+backend-1   |   ... 7 more
+backend-1   | ERROR - ImportTask$1.run(108) |2025-10-26T16:41:18,797| Failed to import mapping org.openmrs.module.openconceptlab.client.OclMapping@5fd7c854[externalId=e3c9a567-e685-405d-a604-6e6041ce89cb]
+backend-1   | org.openmrs.module.openconceptlab.importer.ImportException: Cannot save mapping /orgs/MSF/sources/MSF/mappings/13033/
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:527) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.module.openconceptlab.importer.ImportTask$1.run(ImportTask.java:99) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.api.context.Daemon.lambda$runInDaemonThreadInternal$5(Daemon.java:452) ~[openmrs-api-2.8.1.jar:?]
+backend-1   |   at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+backend-1   |   at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+backend-1   | Caused by: org.openmrs.module.openconceptlab.importer.SavingException: Cannot create mapping to concept with URL /orgs/MSF/sources/MSF/concepts/1503/, because the concept has not been imported
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:389) ~[openconceptlab.jar:?]
+backend-1   |   ... 7 more
+backend-1   | ERROR - ImportTask$1.run(108) |2025-10-26T16:41:18,811| Failed to import mapping org.openmrs.module.openconceptlab.client.OclMapping@2d80e601[externalId=bcb2baa6-5e39-4c50-abc8-ab70b09ba487]
+backend-1   | org.openmrs.module.openconceptlab.importer.ImportException: Cannot save mapping /orgs/MSF/sources/MSF/mappings/13032/
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:527) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.module.openconceptlab.importer.ImportTask$1.run(ImportTask.java:99) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.api.context.Daemon.lambda$runInDaemonThreadInternal$5(Daemon.java:452) ~[openmrs-api-2.8.1.jar:?]
+backend-1   |   at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+backend-1   |   at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+backend-1   | Caused by: org.openmrs.module.openconceptlab.importer.SavingException: Cannot create mapping to concept with URL /orgs/MSF/sources/MSF/concepts/1502/, because the concept has not been imported
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:389) ~[openconceptlab.jar:?]
+backend-1   |   ... 7 more
+backend-1   | ERROR - ImportTask$1.run(108) |2025-10-26T16:41:18,822| Failed to import mapping org.openmrs.module.openconceptlab.client.OclMapping@404642a4[externalId=c6c6885e-c1ca-436e-919e-666e73a1b856]
+backend-1   | org.openmrs.module.openconceptlab.importer.ImportException: Cannot save mapping /orgs/MSF/sources/MSF/mappings/11881/
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:527) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.module.openconceptlab.importer.ImportTask$1.run(ImportTask.java:99) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.api.context.Daemon.lambda$runInDaemonThreadInternal$5(Daemon.java:452) ~[openmrs-api-2.8.1.jar:?]
+backend-1   |   at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+backend-1   |   at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+backend-1   | Caused by: org.openmrs.module.openconceptlab.importer.SavingException: Cannot create mapping to concept with URL /orgs/MSF/sources/MSF/concepts/4982/, because the concept has not been imported
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:389) ~[openconceptlab.jar:?]
+backend-1   |   ... 7 more
+backend-1   | ERROR - ImportTask$1.run(108) |2025-10-26T16:41:18,835| Failed to import mapping org.openmrs.module.openconceptlab.client.OclMapping@20c99f31[externalId=d53600d5-fad6-4bb7-9cbd-b1f2104b5512]
+backend-1   | org.openmrs.module.openconceptlab.importer.ImportException: Cannot save mapping /orgs/MSF/sources/MSF/mappings/11880/
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:527) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.module.openconceptlab.importer.ImportTask$1.run(ImportTask.java:99) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.api.context.Daemon.lambda$runInDaemonThreadInternal$5(Daemon.java:452) ~[openmrs-api-2.8.1.jar:?]
+backend-1   |   at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+backend-1   |   at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+backend-1   | Caused by: org.openmrs.module.openconceptlab.importer.SavingException: Cannot create mapping to concept with URL /orgs/MSF/sources/MSF/concepts/4981/, because the concept has not been imported
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:389) ~[openconceptlab.jar:?]
+backend-1   |   ... 7 more
+backend-1   | ERROR - ImportTask$1.run(108) |2025-10-26T16:41:18,852| Failed to import mapping org.openmrs.module.openconceptlab.client.OclMapping@43a478bc[externalId=7af0052c-1995-4747-8c67-c72eb39eab5a]
+backend-1   | org.openmrs.module.openconceptlab.importer.ImportException: Cannot save mapping /orgs/MSF/sources/MSF/mappings/11879/
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:527) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.module.openconceptlab.importer.ImportTask$1.run(ImportTask.java:99) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.api.context.Daemon.lambda$runInDaemonThreadInternal$5(Daemon.java:452) ~[openmrs-api-2.8.1.jar:?]
+backend-1   |   at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+backend-1   |   at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+backend-1   | Caused by: org.openmrs.module.openconceptlab.importer.SavingException: Cannot create mapping to concept with URL /orgs/MSF/sources/MSF/concepts/4979/, because the concept has not been imported
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:389) ~[openconceptlab.jar:?]
+backend-1   |   ... 7 more
+backend-1   | ERROR - ImportTask$1.run(108) |2025-10-26T16:41:18,906| Failed to import mapping org.openmrs.module.openconceptlab.client.OclMapping@64191c16[externalId=743c7feb-a59b-44a7-85b9-a4800524d1d3]
+backend-1   | org.openmrs.module.openconceptlab.importer.ImportException: Cannot save mapping /orgs/MSF/sources/MSF/mappings/9887/
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:527) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.module.openconceptlab.importer.ImportTask$1.run(ImportTask.java:99) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.api.context.Daemon.lambda$runInDaemonThreadInternal$5(Daemon.java:452) ~[openmrs-api-2.8.1.jar:?]
+backend-1   |   at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+backend-1   |   at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+backend-1   | Caused by: org.openmrs.module.openconceptlab.importer.SavingException: Cannot create mapping from concept with URL /orgs/MSF/sources/MSF/concepts/4306/, because the concept has not been imported
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:362) ~[openconceptlab.jar:?]
+backend-1   |   ... 7 more
+backend-1   | ERROR - ImportTask$1.run(108) |2025-10-26T16:41:18,911| Failed to import mapping org.openmrs.module.openconceptlab.client.OclMapping@38c07354[externalId=45011a46-2aa9-4984-b7ff-f65d9cce1a13]
+backend-1   | org.openmrs.module.openconceptlab.importer.ImportException: Cannot save mapping /orgs/MSF/sources/MSF/mappings/9886/
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:527) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.module.openconceptlab.importer.ImportTask$1.run(ImportTask.java:99) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.api.context.Daemon.lambda$runInDaemonThreadInternal$5(Daemon.java:452) ~[openmrs-api-2.8.1.jar:?]
+backend-1   |   at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+backend-1   |   at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+backend-1   | Caused by: org.openmrs.module.openconceptlab.importer.SavingException: Cannot create mapping from concept with URL /orgs/MSF/sources/MSF/concepts/4306/, because the concept has not been imported
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:362) ~[openconceptlab.jar:?]
+backend-1   |   ... 7 more
+backend-1   | ERROR - ImportTask$1.run(108) |2025-10-26T16:41:25,147| Failed to import mapping org.openmrs.module.openconceptlab.client.OclMapping@2e865e30[externalId=44fb5ce2-d777-4448-a4be-b91f41a2aeda]
+backend-1   | org.openmrs.module.openconceptlab.importer.ImportException: Cannot save mapping /orgs/MSF/sources/MSF/mappings/9883/
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:527) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.module.openconceptlab.importer.ImportTask$1.run(ImportTask.java:99) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.api.context.Daemon.lambda$runInDaemonThreadInternal$5(Daemon.java:452) ~[openmrs-api-2.8.1.jar:?]
+backend-1   |   at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+backend-1   |   at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+backend-1   | Caused by: org.openmrs.module.openconceptlab.importer.SavingException: Cannot create mapping to concept with URL /orgs/MSF/sources/MSF/concepts/4306/, because the concept has not been imported
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:389) ~[openconceptlab.jar:?]
+backend-1   |   ... 7 more
+backend-1   | ERROR - ImportTask$1.run(108) |2025-10-26T16:41:25,165| Failed to import mapping org.openmrs.module.openconceptlab.client.OclMapping@33eb68ac[externalId=fae562b1-2482-4c98-b4d9-6cd9fef9e15c]
+backend-1   | org.openmrs.module.openconceptlab.importer.ImportException: Cannot save mapping /orgs/MSF/sources/MSF/mappings/9882/
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:527) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.module.openconceptlab.importer.ImportTask$1.run(ImportTask.java:99) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.api.context.Daemon.lambda$runInDaemonThreadInternal$5(Daemon.java:452) ~[openmrs-api-2.8.1.jar:?]
+backend-1   |   at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+backend-1   |   at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+backend-1   | Caused by: org.openmrs.module.openconceptlab.importer.SavingException: Cannot create mapping to concept with URL /orgs/PIH/sources/PIH/concepts/703/, because the concept has not been imported
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:389) ~[openconceptlab.jar:?]
+backend-1   |   ... 7 more
+backend-1   | ERROR - ImportTask$1.run(108) |2025-10-26T16:41:25,179| Failed to import mapping org.openmrs.module.openconceptlab.client.OclMapping@4a679496[externalId=b264471c-cc3e-4a68-8de3-4043f8155786]
+backend-1   | org.openmrs.module.openconceptlab.importer.ImportException: Cannot save mapping /orgs/MSF/sources/MSF/mappings/9881/
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:527) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.module.openconceptlab.importer.ImportTask$1.run(ImportTask.java:99) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.api.context.Daemon.lambda$runInDaemonThreadInternal$5(Daemon.java:452) ~[openmrs-api-2.8.1.jar:?]
+backend-1   |   at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+backend-1   |   at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+backend-1   | Caused by: org.openmrs.module.openconceptlab.importer.SavingException: Cannot create mapping to concept with URL /orgs/PIH/sources/PIH/concepts/664/, because the concept has not been imported
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:389) ~[openconceptlab.jar:?]
+backend-1   |   ... 7 more
+backend-1   | ERROR - ImportTask$1.run(108) |2025-10-26T16:41:25,188| Failed to import mapping org.openmrs.module.openconceptlab.client.OclMapping@77dda655[externalId=51a5878e-e90b-41bd-9bc0-90340a10048b]
+backend-1   | org.openmrs.module.openconceptlab.importer.ImportException: Cannot save mapping /orgs/MSF/sources/MSF/mappings/9880/
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:527) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.module.openconceptlab.importer.ImportTask$1.run(ImportTask.java:99) ~[openconceptlab.jar:?]
+backend-1   |   at org.openmrs.api.context.Daemon.lambda$runInDaemonThreadInternal$5(Daemon.java:452) ~[openmrs-api-2.8.1.jar:?]
+backend-1   |   at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+backend-1   |   at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+backend-1   |   at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+backend-1   | Caused by: org.openmrs.module.openconceptlab.importer.SavingException: Cannot create mapping from concept with URL /orgs/MSF/sources/MSF/concepts/4306/, because the concept has not been imported
+backend-1   |   at org.openmrs.module.openconceptlab.importer.Saver.saveMapping(Saver.java:362) ~[openconceptlab.jar:?]
+backend-1   |   ... 7 more
+frontend-1  | 127.0.0.1 - - [26/Oct/2025:16:41:43 +0000] "GET / HTTP/1.1" 200 3311 "-" "curl/8.14.1"
+frontend-1  | 127.0.0.1 - - [26/Oct/2025:16:42:13 +0000] "GET / HTTP/1.1" 200 3311 "-" "curl/8.14.1"
